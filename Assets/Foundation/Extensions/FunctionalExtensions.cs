@@ -1,6 +1,6 @@
 using System;
 
-namespace Kernel.Extensions
+namespace Foundation.Extensions
 {
     public static class FunctionalExtensions
     {

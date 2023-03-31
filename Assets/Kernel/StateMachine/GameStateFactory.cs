@@ -1,6 +1,6 @@
 using Zenject;
 
-namespace Kernel
+namespace Kernel.StateMachine
 {
     public class GameStateFactory : IGameStateFactory
     {

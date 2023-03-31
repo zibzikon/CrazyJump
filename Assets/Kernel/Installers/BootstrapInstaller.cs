@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using Kernel;
 using UnityEngine;
 using Zenject;
 
-public class BootstrapInstaller : MonoInstaller
+namespace Kernel.Installers
 {
-    [SerializeField] private Bootstrap _bootstrap;
-
-    public override void InstallBindings()
+    public class BootstrapInstaller : MonoInstaller
     {
-        Container.BindInstance(_bootstrap).AsSingle();
+        [SerializeField] private Bootstrap _bootstrap;
+
+        public override void InstallBindings()
+        {
+            Container.BindInstance(_bootstrap).AsSingle();
+        }
     }
 }

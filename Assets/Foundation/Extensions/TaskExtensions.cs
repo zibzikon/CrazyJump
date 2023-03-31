@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Kernel.Extensions
+namespace Foundation.Extensions
 {
     public static class TaskExtensions
     {

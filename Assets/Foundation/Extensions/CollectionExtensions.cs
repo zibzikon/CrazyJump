@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace Kernel.Extensions
+namespace Foundation.Extensions
 {
     public static class CollectionExtensions
     {
@@ -12,6 +13,17 @@ namespace Kernel.Extensions
                 action(element);
 
             return collection;
+        }
+
+        public static T SelectRandomItem<T>(this IEnumerable<T> enumerable)
+        {
+            var random = new Random();
+            var array = enumerable.ToArray();
+            if (!array.Any())
+                return default;
+
+            var index = random.Next(0, array.Length - 1);
+            return array[index];
         }
     }
 }

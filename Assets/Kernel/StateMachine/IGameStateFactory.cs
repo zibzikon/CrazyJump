@@ -1,4 +1,4 @@
-namespace Kernel
+namespace Kernel.StateMachine
 {
     public interface IGameStateFactory
     {

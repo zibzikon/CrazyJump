@@ -1,10 +1,9 @@
 using System.Threading.Tasks;
-using Foundation.Exceptions;
-using Foundation.Services.Interfaces;
-using Kernel.Extensions;
+using Foundation.Extensions;
+using Foundation.Utils.Exceptions;
 using UnityEngine;
 
-namespace Foundation.Services
+namespace Foundation
 {
     public class UnityResourceLoader : IResourcesLoader
     {

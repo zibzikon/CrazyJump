@@ -1,5 +1,6 @@
 using System;
-using Kernel.States;
+using Kernel.StateMachine;
+using Kernel.StateMachine.States;
 using UnityEngine;
 using Zenject;
 

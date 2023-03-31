@@ -1,6 +1,7 @@
 using Foundation;
+using static Kernel.Constants.Scenes;
 
-namespace Kernel.States
+namespace Kernel.StateMachine.States
 {
     public class PlayGameState : IGameState
     {
@@ -13,11 +14,11 @@ namespace Kernel.States
         
         public void Enter()
         {
+            _sceneLoader.LoadScene(GamePlaySceneName);
         }
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

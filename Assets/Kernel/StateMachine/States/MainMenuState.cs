@@ -1,7 +1,7 @@
 using Foundation;
 using static Kernel.Constants.Scenes;
 
-namespace Kernel.States
+namespace Kernel.StateMachine.States
 {
     public class MainMenuState : IGameState
     {
