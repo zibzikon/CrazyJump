@@ -1071,6 +1071,8 @@ MonoBehaviour:
     - Prefabs/PlayerCharacter
     GameBoardViews:
     - Prefabs/GameBoard
+    GameBoardEndPartViews:
+    - Prefabs/GameBoardEndPart
 --- !u!1001 &1268821425577118153
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,5 @@
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
-using Kernel.GamePlay.ValuePanel;
 using Kernel.GamePlay.ValuePanel.Data;
 using Kernel.Services;
 using UnityEngine;
@@ -24,11 +23,13 @@ namespace Kernel.Components
     [Game] public class PlayerCharacter : IComponent { }
     [Game] public class ValuePanel : IComponent { }
     [Game] public class Camera : IComponent { }
+    [Game] public class GameBoardEndPart : IComponent { }
     [Game] public class FollowingPlayerCharacter : IComponent { }
     
     [Game] public class Movable : IComponent { }
     [Game] public class Collisionable : IComponent { }
     [Game] public class Destroyable : IComponent { }
+    [Game] public class MakingJump : IComponent { }
     [Game] public class Interacted : IComponent { }
     [Game] public class Obtained : IComponent { }
     
@@ -43,6 +44,8 @@ namespace Kernel.Components
     [Game] public class HorizontalSpeed : IComponent { public float Value; }
     [Game] public class WalkingSpeed : IComponent { public float Value; }
     [Game] public class FollowSpeed : IComponent { public float Value; }
+    [Game] public class DirectionalForce: IComponent { public float Value; }
+    [Game] public class GravityForce: IComponent { public float Value; }
     [Game] public class HorizontalBorder : IComponent { public RangeFloat Value; }
     
     [Game] public class CollidedEntityID: IComponent { public int Value; }

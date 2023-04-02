@@ -4,6 +4,6 @@ namespace Kernel.GamePlay.GameBoard.Interfaces
 {
     public interface IGameBoardViewFactory
     {
-        EntityView CreateGamePathView();
+        EntityView CreateGameBoardView();
     }
 }

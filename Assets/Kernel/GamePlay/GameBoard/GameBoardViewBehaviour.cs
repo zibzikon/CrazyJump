@@ -1,5 +1,3 @@
-using System;
-using Entitas;
 using Kernel.Components;
 using Kernel.ECSIntegration;
 using Kernel.Extensions;
@@ -23,7 +21,8 @@ namespace Kernel.GamePlay.GameBoard
 
         private void UpdateView()
         {
-            _scalablePartTransform.localScale = _scalablePartTransform.localScale.WithNewZ(Entity.length.Value);
+            var length = Entity.length.Value;
+            _scalablePartTransform.localScale = _scalablePartTransform.localScale.WithNewZ(length);
         }
     }
 }

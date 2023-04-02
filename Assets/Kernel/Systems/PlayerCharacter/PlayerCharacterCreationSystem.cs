@@ -35,6 +35,7 @@ namespace Kernel.Systems.PlayerCharacter
                 entity.isPlayerCharacter = true;
                 
                 entity.AddWalkingSpeed(config.WalkingSpeed);
+                entity.AddGravityForce(9.8f);
                 entity.AddHorizontalSpeed(config.HorizontalSpeed);
                 entity.AddHorizontalBorder(config.HorizontalMovingBorder);
                 entity.AddAccumulatedJumpForce(config.StartAccumulatedJumpForce);

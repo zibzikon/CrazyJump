@@ -315,3 +315,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scalablePartTransform: {fileID: 4582266669267899384}
+  _endPartTransform: {fileID: 0}

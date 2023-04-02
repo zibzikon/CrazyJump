@@ -4,6 +4,7 @@ using Kernel.ECSIntegration;
 using Kernel.GamePlay;
 using Kernel.GamePlay.GameBoard;
 using Kernel.GamePlay.GameBoard.Interfaces;
+using Kernel.GamePlay.GameBoardEndPart;
 using Kernel.GamePlay.PlayerCharacter;
 using Kernel.GamePlay.ValuePanel;
 using Kernel.GamePlay.ValuePanel.Interfaces;
@@ -39,6 +40,8 @@ namespace Kernel.Installers
             
             Container.Bind<IGameBoardConfigurationGenerator>().To<RandomGameBoardConfigurationGenerator>().AsSingle().WithArguments(_gameBoardChunksConfigurations.ToArray());
             Container.Bind<IGameBoardViewFactory>().To<GameBoardViewFactory>().AsSingle();
+            
+            Container.Bind<IGameBoardEndPartViewFactory>().To<GameBoardEndPartViewFactory>().AsSingle();
         
             Container.Bind<IValuePanelViewFactory>().To<ValuePanelViewFactory>().AsSingle();
             

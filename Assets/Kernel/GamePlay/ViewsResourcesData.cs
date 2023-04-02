@@ -9,5 +9,6 @@ namespace Kernel.GamePlay
         public List<string> ValuePanelViews;
         public List<string> PlayerCharacterViews;
         public List<string> GameBoardViews;
+        public List<string> GameBoardEndPartViews;
     }
 }

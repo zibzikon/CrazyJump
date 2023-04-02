@@ -17,7 +17,7 @@ namespace Kernel.Systems.PlayerCharacter
         public PlayerCharacterHorizontalMoveSystem(GameContext gameContext, InputContext inputContext, ITime time) : base(inputContext)
         {
             _time = time;
-            _playerCharacters = gameContext.GetGroup(AllOf(GameMatcher.PlayerCharacter, Movable, Position, HorizontalBorder));
+            _playerCharacters = gameContext.GetGroup(AllOf(GameMatcher.PlayerCharacter, Movable, Position, HorizontalBorder).NoneOf(MakingJump));
         }
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)

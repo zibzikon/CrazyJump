@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using Entitas;
 using Kernel.ECSIntegration;
 using Kernel.GamePlay.GameBoard.Interfaces;
+using Kernel.GamePlay.GameBoardEndPart;
+using UnityEngine;
 using static LevelMatcher;
 
 namespace Kernel.Systems.Level
@@ -10,6 +12,7 @@ namespace Kernel.Systems.Level
     {
         private readonly IGameEntityCreator _gameEntityCreator;
         private readonly IGameBoardViewFactory _gameBoardViewFactory;
+        private readonly IGameBoardEndPartViewFactory _gameBoardEndPartViewFactory;
         private readonly IGameBoardConfigurationGenerator _gameBoardConfigurationGenerator;
 
         public GameBoardGenerationSystem(LevelContext context, 
@@ -40,8 +43,9 @@ namespace Kernel.Systems.Level
                 
                 entity.isGameBoard = true;
                 entity.AddLength(configuration.SpacingBetweenChunks * configuration.Chunks.Length);
+                entity.AddPosition(Vector3.zero);
                 
-                _gameBoardViewFactory.CreateGamePathView().Initialize(entity);
+                _gameBoardViewFactory.CreateGameBoardView().Initialize(entity);
                 
                 level.AddGameBoardConfiguration(configuration);
             }

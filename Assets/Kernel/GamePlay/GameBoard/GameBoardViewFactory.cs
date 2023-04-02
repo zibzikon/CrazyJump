@@ -9,7 +9,7 @@ namespace Kernel.GamePlay.GameBoard
         public GameBoardViewFactory(IEntityViewFactory entityViewFactory, IViewsProvider viewsProvider) 
             : base(entityViewFactory, viewsProvider) { }
 
-        public EntityView CreateGamePathView()
+        public EntityView CreateGameBoardView()
             => CreateViewFromPrefab(ViewsProvider.GetGameBoardView(0));
     }
 }

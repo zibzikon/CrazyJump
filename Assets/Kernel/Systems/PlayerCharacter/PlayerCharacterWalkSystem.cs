@@ -14,7 +14,7 @@ namespace Kernel.Systems.PlayerCharacter
         public PlayerCharacterWalkSystem(GameContext context, ITime time)
         {
             _time = time;
-            _characters = context.GetGroup(AllOf(GameMatcher.PlayerCharacter, Movable, Position, WalkingSpeed));
+            _characters = context.GetGroup(AllOf(GameMatcher.PlayerCharacter, Movable, Position, WalkingSpeed).NoneOf(MakingJump));
         }
         
         public void Execute()

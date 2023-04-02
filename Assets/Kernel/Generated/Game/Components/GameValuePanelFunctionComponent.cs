@@ -6,22 +6,19 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Kernel.GamePlay.ValuePanel.Data;
-
 public partial class GameEntity {
 
     public Kernel.Components.ValuePanelFunction valuePanelFunction { get { return (Kernel.Components.ValuePanelFunction)GetComponent(GameComponentsLookup.ValuePanelFunction); } }
     public bool hasValuePanelFunction { get { return HasComponent(GameComponentsLookup.ValuePanelFunction); } }
 
-    public void AddValuePanelFunction(ValuePanelFunctionType newValue) {
+    public void AddValuePanelFunction(Kernel.GamePlay.ValuePanel.Data.ValuePanelFunctionType newValue) {
         var index = GameComponentsLookup.ValuePanelFunction;
         var component = (Kernel.Components.ValuePanelFunction)CreateComponent(index, typeof(Kernel.Components.ValuePanelFunction));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceValuePanelFunction(ValuePanelFunctionType newValue) {
+    public void ReplaceValuePanelFunction(Kernel.GamePlay.ValuePanel.Data.ValuePanelFunctionType newValue) {
         var index = GameComponentsLookup.ValuePanelFunction;
         var component = (Kernel.Components.ValuePanelFunction)CreateComponent(index, typeof(Kernel.Components.ValuePanelFunction));
         component.Value = newValue;

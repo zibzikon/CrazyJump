@@ -15,6 +15,7 @@ namespace Kernel.Systems.Registration
             
             AddInjected<PreviousGameBoardDestroyingSystem>();
             AddInjected<GameBoardGenerationSystem>();
+            AddInjected<GameBoardEndPartCreationSystem>();
             AddInjected<GameBoardValuePlanesGenerationSystem>();
             
             AddInjected<PlayerCharacterCreationSystem>();
@@ -22,6 +23,9 @@ namespace Kernel.Systems.Registration
             AddInjected<PlayerCharacterWithPanelInteractionSystem>();
             AddInjected<PlayerCharacterHorizontalMoveSystem>();
             AddInjected<PlayerCharacterWalkSystem>();
+            AddInjected<PlayerCharacterJumpSystem>();
+            AddInjected<PlayerCharacterGravitySystem>();
+            AddInjected<OnPlayerReachesLevelEndSystem>();
             
             AddInjected<InitializeFollowingCameraOnPlayerCreatedSystem>();
             AddInjected<CameraFollowingPlayerCharacterSystem>();
