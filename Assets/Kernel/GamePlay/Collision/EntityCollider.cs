@@ -1,7 +1,7 @@
-using Kernel.ECS;
+using Kernel.ECSIntegration;
 using UnityEngine;
 
-namespace Kernel.Collision
+namespace Kernel.GamePlay.Collision
 {
     [RequireComponent(typeof(Collider))]
     public class EntityCollider : EntityBehaviour, IGameEntityRegister

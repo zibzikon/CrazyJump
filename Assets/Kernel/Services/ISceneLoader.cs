@@ -1,4 +1,4 @@
-namespace Foundation
+namespace Kernel.Services
 {
     public interface ISceneLoader
     {

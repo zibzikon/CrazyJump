@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using Entitas;
-using Foundation;
-using Foundation.Extensions;
+using Kernel.Extensions;
+using Kernel.Services;
 using UnityEngine;
 using static GameMatcher;
 using static InputMatcher;
 
-namespace Kernel.Systems
+namespace Kernel.Systems.PlayerCharacter
 {
     public class PlayerCharacterHorizontalMoveSystem : ReactiveSystem<InputEntity>
     {
@@ -17,7 +17,7 @@ namespace Kernel.Systems
         public PlayerCharacterHorizontalMoveSystem(GameContext gameContext, InputContext inputContext, ITime time) : base(inputContext)
         {
             _time = time;
-            _playerCharacters = gameContext.GetGroup(AllOf(PlayerCharacter, Movable, Position, HorizontalBorder));
+            _playerCharacters = gameContext.GetGroup(AllOf(GameMatcher.PlayerCharacter, Movable, Position, HorizontalBorder));
         }
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)

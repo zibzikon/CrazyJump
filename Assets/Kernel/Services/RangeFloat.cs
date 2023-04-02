@@ -1,6 +1,6 @@
 using System;
 
-namespace Foundation
+namespace Kernel.Services
 {
     [Serializable]
     public struct RangeFloat

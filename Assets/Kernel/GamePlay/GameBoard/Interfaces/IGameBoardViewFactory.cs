@@ -1,6 +1,6 @@
-using Kernel.ECS;
+using Kernel.ECSIntegration;
 
-namespace Kernel.GamePlay.GameBoard
+namespace Kernel.GamePlay.GameBoard.Interfaces
 {
     public interface IGameBoardViewFactory
     {

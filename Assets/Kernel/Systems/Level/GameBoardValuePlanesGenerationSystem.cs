@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using Entitas;
-using Foundation.Extensions;
-using Kernel.ECS;
+using Kernel.ECSIntegration;
+using Kernel.Extensions;
 using Kernel.GamePlay.GameBoard;
-using Kernel.GamePlay.ValuePanel;
+using Kernel.GamePlay.ValuePanel.Interfaces;
 using UnityEngine;
 using static LevelMatcher;
 
-namespace Kernel.Systems
+namespace Kernel.Systems.Level
 {
     public class GameBoardValuePlanesGenerationSystem : ReactiveSystem<LevelEntity>
     {
@@ -53,7 +53,6 @@ namespace Kernel.Systems
             {
                 var valuePanelConfig = chunk.Panels[j];
 
-                var view = _viewFactory.CreateValuePanelView(valuePanelConfig);
 
                 var entity = _gameEntityCreator.CreateEmpty();
 
@@ -61,7 +60,7 @@ namespace Kernel.Systems
                 entity.AddValuePanelFunction(valuePanelConfig.FunctionType);
                 entity.AddValuePanelValue(valuePanelConfig.Value);
 
-                view.Initialize(entity);
+                _viewFactory.CreateValuePanelView(valuePanelConfig).Initialize(entity);
 
                 entity.ReplacePosition(
                     chunkPosition.WithNewX(config.HorizontalPositions[valuePanelConfig.PlacementType]));

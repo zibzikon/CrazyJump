@@ -1,4 +1,5 @@
 using System;
+using Kernel.GamePlay.ValuePanel.Data;
 
 namespace Kernel.GamePlay.GameBoard
 {

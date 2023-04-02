@@ -1,6 +1,6 @@
 using System;
 
-namespace Foundation.Utils.Exceptions
+namespace Kernel.Utils.Exceptions
 {
     public class ResourceNotExistsException : Exception
     {

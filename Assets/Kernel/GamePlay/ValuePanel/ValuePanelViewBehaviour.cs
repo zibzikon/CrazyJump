@@ -1,10 +1,14 @@
 using System;
 using System.Globalization;
-using Kernel.ECS;
+using Entitas;
+using Kernel.Components;
+using Kernel.ECSIntegration;
+using Kernel.GamePlay.ValuePanel.Data;
+using Kernel.Utils.Exceptions;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-using static Kernel.GamePlay.ValuePanel.ValuePanelFunctionType;
+using static Kernel.GamePlay.ValuePanel.Data.ValuePanelFunctionType;
 
 namespace Kernel.GamePlay.ValuePanel
 {
@@ -18,7 +22,7 @@ namespace Kernel.GamePlay.ValuePanel
         private void Start()
         {
             if (!Entity.hasValuePanelFunction || !Entity.hasValuePanelValue)
-                throw new InvalidOperationException();
+                throw new EntityDoesNotHaveComponentsException(Entity, $"{nameof(ValuePanelFunction)}, {nameof(ValuePanelValue)}");
 
             UpdateView();
         }

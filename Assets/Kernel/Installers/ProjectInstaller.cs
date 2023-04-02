@@ -1,6 +1,4 @@
-using Foundation;
-using Foundation.Services;
-using Foundation.Services.Interfaces;
+using Kernel.Services;
 using Zenject;
 
 namespace Kernel.Installers

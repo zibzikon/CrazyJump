@@ -1,10 +1,10 @@
 using Entitas;
-using Foundation;
-using Foundation.Extensions;
+using Kernel.Extensions;
+using Kernel.Services;
 using UnityEngine;
 using static GameMatcher;
 
-namespace Kernel.Systems
+namespace Kernel.Systems.Camera
 {
     public class CameraFollowingPlayerCharacterSystem : IExecuteSystem
     {
@@ -16,7 +16,7 @@ namespace Kernel.Systems
         public CameraFollowingPlayerCharacterSystem(GameContext gameContext, ITime time)
         {
             _time = time;
-            _playerCharacters = gameContext.GetGroup(AllOf(ID, PlayerCharacter, Position));
+            _playerCharacters = gameContext.GetGroup(AllOf(ID, GameMatcher.PlayerCharacter, Position));
             _followingCameras = gameContext.GetGroup(AllOf(ID, GameMatcher.Camera, FollowingEntityID, Position, Movable, FollowingOffset, FollowSpeed));
         }
         

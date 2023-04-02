@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Kernel.ECS.Listeners
+namespace Kernel.ECSIntegration.Listeners
 {
     public class PositionListener : MonoBehaviour, IGameEventListener, IPositionListener
     {

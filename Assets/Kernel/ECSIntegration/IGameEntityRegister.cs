@@ -1,4 +1,4 @@
-namespace Kernel.ECS
+namespace Kernel.ECSIntegration
 {
     public interface IGameEntityRegister
     {

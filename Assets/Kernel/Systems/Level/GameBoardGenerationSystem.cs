@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Entitas;
-using Kernel.ECS;
-using Kernel.GamePlay.GameBoard;
+using Kernel.ECSIntegration;
+using Kernel.GamePlay.GameBoard.Interfaces;
 using static LevelMatcher;
 
-namespace Kernel.Systems
+namespace Kernel.Systems.Level
 {
     public class GameBoardGenerationSystem : ReactiveSystem<LevelEntity>
     {
@@ -33,7 +33,6 @@ namespace Kernel.Systems
         {
             foreach (var level in entities)
             {
-                var view = _gameBoardViewFactory.CreateGamePathView();
 
                 var configuration = _gameBoardConfigurationGenerator.GenerateConfiguration(level.levelDifficulty.Value);
                 
@@ -42,7 +41,7 @@ namespace Kernel.Systems
                 entity.isGameBoard = true;
                 entity.AddLength(configuration.SpacingBetweenChunks * configuration.Chunks.Length);
                 
-                view.Initialize(entity);
+                _gameBoardViewFactory.CreateGamePathView().Initialize(entity);
                 
                 level.AddGameBoardConfiguration(configuration);
             }

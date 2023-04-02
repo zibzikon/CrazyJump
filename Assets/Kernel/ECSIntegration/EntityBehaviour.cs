@@ -1,7 +1,6 @@
-using Foundation.Extensions;
 using UnityEngine;
 
-namespace Kernel.ECS
+namespace Kernel.ECSIntegration
 {
     [RequireComponent(typeof(EntityView))]
     public class EntityBehaviour : MonoBehaviour

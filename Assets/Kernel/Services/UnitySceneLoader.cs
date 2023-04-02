@@ -1,6 +1,6 @@
 using UnityEngine.SceneManagement;
 
-namespace Foundation
+namespace Kernel.Services
 {
     public class UnitySceneLoader : ISceneLoader
     {

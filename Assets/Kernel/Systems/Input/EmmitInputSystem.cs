@@ -1,5 +1,5 @@
 using Entitas;
-using Foundation;
+using Kernel.Services;
 using static InputMatcher;
 
 namespace Kernel.Systems.Input

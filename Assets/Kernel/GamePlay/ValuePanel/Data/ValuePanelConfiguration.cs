@@ -1,8 +1,6 @@
 using System;
-using Kernel.GamePlay.ValuePanel;
-using Kernel.GamePlay.ValuePanel.Data;
 
-namespace Kernel.GamePlay.GameBoard
+namespace Kernel.GamePlay.ValuePanel.Data
 {
     [Serializable]
     public class ValuePanelConfiguration

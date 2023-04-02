@@ -1,4 +1,5 @@
-using Kernel.ECS;
+using Kernel.ECSIntegration;
+using Kernel.GamePlay.ValuePanel.Data;
 using UnityEngine;
 
 namespace Kernel.GamePlay.ValuePanel

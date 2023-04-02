@@ -1,18 +1,19 @@
 using System.Collections.Generic;
 using System.Linq;
-using Foundation.Services;
-using Foundation.Services.Interfaces;
-using Kernel.ECS;
+using Kernel.ECSIntegration;
 using Kernel.GamePlay;
 using Kernel.GamePlay.GameBoard;
+using Kernel.GamePlay.GameBoard.Interfaces;
 using Kernel.GamePlay.PlayerCharacter;
 using Kernel.GamePlay.ValuePanel;
+using Kernel.GamePlay.ValuePanel.Interfaces;
+using Kernel.Services;
 using Kernel.Systems.Registration;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
-using EntityViewFactory = Foundation.Services.EntityViewFactory;
+using EntityViewFactory = Kernel.Services.EntityViewFactory;
 
 namespace Kernel.Installers
 {

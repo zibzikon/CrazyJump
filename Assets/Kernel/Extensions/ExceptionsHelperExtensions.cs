@@ -1,6 +1,6 @@
 using System;
 
-namespace Foundation.Extensions
+namespace Kernel.Extensions
 {
     public static class ExceptionsHelperExtensions
     {

@@ -1,9 +1,9 @@
 using System;
-using Kernel.ECS;
+using Kernel.ECSIntegration;
 using Kernel.Extensions;
 using UnityEngine;
 
-namespace Kernel.Collision
+namespace Kernel.GamePlay.Collision
 {
     public class TriggerBehavior : EntityBehaviour
     {

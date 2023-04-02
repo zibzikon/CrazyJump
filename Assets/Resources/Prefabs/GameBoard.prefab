@@ -220,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4582266669267899384}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Scalable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 7495416993084224526}
   - component: {fileID: -1801237790321631850}
   - component: {fileID: 8097199035218628268}
-  - component: {fileID: 7510790763649047762}
+  - component: {fileID: 8360773976672533847}
   m_Layer: 0
   m_Name: GameBoard
   m_TagString: Untagged
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4feadb89fe41461298aae97970274e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7510790763649047762
+--- !u!114 &8360773976672533847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5977636303924756708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096ddac90b0e443ab0fd58fe11c99147, type: 3}
+  m_Script: {fileID: 11500000, guid: 75ed784b5ea04d2c8887d3fd1a0ab732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boardTransform: {fileID: 4582266669267899384}
+  _scalablePartTransform: {fileID: 4582266669267899384}

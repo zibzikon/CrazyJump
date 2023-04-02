@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Kernel.ECS
+namespace Kernel.ECSIntegration
 {
     [DisallowMultipleComponent]
     public class EntityView : MonoBehaviour

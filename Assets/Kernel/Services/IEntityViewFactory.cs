@@ -1,6 +1,6 @@
-using Kernel.ECS;
+using Kernel.ECSIntegration;
 
-namespace Foundation.Services.Interfaces
+namespace Kernel.Services
 {
     public interface IEntityViewFactory
     {

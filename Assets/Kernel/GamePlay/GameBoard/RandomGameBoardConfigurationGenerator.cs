@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using Foundation.Extensions;
+using Kernel.Extensions;
+using Kernel.GamePlay.GameBoard.Interfaces;
 using Kernel.GamePlay.ValuePanel.Data;
 using static Kernel.GamePlay.ValuePanel.Data.ValuePanelPlacementType;
 

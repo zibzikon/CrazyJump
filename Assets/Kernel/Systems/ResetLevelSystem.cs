@@ -1,5 +1,5 @@
 using Entitas;
-using Kernel.ECS;
+using Kernel.ECSIntegration;
 using static GameMatcher;
 
 namespace Kernel.Systems
@@ -12,7 +12,7 @@ namespace Kernel.Systems
         public ResetLevelSystem(GameContext context, IGameEntityCreator entityCreator)
         {
             _entityCreator = entityCreator;
-            _playerCharacters = context.GetGroup(AllOf(PlayerCharacter, AccumulatedJumpForce));
+            _playerCharacters = context.GetGroup(AllOf(GameMatcher.PlayerCharacter, AccumulatedJumpForce));
         }
         
         public void Execute()

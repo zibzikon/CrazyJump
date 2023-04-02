@@ -1,5 +1,5 @@
-using Foundation;
-using Kernel.ECS;
+using Kernel.ECSIntegration;
+using Kernel.Services;
 using UnityEngine;
 
 namespace Kernel.GamePlay.PlayerCharacter

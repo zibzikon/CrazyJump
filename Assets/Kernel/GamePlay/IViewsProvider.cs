@@ -1,4 +1,4 @@
-using Kernel.ECS;
+using Kernel.ECSIntegration;
 
 namespace Kernel.GamePlay
 {

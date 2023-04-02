@@ -1,5 +1,6 @@
-using Foundation.Services.Interfaces;
-using Kernel.ECS;
+using Kernel.ECSIntegration;
+using Kernel.GamePlay.GameBoard.Interfaces;
+using Kernel.Services;
 
 namespace Kernel.GamePlay.GameBoard
 {

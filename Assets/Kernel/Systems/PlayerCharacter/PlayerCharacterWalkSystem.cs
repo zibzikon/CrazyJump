@@ -1,9 +1,9 @@
 using Entitas;
-using Foundation;
-using Foundation.Extensions;
+using Kernel.Extensions;
+using Kernel.Services;
 using static GameMatcher;
 
-namespace Kernel.Systems
+namespace Kernel.Systems.PlayerCharacter
 {
     public class PlayerCharacterWalkSystem : IExecuteSystem
     {

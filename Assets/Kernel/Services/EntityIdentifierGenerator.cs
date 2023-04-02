@@ -1,5 +1,5 @@
 
-namespace Kernel
+namespace Kernel.Services
 {
     public class EntityIdentifierGenerator : IEntityIdentifierGenerator
     {

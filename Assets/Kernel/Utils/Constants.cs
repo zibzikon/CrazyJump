@@ -1,4 +1,4 @@
-namespace Foundation
+namespace Kernel.Utils
 {
     public static class Constants
     {

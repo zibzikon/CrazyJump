@@ -1,8 +1,6 @@
-using Foundation.Services.Interfaces;
-using Kernel.ECS;
-using UnityEngine;
+using Kernel.ECSIntegration;
 
-namespace Foundation.Services
+namespace Kernel.Services
 {
     public class EntityViewFactory : IEntityViewFactory
     {

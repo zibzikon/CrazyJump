@@ -7,6 +7,7 @@ namespace Kernel.Mediators
     {
         [Required, SerializeField] private Engine _engine;
         
-        public void PlayGame() => _engine.StartPlaying();
+        [Button, HideInEditorMode] public void PlayGame() => _engine.StartPlaying();
+        [Button, HideInEditorMode] public void GenerateNewLevel() => _engine.GenerateNewLevel();
     }
 }

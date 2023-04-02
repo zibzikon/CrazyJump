@@ -1,7 +1,8 @@
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
-using Foundation;
 using Kernel.GamePlay.ValuePanel;
+using Kernel.GamePlay.ValuePanel.Data;
+using Kernel.Services;
 using UnityEngine;
 
 namespace Kernel.Components
@@ -14,7 +15,8 @@ namespace Kernel.Components
     [Level] public class LevelDifficulty : IComponent { public int Value; }
     [Level] public class GameBoardConfiguration : IComponent { public Kernel.GamePlay.GameBoard.GameBoardConfiguration Value; }
     
-    [Game, Unique] public class CreatePlayerCharacter : IComponent { }
+    [Game, Unique] public class PlayingStarted : IComponent { }
+    [Game] public class CreatePlayerCharacter : IComponent { }
     [Game] public class PlayerCharacterConfiguration : IComponent { public GamePlay.PlayerCharacter.PlayerCharacterConfiguration Value; }
     
     [Game] public class GameBoard : IComponent { }
@@ -22,6 +24,7 @@ namespace Kernel.Components
     [Game] public class PlayerCharacter : IComponent { }
     [Game] public class ValuePanel : IComponent { }
     [Game] public class Camera : IComponent { }
+    [Game] public class FollowingPlayerCharacter : IComponent { }
     
     [Game] public class Movable : IComponent { }
     [Game] public class Collisionable : IComponent { }

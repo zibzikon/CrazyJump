@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Foundation.Extensions
+namespace Kernel.Extensions
 {
     public static class NumberExtensions
     {

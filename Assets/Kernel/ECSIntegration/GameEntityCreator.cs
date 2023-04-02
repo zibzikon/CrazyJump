@@ -1,6 +1,7 @@
-using Foundation.Extensions;
+using Kernel.Extensions;
+using Kernel.Services;
 
-namespace Kernel.ECS
+namespace Kernel.ECSIntegration
 {
     public class GameEntityCreator : IGameEntityCreator
     {

@@ -1,4 +1,4 @@
-namespace Kernel.GamePlay.ValuePanel
+namespace Kernel.GamePlay.ValuePanel.Data
 {
     public enum ValuePanelFunctionType
     {

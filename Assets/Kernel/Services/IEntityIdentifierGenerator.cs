@@ -1,4 +1,4 @@
-namespace Kernel
+namespace Kernel.Services
 {
     public interface IEntityIdentifierGenerator
     {

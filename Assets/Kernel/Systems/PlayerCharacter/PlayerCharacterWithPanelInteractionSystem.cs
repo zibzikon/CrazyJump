@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
 using Entitas;
-using Kernel.GamePlay.ValuePanel;
+using Kernel.GamePlay.ValuePanel.Data;
 using static GameMatcher;
 
-namespace Kernel.Systems
+namespace Kernel.Systems.PlayerCharacter
 {
-    public class CharacterWithPanelInteractionSystem : IExecuteSystem
+    public class PlayerCharacterWithPanelInteractionSystem : IExecuteSystem
     {
         private readonly IGroup<GameEntity> _characters;
         private readonly IGroup<GameEntity> _collidedPanels;
 
         
-        public CharacterWithPanelInteractionSystem(GameContext context)
+        public PlayerCharacterWithPanelInteractionSystem(GameContext context)
         {
             _collidedPanels = context.GetGroup(AllOf(ValuePanel, Collisionable, ValuePanelValue, ValuePanelFunction).NoneOf(Interacted));
-            _characters = context.GetGroup(AllOf(PlayerCharacter, Collisionable, CollidedEntityID, AccumulatedJumpForce));
+            _characters = context.GetGroup(AllOf(GameMatcher.PlayerCharacter, Collisionable, CollidedEntityID, AccumulatedJumpForce));
         }
         
         public void Execute()

@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Foundation
+namespace Kernel.Services
 {
     public interface IResourcesLoader
     {

@@ -18,28 +18,30 @@ public static class GameComponentsLookup {
     public const int Destroyed = 7;
     public const int FollowingEntityID = 8;
     public const int FollowingOffset = 9;
-    public const int FollowSpeed = 10;
-    public const int GameBoard = 11;
-    public const int HorizontalBorder = 12;
-    public const int HorizontalSpeed = 13;
-    public const int ID = 14;
-    public const int Interacted = 15;
-    public const int Length = 16;
-    public const int Movable = 17;
-    public const int MovePosition = 18;
-    public const int Obtained = 19;
-    public const int PlayerCharacter = 20;
-    public const int PlayerCharacterConfiguration = 21;
-    public const int Position = 22;
-    public const int Rotation = 23;
-    public const int ValuePanel = 24;
-    public const int ValuePanelFunction = 25;
-    public const int ValuePanelValue = 26;
-    public const int WalkingSpeed = 27;
-    public const int PositionListener = 28;
-    public const int RotationListener = 29;
+    public const int FollowingPlayerCharacter = 10;
+    public const int FollowSpeed = 11;
+    public const int GameBoard = 12;
+    public const int HorizontalBorder = 13;
+    public const int HorizontalSpeed = 14;
+    public const int ID = 15;
+    public const int Interacted = 16;
+    public const int Length = 17;
+    public const int Movable = 18;
+    public const int MovePosition = 19;
+    public const int Obtained = 20;
+    public const int PlayerCharacter = 21;
+    public const int PlayerCharacterConfiguration = 22;
+    public const int PlayingStarted = 23;
+    public const int Position = 24;
+    public const int Rotation = 25;
+    public const int ValuePanel = 26;
+    public const int ValuePanelFunction = 27;
+    public const int ValuePanelValue = 28;
+    public const int WalkingSpeed = 29;
+    public const int PositionListener = 30;
+    public const int RotationListener = 31;
 
-    public const int TotalComponents = 30;
+    public const int TotalComponents = 32;
 
     public static readonly string[] componentNames = {
         "DestroyedListener",
@@ -52,6 +54,7 @@ public static class GameComponentsLookup {
         "Destroyed",
         "FollowingEntityID",
         "FollowingOffset",
+        "FollowingPlayerCharacter",
         "FollowSpeed",
         "GameBoard",
         "HorizontalBorder",
@@ -64,6 +67,7 @@ public static class GameComponentsLookup {
         "Obtained",
         "PlayerCharacter",
         "PlayerCharacterConfiguration",
+        "PlayingStarted",
         "Position",
         "Rotation",
         "ValuePanel",
@@ -85,6 +89,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.Destroyed),
         typeof(Kernel.Components.FollowingEntityID),
         typeof(Kernel.Components.FollowingOffset),
+        typeof(Kernel.Components.FollowingPlayerCharacter),
         typeof(Kernel.Components.FollowSpeed),
         typeof(Kernel.Components.GameBoard),
         typeof(Kernel.Components.HorizontalBorder),
@@ -97,6 +102,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.Obtained),
         typeof(Kernel.Components.PlayerCharacter),
         typeof(Kernel.Components.PlayerCharacterConfiguration),
+        typeof(Kernel.Components.PlayingStarted),
         typeof(Kernel.Components.Position),
         typeof(Kernel.Components.Rotation),
         typeof(Kernel.Components.ValuePanel),

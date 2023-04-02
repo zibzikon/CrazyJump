@@ -1,10 +1,9 @@
-using Foundation.Extensions;
-using Foundation.Services.Interfaces;
+using Kernel.Extensions;
 using UnityEngine;
 using static System.String;
-using static Foundation.Constants;
+using static Kernel.Utils.Constants;
 
-namespace Foundation.Services
+namespace Kernel.Services
 {
     public class UnityViewService : IUnityViewService
     {

@@ -1,5 +1,5 @@
 using System;
-using Foundation;
+using Kernel.Services;
 using UnityEngine;
 
 namespace Kernel.GamePlay.PlayerCharacter

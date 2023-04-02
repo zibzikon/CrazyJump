@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Foundation
+namespace Kernel.Services
 {
     public class UnityInput : IInput
     {

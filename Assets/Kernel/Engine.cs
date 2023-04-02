@@ -1,3 +1,4 @@
+using Kernel.GamePlay.PlayerCharacter;
 using Kernel.Systems.Registration;
 using UnityEngine;
 using Zenject;
@@ -6,13 +7,17 @@ namespace Kernel
 {
     public class Engine : MonoBehaviour
     {
+        [SerializeField] private PlayerCharacterConfiguration _playerCharacterConfiguration;
+        
         private GameSystems _systems;
         
         private LevelContext _level;
+        private GameContext _game;
 
         [Inject]
-        public void Construct(GameSystems systems, LevelContext level)
+        public void Construct(GameSystems systems, LevelContext level, GameContext game)
         {
+            _game = game;
             _level = level;
             _systems = systems;
         }
@@ -31,6 +36,10 @@ namespace Kernel
         {
             GenerateNewLevel();
             _level.generateNewLevelEntity.AddLevelDifficulty(10);
+            
+            var createPlayerCharacterEntity = _game.CreateEntity();
+            createPlayerCharacterEntity.isCreatePlayerCharacter = true;
+            createPlayerCharacterEntity.AddPlayerCharacterConfiguration(_playerCharacterConfiguration);
         }
         
         public void GenerateNewLevel()
@@ -41,7 +50,8 @@ namespace Kernel
 
         public void StartPlaying()
         {
-            
+            _game.isPlayingStarted = false;
+            _game.isPlayingStarted = true;
         }
         
     }

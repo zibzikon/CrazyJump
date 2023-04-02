@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Kernel.ECS
+namespace Kernel.ECSIntegration
 {
     [RequireComponent(typeof(EntityView))]
     public class SelfInitializedView : MonoBehaviour

@@ -1,5 +1,5 @@
-using Foundation.Services.Interfaces;
-using Kernel.ECS;
+using Kernel.ECSIntegration;
+using Kernel.Services;
 
 namespace Kernel.GamePlay
 {

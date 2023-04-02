@@ -1,7 +1,7 @@
-using Kernel.ECS;
-using Kernel.GamePlay.GameBoard;
+using Kernel.ECSIntegration;
+using Kernel.GamePlay.ValuePanel.Data;
 
-namespace Kernel.GamePlay.ValuePanel
+namespace Kernel.GamePlay.ValuePanel.Interfaces
 {
     public interface IValuePanelViewFactory
     {

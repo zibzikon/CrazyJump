@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Foundation.Extensions;
+using Kernel.Extensions;
 using Kernel.Utils.Attributes;
 using UnityEngine;
 using Zenject;

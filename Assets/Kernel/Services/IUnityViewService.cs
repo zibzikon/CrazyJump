@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Foundation.Services.Interfaces
+namespace Kernel.Services
 {
     public interface IUnityViewService
     {

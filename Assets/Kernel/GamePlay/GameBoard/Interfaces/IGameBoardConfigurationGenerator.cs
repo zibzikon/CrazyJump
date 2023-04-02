@@ -1,4 +1,4 @@
-namespace Kernel.GamePlay.GameBoard
+namespace Kernel.GamePlay.GameBoard.Interfaces
 {
     public interface IGameBoardConfigurationGenerator
     {
