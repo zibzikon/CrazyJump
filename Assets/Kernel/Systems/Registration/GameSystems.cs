@@ -8,15 +8,23 @@ namespace Kernel.Systems.Registration
         public GameSystems(DiContainer container) : base(container)
         {
             
+            AddInjected<GameEventSystems>();
+            
             AddInjected<RegisterInputSystem>();
             AddInjected<EmmitInputSystem>();
             
-            AddInjected<GameEventSystems>();
+            AddInjected<DestroyPreviousGameBoardSystem>();
+            AddInjected<GameBoardGenerationSystem>();
+            AddInjected<GameBoardValuePlanesGenerationSystem>();
+            
             AddInjected<CharacterWithPanelInteractionSystem>();
             AddInjected<PlayerCharacterHorizontalMoveSystem>();
             AddInjected<PlayerCharacterWalkSystem>();
             AddInjected<CameraFollowingPlayerCharacterSystem>();
+            
             AddInjected<MovingSystem>();
+            
+            AddInjected<CleanupDestroyedEntitiesSystem>();
         }
     }
 }

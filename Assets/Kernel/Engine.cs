@@ -1,7 +1,4 @@
-using System;
-using Kernel.ECS;
 using Kernel.Systems.Registration;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
 
@@ -9,27 +6,18 @@ namespace Kernel
 {
     public class Engine : MonoBehaviour
     {
-        [Required, SerializeField] private EntityView _playerCharacter;
-        
         private GameSystems _systems;
-        private IGameEntityCreator _gameEntityCreator;
+        
+        private LevelContext _level;
 
         [Inject]
-        public void Construct(GameSystems systems, IGameEntityCreator gameEntityCreator)
+        public void Construct(GameSystems systems, LevelContext level)
         {
-            _gameEntityCreator = gameEntityCreator;
+            _level = level;
             _systems = systems;
         }
-
-        private void Awake()
-        {
-            _playerCharacter.Initialize(_gameEntityCreator.CreateEmpty());
-        }
-
-        private void Start()
-        {
-            _systems.Initialize();
-        }
+        
+        private void Start() => _systems.Initialize();
 
         private void Update()
         {
@@ -37,9 +25,24 @@ namespace Kernel
             _systems.Cleanup();
         }
 
-        private void OnApplicationQuit()
+        private void OnDestroy() => _systems.TearDown();
+
+        public void BootstrapLevel()
         {
-            _systems.TearDown();
+            GenerateNewLevel();
+            _level.generateNewLevelEntity.AddLevelDifficulty(10);
         }
+        
+        public void GenerateNewLevel()
+        {
+            _level.isGenerateNewLevel = false;
+            _level.isGenerateNewLevel = true;
+        }
+
+        public void StartPlaying()
+        {
+            
+        }
+        
     }
 }

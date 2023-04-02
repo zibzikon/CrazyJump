@@ -3,11 +3,11 @@ using UnityEngine;
 namespace Kernel.ECS
 {
     [DisallowMultipleComponent]
-    public sealed class EntityView : MonoBehaviour
+    public class EntityView : MonoBehaviour
     {
         public GameEntity Entity { get; private set; }
         
-        public void Initialize(GameEntity entity)
+        public virtual void Initialize(GameEntity entity)
         {
             Entity = entity;
             

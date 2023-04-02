@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using Foundation.Extensions;
+using Kernel.GamePlay.ValuePanel.Data;
+using static Kernel.GamePlay.ValuePanel.Data.ValuePanelPlacementType;
 
 namespace Kernel.GamePlay.GameBoard
 {
@@ -19,13 +21,19 @@ namespace Kernel.GamePlay.GameBoard
             
             while (accumulatedDifficulty < difficulty)
             {
-                var chunk = chunks.SelectRandomItem();
+                var chunk = _chunks.SelectRandomItem();
                 accumulatedDifficulty += chunk.SelectionDifficulty;
                 
                 chunks.Add(chunk);
             }
 
-            return new GameBoardConfiguration(2f, chunks.ToArray());
+            return new GameBoardConfiguration(5f, chunks.ToArray(), 
+                new Dictionary<ValuePanelPlacementType, float>()
+            {
+                [Center] = 0f,
+                [Left] = -1.25f,
+                [Right] = 1.25f
+            });
         }
     }
 }

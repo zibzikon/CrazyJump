@@ -1,5 +1,6 @@
 using Foundation;
-using Kernel.StateMachine;
+using Foundation.Services;
+using Foundation.Services.Interfaces;
 using Zenject;
 
 namespace Kernel.Installers
@@ -12,9 +13,7 @@ namespace Kernel.Installers
             Container.Bind<ITime>().To<UnityTime>().AsSingle();
             Container.Bind<IResourcesLoader>().To<UnityResourceLoader>().AsSingle();
             Container.Bind<ISceneLoader>().To<UnitySceneLoader>().AsSingle();
-            
-            Container.Bind<IGameStateFactory>().To<GameStateFactory>().AsSingle();
-            Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
+            Container.Bind<IUnityViewService>().To<UnityViewService>().AsSingle();
         }
     }
 }

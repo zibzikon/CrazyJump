@@ -7,8 +7,17 @@ using UnityEngine;
 namespace Kernel.Components
 {
     // @formatter:off
-
+    
     public class ID : IComponent { [PrimaryEntityIndex] public int Value; }
+    
+    [Level, Unique] public class GenerateNewLevel : IComponent { }
+    [Level] public class LevelDifficulty : IComponent { public int Value; }
+    [Level] public class GameBoardConfiguration : IComponent { public Kernel.GamePlay.GameBoard.GameBoardConfiguration Value; }
+    
+    [Game, Unique] public class CreatePlayerCharacter : IComponent { }
+    [Game] public class PlayerCharacterConfiguration : IComponent { public GamePlay.PlayerCharacter.PlayerCharacterConfiguration Value; }
+    
+    [Game] public class GameBoard : IComponent { }
     
     [Game] public class PlayerCharacter : IComponent { }
     [Game] public class ValuePanel : IComponent { }
@@ -16,11 +25,15 @@ namespace Kernel.Components
     
     [Game] public class Movable : IComponent { }
     [Game] public class Collisionable : IComponent { }
+    [Game] public class Destroyable : IComponent { }
     [Game] public class Interacted : IComponent { }
     [Game] public class Obtained : IComponent { }
     
+    
+    [Game] public class Length : IComponent { public float Value; }
+    
     [Game] public class MovePosition : IComponent { public Vector3 Value; }
-    [Game] public class FollowingOffset : IComponent { public Vector3 Value; }
+    [Game] public class FollowingOffset : IComponent { public Vector3 Value; } 
     [Game] public class AccumulatedJumpForce : IComponent { public float Value; }
     [Game] public class ValuePanelFunction : IComponent { public ValuePanelFunctionType Value; }
     [Game] public class ValuePanelValue : IComponent { public float Value; }
@@ -41,4 +54,5 @@ namespace Kernel.Components
 
     [Game, Event(EventTarget.Self)] public class Position : IComponent { public Vector3 Value; }
     [Game, Event(EventTarget.Self)] public class Rotation : IComponent { public Quaternion Value; }
+    [Game, Event(EventTarget.Self)] public class Destroyed : IComponent { }
 }

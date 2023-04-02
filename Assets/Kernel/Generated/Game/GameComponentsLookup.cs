@@ -8,48 +8,62 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int AccumulatedJumpForce = 0;
-    public const int Camera = 1;
-    public const int CollidedEntityID = 2;
-    public const int Collisionable = 3;
-    public const int FollowingEntityID = 4;
-    public const int FollowingOffset = 5;
-    public const int FollowSpeed = 6;
-    public const int HorizontalBorder = 7;
-    public const int HorizontalSpeed = 8;
-    public const int ID = 9;
-    public const int Interacted = 10;
-    public const int Movable = 11;
-    public const int MovePosition = 12;
-    public const int Obtained = 13;
-    public const int PlayerCharacter = 14;
-    public const int Position = 15;
-    public const int Rotation = 16;
-    public const int ValuePanel = 17;
-    public const int ValuePanelFunction = 18;
-    public const int ValuePanelValue = 19;
-    public const int WalkingSpeed = 20;
-    public const int PositionListener = 21;
-    public const int RotationListener = 22;
+    public const int DestroyedListener = 0;
+    public const int AccumulatedJumpForce = 1;
+    public const int Camera = 2;
+    public const int CollidedEntityID = 3;
+    public const int Collisionable = 4;
+    public const int CreatePlayerCharacter = 5;
+    public const int Destroyable = 6;
+    public const int Destroyed = 7;
+    public const int FollowingEntityID = 8;
+    public const int FollowingOffset = 9;
+    public const int FollowSpeed = 10;
+    public const int GameBoard = 11;
+    public const int HorizontalBorder = 12;
+    public const int HorizontalSpeed = 13;
+    public const int ID = 14;
+    public const int Interacted = 15;
+    public const int Length = 16;
+    public const int Movable = 17;
+    public const int MovePosition = 18;
+    public const int Obtained = 19;
+    public const int PlayerCharacter = 20;
+    public const int PlayerCharacterConfiguration = 21;
+    public const int Position = 22;
+    public const int Rotation = 23;
+    public const int ValuePanel = 24;
+    public const int ValuePanelFunction = 25;
+    public const int ValuePanelValue = 26;
+    public const int WalkingSpeed = 27;
+    public const int PositionListener = 28;
+    public const int RotationListener = 29;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 30;
 
     public static readonly string[] componentNames = {
+        "DestroyedListener",
         "AccumulatedJumpForce",
         "Camera",
         "CollidedEntityID",
         "Collisionable",
+        "CreatePlayerCharacter",
+        "Destroyable",
+        "Destroyed",
         "FollowingEntityID",
         "FollowingOffset",
         "FollowSpeed",
+        "GameBoard",
         "HorizontalBorder",
         "HorizontalSpeed",
         "ID",
         "Interacted",
+        "Length",
         "Movable",
         "MovePosition",
         "Obtained",
         "PlayerCharacter",
+        "PlayerCharacterConfiguration",
         "Position",
         "Rotation",
         "ValuePanel",
@@ -61,21 +75,28 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(DestroyedListenerComponent),
         typeof(Kernel.Components.AccumulatedJumpForce),
         typeof(Kernel.Components.Camera),
         typeof(Kernel.Components.CollidedEntityID),
         typeof(Kernel.Components.Collisionable),
+        typeof(Kernel.Components.CreatePlayerCharacter),
+        typeof(Kernel.Components.Destroyable),
+        typeof(Kernel.Components.Destroyed),
         typeof(Kernel.Components.FollowingEntityID),
         typeof(Kernel.Components.FollowingOffset),
         typeof(Kernel.Components.FollowSpeed),
+        typeof(Kernel.Components.GameBoard),
         typeof(Kernel.Components.HorizontalBorder),
         typeof(Kernel.Components.HorizontalSpeed),
         typeof(Kernel.Components.ID),
         typeof(Kernel.Components.Interacted),
+        typeof(Kernel.Components.Length),
         typeof(Kernel.Components.Movable),
         typeof(Kernel.Components.MovePosition),
         typeof(Kernel.Components.Obtained),
         typeof(Kernel.Components.PlayerCharacter),
+        typeof(Kernel.Components.PlayerCharacterConfiguration),
         typeof(Kernel.Components.Position),
         typeof(Kernel.Components.Rotation),
         typeof(Kernel.Components.ValuePanel),

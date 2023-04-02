@@ -1,5 +1,8 @@
+using System;
+
 namespace Kernel.GamePlay.GameBoard
 {
+    [Serializable]
     public class GameBoardChunkConfiguration
     {
         public int SelectionDifficulty;
