@@ -9,15 +9,11 @@ namespace Kernel.GamePlay.PlayerCharacter
     {
         public float WalkingSpeed;
         public float HorizontalSpeed;
-        public float StartAccumulatedJumpForce;
-        public RangeFloat HorizontalMovingBorder;
+        public float RotationSpeed;
 
-        public PlayerCharacterConfiguration(float walkingSpeed, float horizontalSpeed, float startAccumulatedJumpForce, RangeFloat horizontalMovingBorder)
-        {
-            WalkingSpeed = walkingSpeed;
-            HorizontalSpeed = horizontalSpeed;
-            StartAccumulatedJumpForce = startAccumulatedJumpForce;
-            HorizontalMovingBorder = horizontalMovingBorder;
-        }
+        public float StartAccumulatedJumpForce;
+        
+        public RangeFloat HorizontalMovingBorder;
+        public RangeFloat RotationYBorder;
     }
 }

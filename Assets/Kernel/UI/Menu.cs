@@ -28,5 +28,8 @@ namespace Kernel.UI
         {
             _playButton.Click -= _mediator.PlayGame;
         }
+
+        public void Hide() => _playButton.gameObject.SetActive(false);
+        public void Show() => _playButton.gameObject.SetActive(true);
     }
 }

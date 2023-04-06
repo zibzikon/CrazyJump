@@ -10,6 +10,7 @@ namespace Kernel.GamePlay.GameBoard
         
         public Dictionary<ValuePanelPlacementType, float> HorizontalPositions;
         public float SpacingBetweenChunks;
+        public float MaxPossibleJumpForce;
         public GameBoardChunkConfiguration[] Chunks;
 
         public GameBoardConfiguration(float spacingBetweenChunks, GameBoardChunkConfiguration[] chunks, Dictionary<ValuePanelPlacementType, float> horizontalPositions)

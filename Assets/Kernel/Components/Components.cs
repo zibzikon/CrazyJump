@@ -13,10 +13,12 @@ namespace Kernel.Components
     [Level, Unique] public class GenerateNewLevel : IComponent { }
     [Level] public class LevelDifficulty : IComponent { public int Value; }
     [Level] public class GameBoardConfiguration : IComponent { public Kernel.GamePlay.GameBoard.GameBoardConfiguration Value; }
+    [Level] public class CreatePlayerCharacter : IComponent { }
+    [Level] public class PlayerCharacterConfiguration : IComponent { public GamePlay.PlayerCharacter.PlayerCharacterConfiguration Value; }
     
     [Game, Unique] public class PlayingStarted : IComponent { }
-    [Game] public class CreatePlayerCharacter : IComponent { }
-    [Game] public class PlayerCharacterConfiguration : IComponent { public GamePlay.PlayerCharacter.PlayerCharacterConfiguration Value; }
+    
+    [Game, Unique] public class GravityForce: IComponent { public float Value; }
     
     [Game] public class GameBoard : IComponent { }
     
@@ -24,6 +26,8 @@ namespace Kernel.Components
     [Game] public class ValuePanel : IComponent { }
     [Game] public class Camera : IComponent { }
     [Game] public class GameBoardEndPart : IComponent { }
+    [Game] public class HeightsDiapason : IComponent { }
+    [Game] public class HeightsDiapasonRow : IComponent { }
     [Game] public class FollowingPlayerCharacter : IComponent { }
     
     [Game] public class Movable : IComponent { }
@@ -37,7 +41,11 @@ namespace Kernel.Components
     [Game] public class Length : IComponent { public float Value; }
     
     [Game] public class MovePosition : IComponent { public Vector3 Value; }
+    [Game] public class DefaultRotation : IComponent { public Quaternion Value; }
+    [Game] public class MovingDirection : IComponent { public Vector3 Value; } 
+    [Game] public class TargetRotation : IComponent { public Quaternion Value; }
     [Game] public class FollowingOffset : IComponent { public Vector3 Value; } 
+    [Game] public class RotationSpeed : IComponent { public float Value; }
     [Game] public class AccumulatedJumpForce : IComponent { public float Value; }
     [Game] public class ValuePanelFunction : IComponent { public ValuePanelFunctionType Value; }
     [Game] public class ValuePanelValue : IComponent { public float Value; }
@@ -45,8 +53,13 @@ namespace Kernel.Components
     [Game] public class WalkingSpeed : IComponent { public float Value; }
     [Game] public class FollowSpeed : IComponent { public float Value; }
     [Game] public class DirectionalForce: IComponent { public float Value; }
-    [Game] public class GravityForce: IComponent { public float Value; }
+    
+    [Game] public class MaxHeight : IComponent { public float Value; }
+    [Game] public class RowsCount : IComponent { public int Value; }
+    [Game] public class RowPosition : IComponent { public int Value; }
+    [Game] public class Height : IComponent { public float Value; }
     [Game] public class HorizontalBorder : IComponent { public RangeFloat Value; }
+    [Game] public class RotationYBorder : IComponent { public RangeFloat Value; }
     
     [Game] public class CollidedEntityID: IComponent { public int Value; }
     [Game] public class FollowingEntityID: IComponent { public int Value; }

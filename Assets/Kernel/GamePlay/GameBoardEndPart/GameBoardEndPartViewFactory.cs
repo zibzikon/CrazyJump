@@ -10,6 +10,6 @@ namespace Kernel.GamePlay.GameBoardEndPart
         }
 
         public EntityView CreateGameBoardEndPartView()
-            => CreateViewFromPrefab(ViewsProvider.GetGameBoardView(0));
+            => CreateViewFromPrefab(ViewsProvider.GetGameBoardEndPartView(0));
     }
 }

@@ -8,120 +8,15 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int DestroyedListener = 0;
-    public const int AccumulatedJumpForce = 1;
-    public const int Camera = 2;
-    public const int CollidedEntityID = 3;
-    public const int Collisionable = 4;
-    public const int CreatePlayerCharacter = 5;
-    public const int Destroyable = 6;
-    public const int Destroyed = 7;
-    public const int DirectionalForce = 8;
-    public const int FollowingEntityID = 9;
-    public const int FollowingOffset = 10;
-    public const int FollowingPlayerCharacter = 11;
-    public const int FollowSpeed = 12;
-    public const int GameBoard = 13;
-    public const int GameBoardEndPart = 14;
-    public const int GravityForce = 15;
-    public const int HorizontalBorder = 16;
-    public const int HorizontalSpeed = 17;
-    public const int ID = 18;
-    public const int Interacted = 19;
-    public const int Length = 20;
-    public const int MakingJump = 21;
-    public const int Movable = 22;
-    public const int MovePosition = 23;
-    public const int Obtained = 24;
-    public const int PlayerCharacter = 25;
-    public const int PlayerCharacterConfiguration = 26;
-    public const int PlayingStarted = 27;
-    public const int Position = 28;
-    public const int Rotation = 29;
-    public const int ValuePanel = 30;
-    public const int ValuePanelFunction = 31;
-    public const int ValuePanelValue = 32;
-    public const int WalkingSpeed = 33;
-    public const int PositionListener = 34;
-    public const int RotationListener = 35;
 
-    public const int TotalComponents = 36;
+
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "DestroyedListener",
-        "AccumulatedJumpForce",
-        "Camera",
-        "CollidedEntityID",
-        "Collisionable",
-        "CreatePlayerCharacter",
-        "Destroyable",
-        "Destroyed",
-        "DirectionalForce",
-        "FollowingEntityID",
-        "FollowingOffset",
-        "FollowingPlayerCharacter",
-        "FollowSpeed",
-        "GameBoard",
-        "GameBoardEndPart",
-        "GravityForce",
-        "HorizontalBorder",
-        "HorizontalSpeed",
-        "ID",
-        "Interacted",
-        "Length",
-        "MakingJump",
-        "Movable",
-        "MovePosition",
-        "Obtained",
-        "PlayerCharacter",
-        "PlayerCharacterConfiguration",
-        "PlayingStarted",
-        "Position",
-        "Rotation",
-        "ValuePanel",
-        "ValuePanelFunction",
-        "ValuePanelValue",
-        "WalkingSpeed",
-        "PositionListener",
-        "RotationListener"
+
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(DestroyedListenerComponent),
-        typeof(Kernel.Components.AccumulatedJumpForce),
-        typeof(Kernel.Components.Camera),
-        typeof(Kernel.Components.CollidedEntityID),
-        typeof(Kernel.Components.Collisionable),
-        typeof(Kernel.Components.CreatePlayerCharacter),
-        typeof(Kernel.Components.Destroyable),
-        typeof(Kernel.Components.Destroyed),
-        typeof(Kernel.Components.DirectionalForce),
-        typeof(Kernel.Components.FollowingEntityID),
-        typeof(Kernel.Components.FollowingOffset),
-        typeof(Kernel.Components.FollowingPlayerCharacter),
-        typeof(Kernel.Components.FollowSpeed),
-        typeof(Kernel.Components.GameBoard),
-        typeof(Kernel.Components.GameBoardEndPart),
-        typeof(Kernel.Components.GravityForce),
-        typeof(Kernel.Components.HorizontalBorder),
-        typeof(Kernel.Components.HorizontalSpeed),
-        typeof(Kernel.Components.ID),
-        typeof(Kernel.Components.Interacted),
-        typeof(Kernel.Components.Length),
-        typeof(Kernel.Components.MakingJump),
-        typeof(Kernel.Components.Movable),
-        typeof(Kernel.Components.MovePosition),
-        typeof(Kernel.Components.Obtained),
-        typeof(Kernel.Components.PlayerCharacter),
-        typeof(Kernel.Components.PlayerCharacterConfiguration),
-        typeof(Kernel.Components.PlayingStarted),
-        typeof(Kernel.Components.Position),
-        typeof(Kernel.Components.Rotation),
-        typeof(Kernel.Components.ValuePanel),
-        typeof(Kernel.Components.ValuePanelFunction),
-        typeof(Kernel.Components.ValuePanelValue),
-        typeof(Kernel.Components.WalkingSpeed),
-        typeof(PositionListenerComponent),
-        typeof(RotationListenerComponent)
+
     };
 }

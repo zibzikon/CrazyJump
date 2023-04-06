@@ -1,7 +1,9 @@
 using Kernel.Systems.Camera;
+using Kernel.Systems.HeightsDiapasonSystems;
 using Kernel.Systems.Input;
 using Kernel.Systems.Level;
-using Kernel.Systems.PlayerCharacter;
+using Kernel.Systems.Player;
+using Kernel.Systems.PlayerCharacterSystems;
 using Zenject;
 
 namespace Kernel.Systems.Registration
@@ -13,19 +15,24 @@ namespace Kernel.Systems.Registration
             AddInjected<RegisterInputSystem>();
             AddInjected<EmmitInputSystem>();
             
-            AddInjected<PreviousGameBoardDestroyingSystem>();
+            AddInjected<PreviousLevelDestroyingSystem>();
             AddInjected<GameBoardGenerationSystem>();
             AddInjected<GameBoardEndPartCreationSystem>();
             AddInjected<GameBoardValuePlanesGenerationSystem>();
             
+            AddInjected<HeightsDiapasonCreationSystem>();
+            AddInjected<HeightsDiapasonRowsCreationSystem>();
+            
+            AddInjected<PlayerCharacterResetOnNewLevelGeneratedSystem>();
             AddInjected<PlayerCharacterCreationSystem>();
             AddInjected<PlayerCharacterPlayingStartSystem>();
             AddInjected<PlayerCharacterWithPanelInteractionSystem>();
-            AddInjected<PlayerCharacterHorizontalMoveSystem>();
+            AddInjected<PlayerCharacterMovingDirectionSystem>();
+            AddInjected<PlayerCharacterRotationSystem>();
             AddInjected<PlayerCharacterWalkSystem>();
             AddInjected<PlayerCharacterJumpSystem>();
             AddInjected<PlayerCharacterGravitySystem>();
-            AddInjected<OnPlayerReachesLevelEndSystem>();
+            AddInjected<OnPlayerCharacterReachesLevelEndSystem>();
             
             AddInjected<InitializeFollowingCameraOnPlayerCreatedSystem>();
             AddInjected<CameraFollowingPlayerCharacterSystem>();
@@ -34,7 +41,9 @@ namespace Kernel.Systems.Registration
             
             AddInjected<GameEventSystems>();
             
+            AddInjected<CleanupPlayingStartedEntitySystem>();
             AddInjected<CleanupDestroyedEntitiesSystem>();
+            AddInjected<CleanupLevelGenerationComponentsSystem>();
         }
     }
 }

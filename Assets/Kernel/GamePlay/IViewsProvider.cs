@@ -8,5 +8,6 @@ namespace Kernel.GamePlay
         EntityView GetPlayerCharacterView(int index);
         EntityView GetGameBoardView(int index);
         EntityView GetGameBoardEndPartView(int index);
+        EntityView GetHeightsDiapasonPartView(int index);
     }
 }

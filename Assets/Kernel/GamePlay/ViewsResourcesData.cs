@@ -10,5 +10,6 @@ namespace Kernel.GamePlay
         public List<string> PlayerCharacterViews;
         public List<string> GameBoardViews;
         public List<string> GameBoardEndPartViews;
+        public List<string> HeightsDiapasonPartViews;
     }
 }

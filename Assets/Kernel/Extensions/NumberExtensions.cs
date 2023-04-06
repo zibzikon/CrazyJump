@@ -1,3 +1,4 @@
+using Kernel.Services;
 using UnityEngine;
 
 namespace Kernel.Extensions
@@ -5,6 +6,8 @@ namespace Kernel.Extensions
     public static class NumberExtensions
     {
         public static bool InRange(this int number, int min, int max) => number >= min && number <= max;
+        public static float Clamp(this float number, float min, float max) => Mathf.Clamp(number, min, max);
+        public static float Clamp(this float number, RangeFloat range) => number.Clamp(range.start, range.end);
 
         public static Vector3 AsVector3(this float value) => new(value, value, value);
         public static Vector3 AsVector2(this float value) => new Vector2(value, value);

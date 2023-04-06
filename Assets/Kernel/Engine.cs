@@ -35,22 +35,19 @@ namespace Kernel
         public void BootstrapLevel()
         {
             GenerateNewLevel();
-            _level.generateNewLevelEntity.AddLevelDifficulty(10);
             
-            var createPlayerCharacterEntity = _game.CreateEntity();
-            createPlayerCharacterEntity.isCreatePlayerCharacter = true;
-            createPlayerCharacterEntity.AddPlayerCharacterConfiguration(_playerCharacterConfiguration);
+            _level.generateNewLevelEntity.isCreatePlayerCharacter = true;
         }
         
         public void GenerateNewLevel()
         {
-            _level.isGenerateNewLevel = false;
             _level.isGenerateNewLevel = true;
+            _level.generateNewLevelEntity.AddLevelDifficulty(100);
+            _level.generateNewLevelEntity.AddPlayerCharacterConfiguration(_playerCharacterConfiguration);
         }
 
         public void StartPlaying()
         {
-            _game.isPlayingStarted = false;
             _game.isPlayingStarted = true;
         }
         

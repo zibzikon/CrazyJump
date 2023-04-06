@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c287657dc5b4381ab50662120248316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _followingOffset: {x: 0, y: 6, z: -5.5}
+  _followingOffset: {x: 0, y: 3.5, z: -5}
   _followingSpeed: 2.5
 --- !u!114 &8924073655477162251
 MonoBehaviour:

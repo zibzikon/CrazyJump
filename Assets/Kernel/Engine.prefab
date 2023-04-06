@@ -44,4 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801c48f650bd4b5a8fbca71cbd309d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerCharacter: {fileID: 0}
+  _playerCharacterConfiguration:
+    WalkingSpeed: 12
+    HorizontalSpeed: 12
+    RotationSpeed: 1
+    StartAccumulatedJumpForce: 5
+    HorizontalMovingBorder:
+      start: -1.5
+      end: 1.5
+    RotationYBorder:
+      start: -75
+      end: 75
