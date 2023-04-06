@@ -5,6 +5,7 @@ using Kernel.GamePlay;
 using Kernel.GamePlay.GameBoard;
 using Kernel.GamePlay.GameBoard.Interfaces;
 using Kernel.GamePlay.GameBoardEndPart;
+using Kernel.GamePlay.HeightsDiapason;
 using Kernel.GamePlay.PlayerCharacter;
 using Kernel.GamePlay.ValuePanel;
 using Kernel.GamePlay.ValuePanel.Interfaces;
@@ -22,7 +23,7 @@ namespace Kernel.Installers
     {
         [Required, SerializeField] private Engine _engine;
         [SerializeField] private List<GameBoardChunkConfiguration> _gameBoardChunksConfigurations;
-        [FormerlySerializedAs("_viewResourcesData")] [SerializeField] private ViewsResourcesData viewsResourcesData;
+        [SerializeField] private ViewsResourcesData _viewsResourcesData;
         
         public override void InstallBindings()
         {
@@ -36,10 +37,11 @@ namespace Kernel.Installers
             Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
             Container.Bind<IEntityIdentifierGenerator>().To<EntityIdentifierGenerator>().AsSingle();
             
-            Container.Bind<IViewsProvider>().To<ViewsProvider>().AsSingle().WithArguments(viewsResourcesData);
+            Container.Bind<IViewsProvider>().To<ViewsProvider>().AsSingle().WithArguments(_viewsResourcesData);
             
             Container.Bind<IGameBoardConfigurationGenerator>().To<RandomGameBoardConfigurationGenerator>().AsSingle().WithArguments(_gameBoardChunksConfigurations.ToArray());
             Container.Bind<IGameBoardViewFactory>().To<GameBoardViewFactory>().AsSingle();
+            Container.Bind<IHeightsDiapasonRowViewFactory>().To<HeightsDiapasonRowViewFactory>().AsSingle();
             
             Container.Bind<IGameBoardEndPartViewFactory>().To<GameBoardEndPartViewFactory>().AsSingle();
         

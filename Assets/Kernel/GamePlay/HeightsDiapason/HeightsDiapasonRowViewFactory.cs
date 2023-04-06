@@ -8,6 +8,6 @@ namespace Kernel.GamePlay.HeightsDiapason
         public HeightsDiapasonRowViewFactory(IEntityViewFactory entityViewFactory, IViewsProvider viewsProvider) : base(entityViewFactory, viewsProvider) { }
 
         public EntityView CreateHeightsDiapasonPartView()
-            => CreateViewFromPrefab(ViewsProvider.GetHeightsDiapasonPartView(0));
+            => CreateViewFromPrefab(ViewsProvider.GetHeightsDiapasonPartView(0), "Heights Diapason Row");
     }
 }

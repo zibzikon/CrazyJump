@@ -9,11 +9,6 @@ namespace Kernel.GamePlay.PlayerCharacter
             : base(entityViewFactory, viewsProvider) { }
 
         public EntityView CreatePlayerView()
-            => CreateViewFromPrefab(ViewsProvider.GetPlayerCharacterView(0));
-    }
-
-    public interface IPlayerCharacterViewFactory
-    {
-        EntityView CreatePlayerView();
+            => CreateViewFromPrefab(ViewsProvider.GetPlayerCharacterView(0), "Player Character");
     }
 }

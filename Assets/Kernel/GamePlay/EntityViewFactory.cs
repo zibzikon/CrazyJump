@@ -15,7 +15,7 @@ namespace Kernel.GamePlay
             ViewsProvider = viewsProvider;
         }
 
-        protected EntityView CreateViewFromPrefab(EntityView entityView)
-            => _entityViewFactory.CreateFromPrefab(entityView);
+        protected EntityView CreateViewFromPrefab(EntityView entityView, string name = "Entity View")
+            => _entityViewFactory.CreateFromPrefab(entityView, name);
     }
 }

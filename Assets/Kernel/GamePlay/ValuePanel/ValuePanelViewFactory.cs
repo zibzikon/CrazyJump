@@ -12,7 +12,7 @@ namespace Kernel.GamePlay.ValuePanel
             : base(entityViewFactory, viewsProvider) { }
 
         public EntityView CreateValuePanelView(ValuePanelConfiguration configuration)
-            => CreateViewFromPrefab(ViewsProvider.GetValuePanelView(0));
+            => CreateViewFromPrefab(ViewsProvider.GetValuePanelView(0), "Value Panel");
     
     }
 }

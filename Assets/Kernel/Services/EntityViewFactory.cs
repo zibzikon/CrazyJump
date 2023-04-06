@@ -13,9 +13,9 @@ namespace Kernel.Services
             _resourcesLoader = resourcesLoader;
         }
 
-        public EntityView CreateFromPrefab(EntityView prefab) => _viewService.CreateViewFromPrefab(prefab);
+        public EntityView CreateFromPrefab(EntityView prefab, string instanceName = "Entity View") => _viewService.CreateViewFromPrefab(prefab, instanceName);
 
-        public EntityView CreateFromResourceName(string name) => CreateFromPrefab(_resourcesLoader.Load<EntityView>(name));
+        public EntityView CreateFromResourceName(string name, string instanceName = "Entity View") => CreateFromPrefab(_resourcesLoader.Load<EntityView>(name), instanceName);
 
         public EntityView CreateEmpty() => _viewService.CreateEmpty().AddComponent<EntityView>();
     }
