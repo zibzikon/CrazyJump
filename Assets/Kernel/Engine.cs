@@ -42,6 +42,7 @@ namespace Kernel
         public void GenerateNewLevel()
         {
             _level.isGenerateNewLevel = true;
+            
             _level.generateNewLevelEntity.AddLevelDifficulty(100);
             _level.generateNewLevelEntity.AddPlayerCharacterConfiguration(_playerCharacterConfiguration);
         }

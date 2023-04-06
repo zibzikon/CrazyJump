@@ -8,15 +8,27 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
+    public const int HorizontalAxis = 0;
+    public const int LeftMouse = 1;
+    public const int Mouse = 2;
+    public const int RightMouse = 3;
+    public const int VerticalAxis = 4;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
-
+        "HorizontalAxis",
+        "LeftMouse",
+        "Mouse",
+        "RightMouse",
+        "VerticalAxis"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(Kernel.Components.HorizontalAxis),
+        typeof(Kernel.Components.LeftMouse),
+        typeof(Kernel.Components.Mouse),
+        typeof(Kernel.Components.RightMouse),
+        typeof(Kernel.Components.VerticalAxis)
     };
 }

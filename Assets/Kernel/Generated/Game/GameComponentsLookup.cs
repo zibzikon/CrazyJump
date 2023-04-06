@@ -8,15 +8,147 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
+    public const int DestroyedListener = 0;
+    public const int AccumulatedJumpForce = 1;
+    public const int Camera = 2;
+    public const int CollidedEntityID = 3;
+    public const int Collisionable = 4;
+    public const int DefaultRotation = 5;
+    public const int Destroyable = 6;
+    public const int Destroyed = 7;
+    public const int DirectionalForce = 8;
+    public const int FollowingEntityID = 9;
+    public const int FollowingOffset = 10;
+    public const int FollowingPlayerCharacter = 11;
+    public const int FollowSpeed = 12;
+    public const int GameBoard = 13;
+    public const int GameBoardEndPart = 14;
+    public const int GravityForce = 15;
+    public const int Height = 16;
+    public const int HeightsDiapason = 17;
+    public const int HeightsDiapasonRow = 18;
+    public const int HorizontalBorder = 19;
+    public const int HorizontalSpeed = 20;
+    public const int ID = 21;
+    public const int Interacted = 22;
+    public const int Length = 23;
+    public const int MakingJump = 24;
+    public const int MaxHeight = 25;
+    public const int Movable = 26;
+    public const int MovePosition = 27;
+    public const int MovingDirection = 28;
+    public const int Obtained = 29;
+    public const int PlayerCharacter = 30;
+    public const int PlayingStarted = 31;
+    public const int Position = 32;
+    public const int Rotation = 33;
+    public const int RotationSpeed = 34;
+    public const int RotationYBorder = 35;
+    public const int RowPosition = 36;
+    public const int RowsCount = 37;
+    public const int TargetRotation = 38;
+    public const int ValuePanel = 39;
+    public const int ValuePanelFunction = 40;
+    public const int ValuePanelValue = 41;
+    public const int WalkingSpeed = 42;
+    public const int PositionListener = 43;
+    public const int RotationListener = 44;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 45;
 
     public static readonly string[] componentNames = {
-
+        "DestroyedListener",
+        "AccumulatedJumpForce",
+        "Camera",
+        "CollidedEntityID",
+        "Collisionable",
+        "DefaultRotation",
+        "Destroyable",
+        "Destroyed",
+        "DirectionalForce",
+        "FollowingEntityID",
+        "FollowingOffset",
+        "FollowingPlayerCharacter",
+        "FollowSpeed",
+        "GameBoard",
+        "GameBoardEndPart",
+        "GravityForce",
+        "Height",
+        "HeightsDiapason",
+        "HeightsDiapasonRow",
+        "HorizontalBorder",
+        "HorizontalSpeed",
+        "ID",
+        "Interacted",
+        "Length",
+        "MakingJump",
+        "MaxHeight",
+        "Movable",
+        "MovePosition",
+        "MovingDirection",
+        "Obtained",
+        "PlayerCharacter",
+        "PlayingStarted",
+        "Position",
+        "Rotation",
+        "RotationSpeed",
+        "RotationYBorder",
+        "RowPosition",
+        "RowsCount",
+        "TargetRotation",
+        "ValuePanel",
+        "ValuePanelFunction",
+        "ValuePanelValue",
+        "WalkingSpeed",
+        "PositionListener",
+        "RotationListener"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(DestroyedListenerComponent),
+        typeof(Kernel.Components.AccumulatedJumpForce),
+        typeof(Kernel.Components.Camera),
+        typeof(Kernel.Components.CollidedEntityID),
+        typeof(Kernel.Components.Collisionable),
+        typeof(Kernel.Components.DefaultRotation),
+        typeof(Kernel.Components.Destroyable),
+        typeof(Kernel.Components.Destroyed),
+        typeof(Kernel.Components.DirectionalForce),
+        typeof(Kernel.Components.FollowingEntityID),
+        typeof(Kernel.Components.FollowingOffset),
+        typeof(Kernel.Components.FollowingPlayerCharacter),
+        typeof(Kernel.Components.FollowSpeed),
+        typeof(Kernel.Components.GameBoard),
+        typeof(Kernel.Components.GameBoardEndPart),
+        typeof(Kernel.Components.GravityForce),
+        typeof(Kernel.Components.Height),
+        typeof(Kernel.Components.HeightsDiapason),
+        typeof(Kernel.Components.HeightsDiapasonRow),
+        typeof(Kernel.Components.HorizontalBorder),
+        typeof(Kernel.Components.HorizontalSpeed),
+        typeof(Kernel.Components.ID),
+        typeof(Kernel.Components.Interacted),
+        typeof(Kernel.Components.Length),
+        typeof(Kernel.Components.MakingJump),
+        typeof(Kernel.Components.MaxHeight),
+        typeof(Kernel.Components.Movable),
+        typeof(Kernel.Components.MovePosition),
+        typeof(Kernel.Components.MovingDirection),
+        typeof(Kernel.Components.Obtained),
+        typeof(Kernel.Components.PlayerCharacter),
+        typeof(Kernel.Components.PlayingStarted),
+        typeof(Kernel.Components.Position),
+        typeof(Kernel.Components.Rotation),
+        typeof(Kernel.Components.RotationSpeed),
+        typeof(Kernel.Components.RotationYBorder),
+        typeof(Kernel.Components.RowPosition),
+        typeof(Kernel.Components.RowsCount),
+        typeof(Kernel.Components.TargetRotation),
+        typeof(Kernel.Components.ValuePanel),
+        typeof(Kernel.Components.ValuePanelFunction),
+        typeof(Kernel.Components.ValuePanelValue),
+        typeof(Kernel.Components.WalkingSpeed),
+        typeof(PositionListenerComponent),
+        typeof(RotationListenerComponent)
     };
 }

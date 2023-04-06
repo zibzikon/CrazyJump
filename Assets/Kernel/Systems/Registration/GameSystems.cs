@@ -12,6 +12,8 @@ namespace Kernel.Systems.Registration
     {
         public GameSystems(DiContainer container) : base(container)
         {
+            AddInjected<InitializeGameSystem>();
+            
             AddInjected<RegisterInputSystem>();
             AddInjected<EmmitInputSystem>();
             

@@ -8,15 +8,27 @@
 //------------------------------------------------------------------------------
 public static class LevelComponentsLookup {
 
+    public const int CreatePlayerCharacter = 0;
+    public const int GameBoardConfiguration = 1;
+    public const int GenerateNewLevel = 2;
+    public const int LevelDifficulty = 3;
+    public const int PlayerCharacterConfiguration = 4;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
-
+        "CreatePlayerCharacter",
+        "GameBoardConfiguration",
+        "GenerateNewLevel",
+        "LevelDifficulty",
+        "PlayerCharacterConfiguration"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(Kernel.Components.CreatePlayerCharacter),
+        typeof(Kernel.Components.GameBoardConfiguration),
+        typeof(Kernel.Components.GenerateNewLevel),
+        typeof(Kernel.Components.LevelDifficulty),
+        typeof(Kernel.Components.PlayerCharacterConfiguration)
     };
 }

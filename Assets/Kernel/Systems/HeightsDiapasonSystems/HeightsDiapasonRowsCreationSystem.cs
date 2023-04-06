@@ -34,12 +34,12 @@ namespace Kernel.Systems.HeightsDiapasonSystems
                 var rowHeight = heightsDiapason.maxHeight.Value / rowsCount;
                 
                 for (int i = 0; i < rowsCount ; i++)
-                    CreateRow(i, rowHeight, heightsDiapason.position.Value);
+                    CreateRow(i, rowHeight, heightsDiapason.position.Value, rowsCount);
                 
             }
         }
 
-        private void CreateRow(int position, float height, Vector3 horizontalPosition)
+        private void CreateRow(int position, float height, Vector3 horizontalPosition, int rowsCount)
         {
             var highness = position * height;
 
@@ -47,6 +47,8 @@ namespace Kernel.Systems.HeightsDiapasonSystems
             entity.isHeightsDiapasonRow = true;
 
             entity.AddHeight(height);
+            entity.AddRowPosition(position);
+            entity.AddRowsCount(rowsCount);
             entity.ReplacePosition(horizontalPosition + highness.AsYVector3());
             _viewFactory.CreateHeightsDiapasonPartView().Initialize(entity);
         }
