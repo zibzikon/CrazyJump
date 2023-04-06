@@ -47,7 +47,7 @@ namespace Kernel.Components
     [Game] public class FollowingOffset : IComponent { public Vector3 Value; } 
     [Game] public class RotationSpeed : IComponent { public float Value; }
     [Game] public class AccumulatedJumpForce : IComponent { public float Value; }
-    [Game] public class ValuePanelFunction : IComponent { public ValuePanelFunctionType Value; }
+    [Game] public class ValuePanelFunction : IComponent { public MathematicalFunctionType Value; }
     [Game] public class ValuePanelValue : IComponent { public float Value; }
     [Game] public class HorizontalSpeed : IComponent { public float Value; }
     [Game] public class WalkingSpeed : IComponent { public float Value; }

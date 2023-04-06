@@ -8,7 +8,7 @@ using Kernel.Utils.Exceptions;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-using static Kernel.GamePlay.ValuePanel.Data.ValuePanelFunctionType;
+using static Kernel.GamePlay.ValuePanel.Data.MathematicalFunctionType;
 
 namespace Kernel.GamePlay.ValuePanel
 {
@@ -37,7 +37,7 @@ namespace Kernel.GamePlay.ValuePanel
             _renderer.material = SelectMaterial(functionType);
         }
 
-        private Material SelectMaterial(ValuePanelFunctionType functionType) =>
+        private Material SelectMaterial(MathematicalFunctionType functionType) =>
             functionType switch
             {
                 Add => _positiveFunctionMaterial,
@@ -47,7 +47,7 @@ namespace Kernel.GamePlay.ValuePanel
                 _ => throw new ArgumentOutOfRangeException(nameof(functionType), functionType, null)
             };
 
-        private char SelectFunctionCharacter(ValuePanelFunctionType functionType) => 
+        private char SelectFunctionCharacter(MathematicalFunctionType functionType) => 
             functionType switch
             {
                 Add => '+',

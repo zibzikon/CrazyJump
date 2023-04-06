@@ -1,6 +1,6 @@
 namespace Kernel.GamePlay.ValuePanel.Data
 {
-    public enum ValuePanelFunctionType
+    public enum MathematicalFunctionType
     {
         Add,
         Subtract,

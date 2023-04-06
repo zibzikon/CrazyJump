@@ -6,7 +6,7 @@ namespace Kernel.GamePlay.ValuePanel.Data
     public class ValuePanelConfiguration
     {
         public float Value;
-        public ValuePanelFunctionType FunctionType;
+        public MathematicalFunctionType FunctionType;
         public ValuePanelMovingType MovingType;
         public ValuePanelPlacementType PlacementType;
     }

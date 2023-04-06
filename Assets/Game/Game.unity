@@ -1043,7 +1043,7 @@ MonoBehaviour:
       FunctionType: 2
       MovingType: 0
       PlacementType: 2
-  viewsResourcesData:
+  _viewsResourcesData:
     ValuePanelViews:
     - Prefabs/ValuePanel
     PlayerCharacterViews:
@@ -1052,6 +1052,8 @@ MonoBehaviour:
     - Prefabs/GameBoard
     GameBoardEndPartViews:
     - Prefabs/GameBoardEndPart
+    HeightsDiapasonPartViews:
+    - Prefabs/HeightsDiapasonRow
 --- !u!114 &1056458184552777644
 MonoBehaviour:
   m_ObjectHideFlags: 0

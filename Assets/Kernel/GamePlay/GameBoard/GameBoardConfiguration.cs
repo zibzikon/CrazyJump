@@ -13,9 +13,10 @@ namespace Kernel.GamePlay.GameBoard
         public float MaxPossibleJumpForce;
         public GameBoardChunkConfiguration[] Chunks;
 
-        public GameBoardConfiguration(float spacingBetweenChunks, GameBoardChunkConfiguration[] chunks, Dictionary<ValuePanelPlacementType, float> horizontalPositions)
+        public GameBoardConfiguration(float spacingBetweenChunks, float maxPossibleJumpForce, GameBoardChunkConfiguration[] chunks, Dictionary<ValuePanelPlacementType, float> horizontalPositions)
         {
             SpacingBetweenChunks = spacingBetweenChunks;
+            MaxPossibleJumpForce = maxPossibleJumpForce;
             Chunks = chunks;
             HorizontalPositions = horizontalPositions;
         }

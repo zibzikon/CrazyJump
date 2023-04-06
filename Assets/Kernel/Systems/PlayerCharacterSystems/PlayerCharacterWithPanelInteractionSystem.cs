@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Entitas;
+using Kernel.Extensions;
 using Kernel.GamePlay.ValuePanel.Data;
 using static GameMatcher;
-using static Kernel.GamePlay.ValuePanel.Data.ValuePanelFunctionType;
+using static Kernel.GamePlay.ValuePanel.Data.MathematicalFunctionType;
 
 namespace Kernel.Systems.PlayerCharacterSystems
 {
@@ -28,11 +29,9 @@ namespace Kernel.Systems.PlayerCharacterSystems
             {
                 if(character.collidedEntityID.Value != collidedPanel.iD.Value) continue;
                 
-                character.ReplaceAccumulatedJumpForce(CalculateNewJumpForce(
-                    character.accumulatedJumpForce.Value,
-                    collidedPanel.valuePanelValue.Value,
-                    collidedPanel.valuePanelFunction.Value
-                    ));
+                character.ReplaceAccumulatedJumpForce(character.accumulatedJumpForce.Value.ProcessMathematicalFunction(collidedPanel.valuePanelFunction.Value,
+                        collidedPanel.valuePanelValue.Value)
+                );
                 
                 entitiesToInteract.Add(collidedPanel);
             }
@@ -40,15 +39,7 @@ namespace Kernel.Systems.PlayerCharacterSystems
             entitiesToInteract.ForEach(x => x.isInteracted = true);
         }
 
-        private float CalculateNewJumpForce(float accumulatedForce, float value, ValuePanelFunctionType functionType)
-            => functionType switch
-            {
-                Add => accumulatedForce + value,
-                Subtract => accumulatedForce - value,
-                Divide => accumulatedForce / value,
-                Multiply => accumulatedForce * value,
-                _ => throw new InvalidOperationException()
-            };
+     
 
     }
 }

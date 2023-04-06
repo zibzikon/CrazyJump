@@ -7,7 +7,7 @@ namespace Kernel.GamePlay.ValuePanel
     public class ValuePanelRegister : MonoBehaviour, IGameEntityRegister
     {
         [SerializeField] private int _value;
-        [SerializeField] private ValuePanelFunctionType _function;
+        [SerializeField] private MathematicalFunctionType _function;
         
         public void Register(GameEntity entity)
         {

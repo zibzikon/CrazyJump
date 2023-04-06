@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 1544343489343462960}
   - component: {fileID: 4852955645727999847}
   - component: {fileID: 2431427974616677221}
+  - component: {fileID: 2233330213953953788}
   - component: {fileID: 8909982582007909788}
   m_Layer: 6
   m_Name: GameBoardEndPart
@@ -212,6 +213,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff17bbc5262f40778a48556bccebe47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2233330213953953788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211412298463271644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a927c09ddfbb425b8a2847add2102163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _length: 15
 --- !u!114 &8909982582007909788
 MonoBehaviour:
   m_ObjectHideFlags: 0
