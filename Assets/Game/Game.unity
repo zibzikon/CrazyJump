@@ -941,71 +941,13 @@ MonoBehaviour:
   _gameBoardChunksConfigurations:
   - SelectionDifficulty: 1
     Panels:
-    - Value: 2
-      FunctionType: 2
-      MovingType: 0
-      PlacementType: 1
-  - SelectionDifficulty: 1
-    Panels:
-    - Value: 20
-      FunctionType: 1
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 1
-    Panels:
-    - Value: 4
-      FunctionType: 2
-      MovingType: 0
-      PlacementType: 0
-  - SelectionDifficulty: 1
-    Panels:
-    - Value: 50
+    - Value: 1
       FunctionType: 0
       MovingType: 0
       PlacementType: 0
-  - SelectionDifficulty: 1
+  - SelectionDifficulty: 2
     Panels:
     - Value: 5
-      FunctionType: 1
-      MovingType: 0
-      PlacementType: 1
-    - Value: 10
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 2
-    Panels:
-    - Value: 0
-      FunctionType: 2
-      MovingType: 0
-      PlacementType: 1
-    - Value: 20
-      FunctionType: 1
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 2
-    Panels:
-    - Value: 15
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 1
-    - Value: 12
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 3
-    Panels:
-    - Value: 10
-      FunctionType: 3
-      MovingType: 0
-      PlacementType: 1
-    - Value: 100
-      FunctionType: 1
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 3
-    Panels:
-    - Value: 50
       FunctionType: 0
       MovingType: 0
       PlacementType: 1
@@ -1013,34 +955,24 @@ MonoBehaviour:
       FunctionType: 2
       MovingType: 0
       PlacementType: 2
-  - SelectionDifficulty: 4
+  - SelectionDifficulty: 2
     Panels:
-    - Value: 150
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 1
-    - Value: 20
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 4
-    Panels:
-    - Value: 25
+    - Value: 2
       FunctionType: 3
       MovingType: 0
       PlacementType: 1
-    - Value: 100
-      FunctionType: 0
+    - Value: 10
+      FunctionType: 1
       MovingType: 0
       PlacementType: 2
-  - SelectionDifficulty: 4
+  - SelectionDifficulty: 2
     Panels:
-    - Value: 250
+    - Value: 5
       FunctionType: 0
       MovingType: 0
       PlacementType: 1
     - Value: 5
-      FunctionType: 2
+      FunctionType: 1
       MovingType: 0
       PlacementType: 2
   _viewsResourcesData:
@@ -1085,7 +1017,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5944675610341182388, guid: 7c1e533d115787c4cb1448f10c84a217, type: 3}
       propertyPath: _playerCharacterConfiguration.WalkingSpeed
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944675610341182388, guid: 7c1e533d115787c4cb1448f10c84a217, type: 3}
+      propertyPath: _playerCharacterConfiguration.RotationSensitivity
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 7154470331930863267, guid: 7c1e533d115787c4cb1448f10c84a217, type: 3}
       propertyPath: m_RootOrder

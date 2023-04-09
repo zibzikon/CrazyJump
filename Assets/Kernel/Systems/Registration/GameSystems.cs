@@ -25,7 +25,7 @@ namespace Kernel.Systems.Registration
             AddInjected<HeightsDiapasonCreationSystem>();
             AddInjected<HeightsDiapasonRowsCreationSystem>();
             
-            AddInjected<PlayerCharacterResetOnNewLevelGeneratedSystem>();
+            AddInjected<PlayerCharacterResetSystem>();
             AddInjected<PlayerCharacterCreationSystem>();
             AddInjected<PlayerCharacterPlayingStartSystem>();
             AddInjected<PlayerCharacterWithPanelInteractionSystem>();
@@ -33,8 +33,8 @@ namespace Kernel.Systems.Registration
             AddInjected<PlayerCharacterRotationSystem>();
             AddInjected<PlayerCharacterWalkSystem>();
             AddInjected<PlayerCharacterJumpSystem>();
-            AddInjected<PlayerCharacterGravitySystem>();
-            AddInjected<OnPlayerCharacterReachesLevelEndSystem>();
+            AddInjected<PlayerCharacterFlyingSystem>();
+            AddInjected<PlayerCharacterJumpMakingSystem>();
             
             AddInjected<InitializeFollowingCameraOnPlayerCreatedSystem>();
             AddInjected<CameraFollowingPlayerCharacterSystem>();

@@ -5,11 +5,11 @@ using static LevelMatcher;
 
 namespace Kernel.Systems.Player
 {
-    public class PlayerCharacterResetOnNewLevelGeneratedSystem : ReactiveSystem<LevelEntity>
+    public class PlayerCharacterResetSystem : ReactiveSystem<LevelEntity>
     {
         private readonly IGroup<GameEntity> _playerCharacters;
 
-        public PlayerCharacterResetOnNewLevelGeneratedSystem(LevelContext levelContext, GameContext  gameContext) : base(levelContext)
+        public PlayerCharacterResetSystem(LevelContext levelContext, GameContext  gameContext) : base(levelContext)
         {
             _playerCharacters = gameContext.GetGroup(GameMatcher.PlayerCharacter);
         }

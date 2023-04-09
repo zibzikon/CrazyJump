@@ -27,34 +27,37 @@ public static class GameComponentsLookup {
     public const int Height = 16;
     public const int HeightsDiapason = 17;
     public const int HeightsDiapasonRow = 18;
-    public const int HorizontalBorder = 19;
-    public const int HorizontalSpeed = 20;
-    public const int ID = 21;
-    public const int Interacted = 22;
-    public const int Length = 23;
-    public const int MakingJump = 24;
-    public const int MaxHeight = 25;
-    public const int Movable = 26;
-    public const int MovePosition = 27;
-    public const int MovingDirection = 28;
-    public const int Obtained = 29;
-    public const int PlayerCharacter = 30;
-    public const int PlayingStarted = 31;
-    public const int Position = 32;
-    public const int Rotation = 33;
-    public const int RotationSpeed = 34;
-    public const int RotationYBorder = 35;
-    public const int RowPosition = 36;
-    public const int RowsCount = 37;
-    public const int TargetRotation = 38;
-    public const int ValuePanel = 39;
-    public const int ValuePanelFunction = 40;
-    public const int ValuePanelValue = 41;
-    public const int WalkingSpeed = 42;
-    public const int PositionListener = 43;
-    public const int RotationListener = 44;
+    public const int Hooked = 19;
+    public const int HookedEntityID = 20;
+    public const int Hooking = 21;
+    public const int HorizontalBorder = 22;
+    public const int HorizontalSpeed = 23;
+    public const int ID = 24;
+    public const int Interacted = 25;
+    public const int Length = 26;
+    public const int MakingJump = 27;
+    public const int MaxHeight = 28;
+    public const int Movable = 29;
+    public const int MovePosition = 30;
+    public const int MovingDirection = 31;
+    public const int Obtained = 32;
+    public const int PlayerCharacter = 33;
+    public const int PlayingStarted = 34;
+    public const int Position = 35;
+    public const int Rotation = 36;
+    public const int RotationSensitivity = 37;
+    public const int RotationYBorder = 38;
+    public const int RowPosition = 39;
+    public const int RowsCount = 40;
+    public const int TargetRotation = 41;
+    public const int ValuePanel = 42;
+    public const int ValuePanelFunction = 43;
+    public const int ValuePanelValue = 44;
+    public const int WalkingSpeed = 45;
+    public const int PositionListener = 46;
+    public const int RotationListener = 47;
 
-    public const int TotalComponents = 45;
+    public const int TotalComponents = 48;
 
     public static readonly string[] componentNames = {
         "DestroyedListener",
@@ -76,6 +79,9 @@ public static class GameComponentsLookup {
         "Height",
         "HeightsDiapason",
         "HeightsDiapasonRow",
+        "Hooked",
+        "HookedEntityID",
+        "Hooking",
         "HorizontalBorder",
         "HorizontalSpeed",
         "ID",
@@ -91,7 +97,7 @@ public static class GameComponentsLookup {
         "PlayingStarted",
         "Position",
         "Rotation",
-        "RotationSpeed",
+        "RotationSensitivity",
         "RotationYBorder",
         "RowPosition",
         "RowsCount",
@@ -124,6 +130,9 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.Height),
         typeof(Kernel.Components.HeightsDiapason),
         typeof(Kernel.Components.HeightsDiapasonRow),
+        typeof(Kernel.Components.Hooked),
+        typeof(Kernel.Components.HookedEntityID),
+        typeof(Kernel.Components.Hooking),
         typeof(Kernel.Components.HorizontalBorder),
         typeof(Kernel.Components.HorizontalSpeed),
         typeof(Kernel.Components.ID),
@@ -139,7 +148,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.PlayingStarted),
         typeof(Kernel.Components.Position),
         typeof(Kernel.Components.Rotation),
-        typeof(Kernel.Components.RotationSpeed),
+        typeof(Kernel.Components.RotationSensitivity),
         typeof(Kernel.Components.RotationYBorder),
         typeof(Kernel.Components.RowPosition),
         typeof(Kernel.Components.RowsCount),

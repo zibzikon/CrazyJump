@@ -19,8 +19,6 @@ namespace Kernel.GamePlay.Collision
         private void OnTriggerExit(Collider other)
         {
             if(!TryGetEntity(other, out var collidedEntity) || !Entity.hasCollidedEntityID) return;
-
-            if (Entity.collidedEntityID.Value != collidedEntity.iD.Value) throw new InvalidOperationException();
             
             Entity.RemoveCollidedEntityID();
         }

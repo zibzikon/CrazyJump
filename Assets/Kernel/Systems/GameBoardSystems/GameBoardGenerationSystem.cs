@@ -37,7 +37,7 @@ namespace Kernel.Systems.Level
             foreach (var level in entities)
             {
 
-                var configuration = _gameBoardConfigurationGenerator.GenerateConfiguration(level.levelDifficulty.Value);
+                var configuration = _gameBoardConfigurationGenerator.GenerateConfiguration(level.levelDifficulty.Value, 5f);
                 
                 var entity = _gameEntityCreator.CreateEmpty();
                 

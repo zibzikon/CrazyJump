@@ -38,15 +38,15 @@ namespace Kernel.Systems.Player
                 
                 entity.AddWalkingSpeed(config.WalkingSpeed);
                 entity.AddHorizontalSpeed(config.HorizontalSpeed);
-                entity.AddRotationSpeed(config.RotationSpeed);
+                entity.AddRotationSensitivity(config.RotationSensitivity);
                
                 entity.AddAccumulatedJumpForce(config.StartAccumulatedJumpForce);
                
                 entity.AddHorizontalBorder(config.HorizontalMovingBorder);
                 entity.AddRotationYBorder(config.RotationYBorder);
                 
-                entity.AddDefaultRotation(quaternion.identity);
-                entity.AddTargetRotation(quaternion.identity);
+                entity.AddDefaultRotation(Vector3.zero);
+                entity.AddTargetRotation(Vector3.zero);
                 entity.AddMovingDirection(Vector3.forward);
                 
                 _playerCharacterViewFactory.CreatePlayerView().Initialize(entity);

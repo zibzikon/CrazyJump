@@ -1,4 +1,4 @@
-using Entitas;
+using  Entitas;
 using Entitas.CodeGeneration.Attributes;
 using Kernel.GamePlay.ValuePanel.Data;
 using Kernel.Services;
@@ -33,19 +33,23 @@ namespace Kernel.Components
     [Game] public class Movable : IComponent { }
     [Game] public class Collisionable : IComponent { }
     [Game] public class Destroyable : IComponent { }
+    
     [Game] public class MakingJump : IComponent { }
     [Game] public class Interacted : IComponent { }
     [Game] public class Obtained : IComponent { }
+    [Game] public class Hooked : IComponent { }
+    [Game] public class Hooking : IComponent { }
     
     
     [Game] public class Length : IComponent { public float Value; }
     
     [Game] public class MovePosition : IComponent { public Vector3 Value; }
-    [Game] public class DefaultRotation : IComponent { public Quaternion Value; }
+    [Game] public class DefaultRotation : IComponent { public Vector3 Value; }
+    [Game] public class HookedEntityID : IComponent { public int Value; }
     [Game] public class MovingDirection : IComponent { public Vector3 Value; } 
-    [Game] public class TargetRotation : IComponent { public Quaternion Value; }
+    [Game] public class TargetRotation : IComponent { public Vector3 Value; }
     [Game] public class FollowingOffset : IComponent { public Vector3 Value; } 
-    [Game] public class RotationSpeed : IComponent { public float Value; }
+    [Game] public class RotationSensitivity : IComponent { public float Value; }
     [Game] public class AccumulatedJumpForce : IComponent { public float Value; }
     [Game] public class ValuePanelFunction : IComponent { public MathematicalFunctionType Value; }
     [Game] public class ValuePanelValue : IComponent { public float Value; }
@@ -72,6 +76,6 @@ namespace Kernel.Components
     [Input] public class VerticalAxis : IComponent { public float Value; }
 
     [Game, Event(EventTarget.Self)] public class Position : IComponent { public Vector3 Value; }
-    [Game, Event(EventTarget.Self)] public class Rotation : IComponent { public Quaternion Value; }
+    [Game, Event(EventTarget.Self)] public class Rotation : IComponent { public Vector3 Value; }
     [Game, Event(EventTarget.Self)] public class Destroyed : IComponent { }
 }

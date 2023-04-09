@@ -18,6 +18,8 @@ namespace Kernel.Systems.Level
             _gameBoards = gameContext.GetGroup(AllOf(GameBoard, Destroyable));
             _gameBoardValuePanels = gameContext.GetGroup(AllOf(ValuePanel, Destroyable));
             _gameBoardEndParts = gameContext.GetGroup(AllOf(GameBoardEndPart, Destroyable));
+            _heightsDiapasonRows = gameContext.GetGroup(AllOf(HeightsDiapasonRow, Destroyable));
+            _heightsDiapasons = gameContext.GetGroup(AllOf(HeightsDiapason, Destroyable));
         }
 
         protected override ICollector<LevelEntity> GetTrigger(IContext<LevelEntity> context)

@@ -9,6 +9,6 @@ namespace Kernel.GamePlay.EntityTransformation
 
         public void Unregister(GameEntity entity) => entity.RemoveRotationListener(this);
 
-        public void OnRotation(GameEntity entity, Quaternion value) => transform.localRotation = value;
+        public void OnRotation(GameEntity entity, Vector3 value) => transform.localRotation = Quaternion.Euler(value);
     }
 }

@@ -11,14 +11,14 @@ public partial class GameEntity {
     public Kernel.Components.DefaultRotation defaultRotation { get { return (Kernel.Components.DefaultRotation)GetComponent(GameComponentsLookup.DefaultRotation); } }
     public bool hasDefaultRotation { get { return HasComponent(GameComponentsLookup.DefaultRotation); } }
 
-    public void AddDefaultRotation(UnityEngine.Quaternion newValue) {
+    public void AddDefaultRotation(UnityEngine.Vector3 newValue) {
         var index = GameComponentsLookup.DefaultRotation;
         var component = (Kernel.Components.DefaultRotation)CreateComponent(index, typeof(Kernel.Components.DefaultRotation));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceDefaultRotation(UnityEngine.Quaternion newValue) {
+    public void ReplaceDefaultRotation(UnityEngine.Vector3 newValue) {
         var index = GameComponentsLookup.DefaultRotation;
         var component = (Kernel.Components.DefaultRotation)CreateComponent(index, typeof(Kernel.Components.DefaultRotation));
         component.Value = newValue;

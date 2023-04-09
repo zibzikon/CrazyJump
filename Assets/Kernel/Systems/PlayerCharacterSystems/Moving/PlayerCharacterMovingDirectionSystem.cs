@@ -5,6 +5,7 @@ using UnityEngine;
 using static Unity.Mathematics.math;
 using static InputMatcher;
 using static GameMatcher;
+using quaternion = Unity.Mathematics.quaternion;
 
 namespace Kernel.Systems.Player
 {
@@ -16,7 +17,7 @@ namespace Kernel.Systems.Player
         
         public PlayerCharacterMovingDirectionSystem(GameContext gameContext, InputContext inputContext)
         {
-            _playerCharacters = gameContext.GetGroup(AllOf(PlayerCharacter, MovingDirection, DefaultRotation, RotationSpeed, TargetRotation, Rotation, Movable));
+            _playerCharacters = gameContext.GetGroup(AllOf(PlayerCharacter, MovingDirection, DefaultRotation, RotationSensitivity, TargetRotation, Rotation, Movable));
             _mouses = inputContext.GetGroup(AllOf(Mouse, HorizontalAxis));
         }
         
@@ -30,9 +31,11 @@ namespace Kernel.Systems.Player
                 var targetRotation = playerCharacter.defaultRotation.Value;
  
                 if (axis != 0 && mouse.isLeftMouse)
-                    targetRotation = Quaternion.Euler((rotation.eulerAngles.y + axis * playerCharacter.rotationSpeed.Value).AsYVector3());
+                    targetRotation = (rotation.y + axis * playerCharacter.rotationSensitivity.Value).AsYVector3();
+
+                var movingDirection = (Quaternion.AngleAxis(rotation.y, Vector3.up) * Vector3.forward).normalized;
                 
-                playerCharacter.ReplaceMovingDirection(rotate(rotation, new float3(0,0,1)));
+                playerCharacter.ReplaceMovingDirection(movingDirection);
                 playerCharacter.ReplaceTargetRotation(targetRotation);
                 
             }

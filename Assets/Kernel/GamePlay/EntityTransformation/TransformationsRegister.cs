@@ -8,7 +8,7 @@ namespace Kernel.GamePlay
         public void Register(GameEntity entity)
         {
             entity.AddPosition(transform.position);
-            entity.AddRotation(transform.rotation);
+            entity.AddRotation(transform.rotation.eulerAngles);
         }
     }
 }

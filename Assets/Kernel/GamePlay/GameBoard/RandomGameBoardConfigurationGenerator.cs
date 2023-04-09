@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Kernel.Extensions;
 using Kernel.GamePlay.GameBoard.Interfaces;
 using Kernel.GamePlay.ValuePanel.Data;
@@ -16,21 +17,26 @@ namespace Kernel.GamePlay.GameBoard
             _chunks = chunks;
         }
         
-        public GameBoardConfiguration GenerateConfiguration(int difficulty)
+        public GameBoardConfiguration GenerateConfiguration(int difficulty, float startJumpForce)
         {
             var accumulatedDifficulty = 0;
             var chunks = new List<GameBoardChunkConfiguration>();
-            var maxHeightJump = 0f;
+            var maxHeightJump = startJumpForce;
                 
             while (accumulatedDifficulty < difficulty)
             {
-                var chunk = _chunks.SelectRandomItem();
+                var chunk = _chunks.Where(x =>
+                    {
+                        var bestConfig = GetBestValuePanelInChunk(x);
+                        return maxHeightJump.ProcessMathematicalFunction(bestConfig.FunctionType, bestConfig.Value) > 0;
+                    })
+                    .SelectRandomItem();
+                
                 accumulatedDifficulty += chunk.SelectionDifficulty;
                 var bestConfiguration = GetBestValuePanelInChunk(chunk);
                 
-                maxHeightJump =
-                    maxHeightJump.ProcessMathematicalFunction(bestConfiguration.FunctionType, bestConfiguration.Value);
-                
+                maxHeightJump = maxHeightJump.ProcessMathematicalFunction(bestConfiguration.FunctionType, bestConfiguration.Value);
+
                 chunks.Add(chunk);
             }
 
@@ -56,10 +62,10 @@ namespace Kernel.GamePlay.GameBoard
                 var configuration = panels[i];
                 var function = configuration.FunctionType;
                 var value = configuration.Value;
-
+ 
                 if (bestFunction.IsPositive() && function.IsNegative() && bestConfigurationIndex != -1 ||
                     bestFunction.IsPositive() && function.IsPositive() && bestValue > value ||
-                    bestFunction.IsPositive() && function.IsNegative() && bestValue < value ||
+                    bestFunction.IsNegative() && function.IsNegative() && bestValue < value ||
                     function == Multiply && value == 0)
                     continue;
                         

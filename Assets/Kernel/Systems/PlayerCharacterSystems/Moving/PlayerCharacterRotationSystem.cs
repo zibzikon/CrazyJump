@@ -21,9 +21,9 @@ namespace Kernel.Systems.Player
         {
             foreach (var playerCharacter in _playerCharacters)
             {
-                var reachingSpeed = 2f;
-                var rotation = playerCharacter.rotation.Value.eulerAngles;
-                var targetRotation = playerCharacter.targetRotation.Value.eulerAngles;
+                var reachingSpeed = 1f;
+                var rotation = playerCharacter.rotation.Value;
+                var targetRotation = playerCharacter.targetRotation.Value;
                 var rotationYBorder = playerCharacter.rotationYBorder.Value;
 
                 var yRotation =
@@ -32,7 +32,7 @@ namespace Kernel.Systems.Player
                         Mathf.Clamp(targetRotation.y, rotationYBorder.start, rotationYBorder.end),
                         reachingSpeed * _time.DeltaTime);
                 
-                playerCharacter.ReplaceRotation(Quaternion.Euler(rotation.WithNewY(yRotation)));
+               playerCharacter.ReplaceRotation(rotation.WithNewY(yRotation));
             }
         }
     }

@@ -6,6 +6,10 @@ namespace Kernel.Extensions
     public static class NumberExtensions
     {
         public static bool InRange(this int number, int min, int max) => number >= min && number <= max;
+        
+        public static bool InRange(this float number, float min, float max) => number >= min && number <= max;
+        public static bool InRange(this float value, RangeFloat range) => value.InRange(range.start, range.end);
+        
         public static float Clamp(this float number, float min, float max) => Mathf.Clamp(number, min, max);
         public static float Clamp(this float number, RangeFloat range) => number.Clamp(range.start, range.end);
 
@@ -16,5 +20,6 @@ namespace Kernel.Extensions
         public static Vector3 AsZVector3(this float value) => new(0, 0, value);
         public static Vector2 AsYVector2(this float value) => new(0, value);
         public static Vector2 AsXVector2(this float value) => new(value, 0);
+
     }
 }

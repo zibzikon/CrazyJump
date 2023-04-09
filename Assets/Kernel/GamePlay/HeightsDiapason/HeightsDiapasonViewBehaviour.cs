@@ -1,15 +1,11 @@
-using System;
 using System.Collections.Generic;
-using System.Globalization;
 using Kernel.Components;
 using Kernel.ECSIntegration;
 using Kernel.Extensions;
 using Kernel.Utils.Exceptions;
-using log4net.Appender;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Kernel.GamePlay.HeightsDiapason
 {
@@ -22,7 +18,7 @@ namespace Kernel.GamePlay.HeightsDiapason
 
         private void Start()
         {
-            if (Entity.isHeightsDiapasonRow || !Entity.hasHeight || Entity.hasRowPosition || Entity.hasRowsCount)
+            if (!Entity.isHeightsDiapasonRow || !Entity.hasHeight || !Entity.hasRowPosition || !Entity.hasRowsCount)
                 throw new EntityDoesNotHaveComponentsException(Entity,
                     $"{nameof(HeightsDiapasonRow)}, {nameof(Height)}, {nameof(RowPosition)}, {nameof(RowsCount)} ");
             
@@ -36,13 +32,12 @@ namespace Kernel.GamePlay.HeightsDiapason
             var rowsCount = Entity.rowsCount.Value;
             
             var fullHeight = rowsCount * rowHeight;
-            var rowWorldPosition = fullHeight / rowPosition;
+            var rowWorldPosition = (rowPosition + 1) * rowHeight;
             
             _heightIndicationTextMesh.text = rowWorldPosition.ToString("#.##");
             
-            _renderer.material.color = GetColor(rowPosition, rowHeight);
-            
-            CentreTextMesh(rowHeight);
+            _renderer.material.color = GetColor(rowPosition, fullHeight);
+            transform.localScale = transform.localScale.WithNewY(rowHeight);
         }
 
         private Color GetColor(float rowWorldPosition, float fullHeight)
@@ -62,12 +57,7 @@ namespace Kernel.GamePlay.HeightsDiapason
             
             return startColor;
         }
-
-        private void CentreTextMesh(float height)
-        {
-            var textMeshPosition = transform.localPosition;
-            _heightIndicationTextMesh.transform.localPosition = textMeshPosition.WithNewY(height / 2);
-        }
+        
 
     }
 }

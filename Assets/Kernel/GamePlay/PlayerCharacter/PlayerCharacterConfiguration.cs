@@ -9,7 +9,7 @@ namespace Kernel.GamePlay.PlayerCharacter
     {
         public float WalkingSpeed;
         public float HorizontalSpeed;
-        public float RotationSpeed;
+        public float RotationSensitivity;
 
         public float StartAccumulatedJumpForce;
         

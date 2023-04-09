@@ -3,12 +3,12 @@ using static GameMatcher;
 
 namespace Kernel.Systems.Player
 {
-    public class OnPlayerCharacterReachesLevelEndSystem : IExecuteSystem
+    public class PlayerCharacterJumpMakingSystem : IExecuteSystem
     {
         private readonly IGroup<GameEntity> _playerCharacters;
         private readonly IGroup<GameEntity> _gameBoardEndParts;
 
-        public OnPlayerCharacterReachesLevelEndSystem(GameContext context)
+        public PlayerCharacterJumpMakingSystem(GameContext context)
         {
             _playerCharacters = context.GetGroup(AllOf(GameMatcher.PlayerCharacter, Collisionable, CollidedEntityID));
             _gameBoardEndParts = context.GetGroup(AllOf(GameBoardEndPart, Collisionable, ID));
