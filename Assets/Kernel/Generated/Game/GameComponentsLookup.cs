@@ -8,62 +8,66 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int DestroyedListener = 0;
-    public const int AccumulatedJumpForce = 1;
-    public const int Camera = 2;
-    public const int CollidedEntityID = 3;
-    public const int Collisionable = 4;
-    public const int DefaultRotation = 5;
-    public const int Destroyable = 6;
-    public const int Destroyed = 7;
-    public const int DirectionalForce = 8;
-    public const int FollowingEntityID = 9;
-    public const int FollowingOffset = 10;
-    public const int FollowingPlayerCharacter = 11;
-    public const int FollowSpeed = 12;
-    public const int GameBoard = 13;
-    public const int GameBoardEndPart = 14;
-    public const int GravityForce = 15;
-    public const int Height = 16;
-    public const int HeightsDiapason = 17;
-    public const int HeightsDiapasonRow = 18;
-    public const int Hooked = 19;
-    public const int HookedEntityID = 20;
-    public const int Hooking = 21;
-    public const int HorizontalBorder = 22;
-    public const int HorizontalSpeed = 23;
-    public const int ID = 24;
-    public const int Interacted = 25;
-    public const int Length = 26;
-    public const int MakingJump = 27;
-    public const int MaxHeight = 28;
-    public const int Movable = 29;
-    public const int MovePosition = 30;
-    public const int MovingDirection = 31;
-    public const int Obtained = 32;
-    public const int PlayerCharacter = 33;
-    public const int PlayingStarted = 34;
-    public const int Position = 35;
-    public const int RagdollBody = 36;
-    public const int Rotation = 37;
-    public const int RotationSensitivity = 38;
-    public const int RotationYBorder = 39;
-    public const int RowPosition = 40;
-    public const int RowsCount = 41;
-    public const int TargetRotation = 42;
-    public const int ValuePanel = 43;
-    public const int ValuePanelFunction = 44;
-    public const int ValuePanelValue = 45;
-    public const int WalkingSpeed = 46;
-    public const int PositionListener = 47;
-    public const int RagdollBodyListener = 48;
-    public const int RotationListener = 49;
+    public const int AnchoredToHandListener = 0;
+    public const int DestroyedListener = 1;
+    public const int AccumulatedJumpForce = 2;
+    public const int AnchoredToHand = 3;
+    public const int Camera = 4;
+    public const int CollidedEntityID = 5;
+    public const int Collisionable = 6;
+    public const int DefaultRotation = 7;
+    public const int Destroyable = 8;
+    public const int Destroyed = 9;
+    public const int DirectionalForce = 10;
+    public const int FollowingEntityID = 11;
+    public const int FollowingOffset = 12;
+    public const int FollowingPlayerCharacter = 13;
+    public const int FollowSpeed = 14;
+    public const int GameBoard = 15;
+    public const int GameBoardEndPart = 16;
+    public const int GravityForce = 17;
+    public const int Height = 18;
+    public const int HeightsDiapason = 19;
+    public const int HeightsDiapasonRow = 20;
+    public const int Hooked = 21;
+    public const int HookedEntityID = 22;
+    public const int Hooking = 23;
+    public const int HorizontalBorder = 24;
+    public const int HorizontalSpeed = 25;
+    public const int ID = 26;
+    public const int Interacted = 27;
+    public const int Length = 28;
+    public const int MakingJump = 29;
+    public const int MaxHeight = 30;
+    public const int Movable = 31;
+    public const int MovePosition = 32;
+    public const int MovingDirection = 33;
+    public const int Obtained = 34;
+    public const int PlayerCharacter = 35;
+    public const int PlayingStarted = 36;
+    public const int Position = 37;
+    public const int RagdollBody = 38;
+    public const int Rotation = 39;
+    public const int RotationSensitivity = 40;
+    public const int RotationYBorder = 41;
+    public const int RowPosition = 42;
+    public const int RowsCount = 43;
+    public const int TargetRotation = 44;
+    public const int ValuePanel = 45;
+    public const int ValuePanelFunction = 46;
+    public const int ValuePanelValue = 47;
+    public const int WalkingSpeed = 48;
+    public const int PositionListener = 49;
+    public const int RagdollBodyListener = 50;
+    public const int RotationListener = 51;
 
-    public const int TotalComponents = 50;
+    public const int TotalComponents = 52;
 
     public static readonly string[] componentNames = {
+        "AnchoredToHandListener",
         "DestroyedListener",
         "AccumulatedJumpForce",
+        "AnchoredToHand",
         "Camera",
         "CollidedEntityID",
         "Collisionable",
@@ -115,8 +119,10 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AnchoredToHandListenerComponent),
         typeof(DestroyedListenerComponent),
         typeof(Kernel.Components.AccumulatedJumpForce),
+        typeof(Kernel.Components.AnchoredToHand),
         typeof(Kernel.Components.Camera),
         typeof(Kernel.Components.CollidedEntityID),
         typeof(Kernel.Components.Collisionable),

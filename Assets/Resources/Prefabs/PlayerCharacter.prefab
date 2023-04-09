@@ -41,6 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1455112177067950869}
+  - component: {fileID: 7866271460927266202}
   m_Layer: 0
   m_Name: Hand.R
   m_TagString: Untagged
@@ -63,6 +64,20 @@ Transform:
   m_Father: {fileID: 3512382946910118711}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7866271460927266202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755154561098077023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347fa0268d0749c29970b3f9a47d3c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connectedBody: {fileID: 6662582601726138853}
+  _axis: {x: 0, y: 0, z: 1}
 --- !u!1 &775568688983651378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,6 +1549,8 @@ GameObject:
   - component: {fileID: 4475704640603964424}
   - component: {fileID: 3204496951403305781}
   - component: {fileID: 247035325389727847}
+  - component: {fileID: 3168458893353375195}
+  - component: {fileID: 227910641982915279}
   m_Layer: 6
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -1578,7 +1595,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.35
   m_Height: 2
@@ -1719,6 +1736,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7ffa78b591402fbf1680274cb6210a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interferingCollider: {fileID: 746356164396168760}
+  _interferingAnimator: {fileID: 3204496951403305781}
+  _disablePhysicsAtStart: 1
+--- !u!114 &3168458893353375195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235568034610986320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93701372feed4b44a0409d16d099faf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragdollBody: {fileID: 247035325389727847}
+--- !u!114 &227910641982915279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235568034610986320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32223ec4247649729a4dbdb8fc9f0c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anchorRagdollBodyPart: {fileID: 7866271460927266202}
 --- !u!1 &6849040352027817338
 GameObject:
   m_ObjectHideFlags: 0

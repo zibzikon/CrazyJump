@@ -10,7 +10,7 @@ namespace Kernel.Systems.Player
 
         public PlayerCharacterJumpMakingSystem(GameContext context)
         {
-            _playerCharacters = context.GetGroup(AllOf(GameMatcher.PlayerCharacter, Collisionable, CollidedEntityID));
+            _playerCharacters = context.GetGroup(AllOf(PlayerCharacter, Collisionable, CollidedEntityID, Movable));
             _gameBoardEndParts = context.GetGroup(AllOf(GameBoardEndPart, Collisionable, ID));
         }
 

@@ -18,10 +18,11 @@ namespace Kernel.Systems.PlayerCharacterSystems
         {
             foreach (var playerCharacter in _playerCharacters)
             {
-                if (playerCharacter.directionalForce.Value != 0 || !playerCharacter.isMakingJump) continue;
+                if (playerCharacter.directionalForce.Value != 0 || !playerCharacter.isMakingJump || !playerCharacter.isMovable) continue;
 
                 playerCharacter.isHooking = true;
                 playerCharacter.isMakingJump = false;
+                playerCharacter.isMovable = false;
             }
         }
     }

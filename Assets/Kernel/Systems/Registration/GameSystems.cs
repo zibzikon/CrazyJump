@@ -35,11 +35,12 @@ namespace Kernel.Systems.Registration
             AddInjected<PlayerCharacterJumpSystem>();
             AddInjected<PlayerCharacterFlyingSystem>();
             AddInjected<PlayerCharacterJumpMakingSystem>();
+            AddInjected<PlayerCharacterHookingSystem>();
+            AddInjected<PlayerCharacterHookToHeightsDiapasonRowSystem>();
+            AddInjected<PlayerCharacterRagdollHookingSystem>();
             
             AddInjected<InitializeFollowingCameraOnPlayerCreatedSystem>();
             AddInjected<CameraFollowingPlayerCharacterSystem>();
-            
-            AddInjected<MovingSystem>();
             
             AddInjected<GameEventSystems>();
             

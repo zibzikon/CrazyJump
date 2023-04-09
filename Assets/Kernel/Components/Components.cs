@@ -35,12 +35,13 @@ namespace Kernel.Components
     [Game] public class Collisionable : IComponent { }
     [Game] public class Destroyable : IComponent { }
     
-    [Game] public class MakingJump : IComponent { }
     [Game, Event(Self)] public class RagdollBody : IComponent { }
+    [Game] public class MakingJump : IComponent { }
     [Game] public class Interacted : IComponent { }
     [Game] public class Obtained : IComponent { }
     [Game] public class Hooked : IComponent { }
     [Game] public class Hooking : IComponent { }
+    [Game, Event(Self)] public class AnchoredToHand : IComponent { }
     
     
     [Game] public class Length : IComponent { public float Value; }

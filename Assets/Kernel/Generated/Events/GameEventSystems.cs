@@ -9,6 +9,7 @@
 public sealed class GameEventSystems : Feature {
 
     public GameEventSystems(Contexts contexts) {
+        Add(new AnchoredToHandEventSystem(contexts)); // priority: 0
         Add(new DestroyedEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new RagdollBodyEventSystem(contexts)); // priority: 0

@@ -12,7 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _DISABLE_OUTLINE
   - _EMISSIVE_SIMPLE
   - _IS_ANGELRING_OFF
   - _IS_CLIPPING_OFF
@@ -26,8 +25,7 @@ Material:
   stringTagMap:
     IgnoreProjection: False
     RenderType: Opaque
-  disabledShaderPasses:
-  - ALWAYS
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -381,7 +379,7 @@ Material:
     - _Offset_Z: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _Outline_Width: 2
+    - _Outline_Width: 5
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
