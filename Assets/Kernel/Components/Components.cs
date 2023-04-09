@@ -3,6 +3,7 @@ using Entitas.CodeGeneration.Attributes;
 using Kernel.GamePlay.ValuePanel.Data;
 using Kernel.Services;
 using UnityEngine;
+using static Entitas.CodeGeneration.Attributes.EventTarget;
 
 namespace Kernel.Components
 {
@@ -35,6 +36,7 @@ namespace Kernel.Components
     [Game] public class Destroyable : IComponent { }
     
     [Game] public class MakingJump : IComponent { }
+    [Game, Event(Self)] public class RagdollBody : IComponent { }
     [Game] public class Interacted : IComponent { }
     [Game] public class Obtained : IComponent { }
     [Game] public class Hooked : IComponent { }
@@ -75,7 +77,7 @@ namespace Kernel.Components
     [Input] public class HorizontalAxis : IComponent { public float Value; }
     [Input] public class VerticalAxis : IComponent { public float Value; }
 
-    [Game, Event(EventTarget.Self)] public class Position : IComponent { public Vector3 Value; }
-    [Game, Event(EventTarget.Self)] public class Rotation : IComponent { public Vector3 Value; }
-    [Game, Event(EventTarget.Self)] public class Destroyed : IComponent { }
+    [Game, Event(Self)] public class Position : IComponent { public Vector3 Value; }
+    [Game, Event(Self)] public class Rotation : IComponent { public Vector3 Value; }
+    [Game, Event(Self)] public class Destroyed : IComponent { }
 }

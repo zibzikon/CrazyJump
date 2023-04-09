@@ -44,20 +44,22 @@ public static class GameComponentsLookup {
     public const int PlayerCharacter = 33;
     public const int PlayingStarted = 34;
     public const int Position = 35;
-    public const int Rotation = 36;
-    public const int RotationSensitivity = 37;
-    public const int RotationYBorder = 38;
-    public const int RowPosition = 39;
-    public const int RowsCount = 40;
-    public const int TargetRotation = 41;
-    public const int ValuePanel = 42;
-    public const int ValuePanelFunction = 43;
-    public const int ValuePanelValue = 44;
-    public const int WalkingSpeed = 45;
-    public const int PositionListener = 46;
-    public const int RotationListener = 47;
+    public const int RagdollBody = 36;
+    public const int Rotation = 37;
+    public const int RotationSensitivity = 38;
+    public const int RotationYBorder = 39;
+    public const int RowPosition = 40;
+    public const int RowsCount = 41;
+    public const int TargetRotation = 42;
+    public const int ValuePanel = 43;
+    public const int ValuePanelFunction = 44;
+    public const int ValuePanelValue = 45;
+    public const int WalkingSpeed = 46;
+    public const int PositionListener = 47;
+    public const int RagdollBodyListener = 48;
+    public const int RotationListener = 49;
 
-    public const int TotalComponents = 48;
+    public const int TotalComponents = 50;
 
     public static readonly string[] componentNames = {
         "DestroyedListener",
@@ -96,6 +98,7 @@ public static class GameComponentsLookup {
         "PlayerCharacter",
         "PlayingStarted",
         "Position",
+        "RagdollBody",
         "Rotation",
         "RotationSensitivity",
         "RotationYBorder",
@@ -107,6 +110,7 @@ public static class GameComponentsLookup {
         "ValuePanelValue",
         "WalkingSpeed",
         "PositionListener",
+        "RagdollBodyListener",
         "RotationListener"
     };
 
@@ -147,6 +151,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.PlayerCharacter),
         typeof(Kernel.Components.PlayingStarted),
         typeof(Kernel.Components.Position),
+        typeof(Kernel.Components.RagdollBody),
         typeof(Kernel.Components.Rotation),
         typeof(Kernel.Components.RotationSensitivity),
         typeof(Kernel.Components.RotationYBorder),
@@ -158,6 +163,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.ValuePanelValue),
         typeof(Kernel.Components.WalkingSpeed),
         typeof(PositionListenerComponent),
+        typeof(RagdollBodyListenerComponent),
         typeof(RotationListenerComponent)
     };
 }

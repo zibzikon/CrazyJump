@@ -6,13 +6,10 @@ namespace Kernel.Extensions
 {
     public static class CollectionExtensions
     {
-        public static TCollection ForEach<TCollection, TType>(this TCollection collection, Action<TType> action)
-            where TCollection : IEnumerable<TType>
+        public static void ForEach<TType>(this IEnumerable<TType> collection, Action<TType> action)
         {
             foreach (var element in collection)
                 action(element);
-
-            return collection;
         }
 
         public static T SelectRandomItem<T>(this IEnumerable<T> enumerable)
