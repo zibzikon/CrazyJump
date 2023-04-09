@@ -1,3 +1,4 @@
+using Kernel.Extensions;
 using UnityEngine;
 
 namespace Kernel.ECSIntegration
@@ -10,7 +11,8 @@ namespace Kernel.ECSIntegration
         
         private void Awake()
         {
-            _view = GetComponent<EntityView>();
+            _view = GetComponent<EntityView>().ThrowIfNull();
+            
             OnAwake();
         }
 
