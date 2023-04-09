@@ -37,7 +37,7 @@ namespace Kernel.GamePlay.Ragdoll
         public void DisableRagdollPhysics()
         {
             _interferingCollider.enabled = true;
-            _interferingAnimator.enabled = true;
+            //_interferingAnimator.enabled = true;
             _ragdollBodyParts.ForEach(x => x.DisableRagdollPhysics());
         }
 

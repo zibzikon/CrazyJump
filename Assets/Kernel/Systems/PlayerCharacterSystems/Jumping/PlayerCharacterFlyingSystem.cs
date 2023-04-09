@@ -16,7 +16,7 @@ namespace Kernel.Systems.Player
             _gameContext = gameContext;
             _time = time;
             _playerCharacters =
-                gameContext.GetGroup(AllOf(PlayerCharacter, DirectionalForce, Movable, MakingJump));
+                gameContext.GetGroup(AllOf(PlayerCharacter, DirectionalForce, Movable, MakingJump).NoneOf(Running));
         }
         
         public void Execute()

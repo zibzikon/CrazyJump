@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Kernel.Components.WalkingSpeed walkingSpeed { get { return (Kernel.Components.WalkingSpeed)GetComponent(GameComponentsLookup.WalkingSpeed); } }
-    public bool hasWalkingSpeed { get { return HasComponent(GameComponentsLookup.WalkingSpeed); } }
+    public Kernel.Components.RunningSpeed runningSpeed { get { return (Kernel.Components.RunningSpeed)GetComponent(GameComponentsLookup.RunningSpeed); } }
+    public bool hasRunningSpeed { get { return HasComponent(GameComponentsLookup.RunningSpeed); } }
 
-    public void AddWalkingSpeed(float newValue) {
-        var index = GameComponentsLookup.WalkingSpeed;
-        var component = (Kernel.Components.WalkingSpeed)CreateComponent(index, typeof(Kernel.Components.WalkingSpeed));
+    public void AddRunningSpeed(float newValue) {
+        var index = GameComponentsLookup.RunningSpeed;
+        var component = (Kernel.Components.RunningSpeed)CreateComponent(index, typeof(Kernel.Components.RunningSpeed));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceWalkingSpeed(float newValue) {
-        var index = GameComponentsLookup.WalkingSpeed;
-        var component = (Kernel.Components.WalkingSpeed)CreateComponent(index, typeof(Kernel.Components.WalkingSpeed));
+    public void ReplaceRunningSpeed(float newValue) {
+        var index = GameComponentsLookup.RunningSpeed;
+        var component = (Kernel.Components.RunningSpeed)CreateComponent(index, typeof(Kernel.Components.RunningSpeed));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveWalkingSpeed() {
-        RemoveComponent(GameComponentsLookup.WalkingSpeed);
+    public void RemoveRunningSpeed() {
+        RemoveComponent(GameComponentsLookup.RunningSpeed);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherWalkingSpeed;
+    static Entitas.IMatcher<GameEntity> _matcherRunningSpeed;
 
-    public static Entitas.IMatcher<GameEntity> WalkingSpeed {
+    public static Entitas.IMatcher<GameEntity> RunningSpeed {
         get {
-            if (_matcherWalkingSpeed == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.WalkingSpeed);
+            if (_matcherRunningSpeed == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.RunningSpeed);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherWalkingSpeed = matcher;
+                _matcherRunningSpeed = matcher;
             }
 
-            return _matcherWalkingSpeed;
+            return _matcherRunningSpeed;
         }
     }
 }

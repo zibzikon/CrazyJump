@@ -17,7 +17,7 @@ namespace Kernel.Systems.Player
         
         public PlayerCharacterMovingDirectionSystem(GameContext gameContext, InputContext inputContext)
         {
-            _playerCharacters = gameContext.GetGroup(AllOf(PlayerCharacter, MovingDirection, DefaultRotation, RotationSensitivity, TargetRotation, Rotation, Movable));
+            _playerCharacters = gameContext.GetGroup(AllOf(PlayerCharacter, MovingDirection, DefaultRotation, RotationSensitivity, TargetRotation, Rotation, Movable, Running));
             _mouses = inputContext.GetGroup(AllOf(Mouse, HorizontalAxis));
         }
         

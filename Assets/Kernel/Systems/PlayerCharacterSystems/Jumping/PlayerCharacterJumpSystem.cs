@@ -14,7 +14,7 @@ namespace Kernel.Systems.Player
             => context.CreateCollector(MakingJump.Added());
         
         protected override bool Filter(GameEntity playerCharacter)
-            => AllOf(AccumulatedJumpForce).Matches(playerCharacter);
+            => AllOf(AccumulatedJumpForce).NoneOf(Running).Matches(playerCharacter);
 
         protected override void Execute(List<GameEntity> playerCharacters)
         {

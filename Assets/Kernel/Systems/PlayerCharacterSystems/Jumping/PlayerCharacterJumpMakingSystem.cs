@@ -20,7 +20,8 @@ namespace Kernel.Systems.Player
             foreach (var endPart in _gameBoardEndParts)
             {
                 if(playerCharacter.collidedEntityID.Value != endPart.iD.Value || playerCharacter.isMakingJump) continue;
-
+                
+                playerCharacter.isRunning = false;
                 playerCharacter.isMakingJump = true;
             }
         }

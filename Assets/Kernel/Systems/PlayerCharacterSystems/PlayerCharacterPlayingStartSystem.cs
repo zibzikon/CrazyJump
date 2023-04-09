@@ -11,7 +11,7 @@ namespace Kernel.Systems.Player
         
         public PlayerCharacterPlayingStartSystem(GameContext context) : base(context)
         {
-            _players = context.GetGroup(AllOf(GameMatcher.PlayerCharacter));
+            _players = context.GetGroup(AllOf(PlayerCharacter, Movable));
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -24,9 +24,7 @@ namespace Kernel.Systems.Player
             foreach (var player in _players)
             foreach (var _ in entities)
             {
-                if (player.isMovable) continue;
-
-                player.isMovable = true;
+                player.isRunning = true;
             }
         }
     }

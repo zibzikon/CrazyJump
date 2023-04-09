@@ -1,29 +1,28 @@
 using Kernel.Extensions;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Kernel.GamePlay.PlayerCharacter
 {
-    [RequireComponent(typeof(Animator))]
     public class PlayerCharacterAnimator : MonoBehaviour
     {
+        [Required, SerializeField]private Animator _animator;
+        
         [SerializeField] private string _idleAnimationKey;
         [SerializeField] private string _runningAnimationKey;
         [SerializeField] private string _flyingAnimationKey;
         [SerializeField] private string _hookingAnimationKey;
         
-        private Animator _animator;
 
         private string _lastEnteredAnimationKey;
+        
+        [HideInEditorMode, Button] public void EnterIdleAnimation() => EnterAnimation(_idleAnimationKey);
 
-        private void Awake() => _animator = GetComponent<Animator>().ThrowIfNull();
+        [HideInEditorMode, Button] public void EnterRunningAnimation() => EnterAnimation(_runningAnimationKey);
 
-        public void EnterIdleAnimation() => EnterAnimation(_idleAnimationKey);
+        [HideInEditorMode, Button] public void EnterFlyingAnimation() => EnterAnimation(_flyingAnimationKey);
 
-        public void EnterRunningAnimation() => EnterAnimation(_runningAnimationKey);
-
-        public void EnterFlyingAnimation() => EnterAnimation(_flyingAnimationKey);
-
-        public void EnterHookingAnimation() => EnterAnimation(_hookingAnimationKey);
+        [HideInEditorMode, Button] public void EnterHookingAnimation() => EnterAnimation(_hookingAnimationKey);
 
         private void EnterAnimation(string key)
         {

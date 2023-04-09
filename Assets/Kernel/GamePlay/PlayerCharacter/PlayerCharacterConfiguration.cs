@@ -1,13 +1,14 @@
 using System;
 using Kernel.Services;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Kernel.GamePlay.PlayerCharacter
 {
     [Serializable]
     public struct PlayerCharacterConfiguration
     {
-        public float WalkingSpeed;
+        [FormerlySerializedAs("WalkingSpeed")] public float RunningSpeed;
         public float HorizontalSpeed;
         public float RotationSensitivity;
 

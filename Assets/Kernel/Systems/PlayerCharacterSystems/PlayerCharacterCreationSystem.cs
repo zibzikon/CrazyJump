@@ -34,9 +34,11 @@ namespace Kernel.Systems.Player
                 var config = createPlayerEntity.playerCharacterConfiguration.Value;
                 
                 var entity = _gameEntityCreator.CreateEmpty();
-                entity.isPlayerCharacter = true;
                 
-                entity.AddWalkingSpeed(config.WalkingSpeed);
+                entity.isPlayerCharacter = true;
+                entity.isMovable = true;
+                
+                entity.AddRunningSpeed(config.RunningSpeed);
                 entity.AddHorizontalSpeed(config.HorizontalSpeed);
                 entity.AddRotationSensitivity(config.RotationSensitivity);
                

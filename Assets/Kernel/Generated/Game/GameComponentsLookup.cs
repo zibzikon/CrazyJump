@@ -52,16 +52,18 @@ public static class GameComponentsLookup {
     public const int RotationYBorder = 41;
     public const int RowPosition = 42;
     public const int RowsCount = 43;
-    public const int TargetRotation = 44;
-    public const int ValuePanel = 45;
-    public const int ValuePanelFunction = 46;
-    public const int ValuePanelValue = 47;
-    public const int WalkingSpeed = 48;
-    public const int PositionListener = 49;
-    public const int RagdollBodyListener = 50;
-    public const int RotationListener = 51;
+    public const int Running = 44;
+    public const int RunningSpeed = 45;
+    public const int TargetRotation = 46;
+    public const int ValuePanel = 47;
+    public const int ValuePanelFunction = 48;
+    public const int ValuePanelValue = 49;
+    public const int PositionListener = 50;
+    public const int RagdollBodyListener = 51;
+    public const int RotationListener = 52;
+    public const int RunningListener = 53;
 
-    public const int TotalComponents = 52;
+    public const int TotalComponents = 54;
 
     public static readonly string[] componentNames = {
         "AnchoredToHandListener",
@@ -108,14 +110,16 @@ public static class GameComponentsLookup {
         "RotationYBorder",
         "RowPosition",
         "RowsCount",
+        "Running",
+        "RunningSpeed",
         "TargetRotation",
         "ValuePanel",
         "ValuePanelFunction",
         "ValuePanelValue",
-        "WalkingSpeed",
         "PositionListener",
         "RagdollBodyListener",
-        "RotationListener"
+        "RotationListener",
+        "RunningListener"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -163,13 +167,15 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.RotationYBorder),
         typeof(Kernel.Components.RowPosition),
         typeof(Kernel.Components.RowsCount),
+        typeof(Kernel.Components.Running),
+        typeof(Kernel.Components.RunningSpeed),
         typeof(Kernel.Components.TargetRotation),
         typeof(Kernel.Components.ValuePanel),
         typeof(Kernel.Components.ValuePanelFunction),
         typeof(Kernel.Components.ValuePanelValue),
-        typeof(Kernel.Components.WalkingSpeed),
         typeof(PositionListenerComponent),
         typeof(RagdollBodyListenerComponent),
-        typeof(RotationListenerComponent)
+        typeof(RotationListenerComponent),
+        typeof(RunningListenerComponent)
     };
 }

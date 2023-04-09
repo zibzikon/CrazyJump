@@ -15,14 +15,14 @@ namespace Kernel.Systems.Player
         public PlayerCharacterWalkSystem(GameContext context, ITime time)
         {
             _time = time;
-            _characters = context.GetGroup(AllOf(PlayerCharacter, MovingDirection, Movable, Position, WalkingSpeed).NoneOf(MakingJump));
+            _characters = context.GetGroup(AllOf(PlayerCharacter, MovingDirection, Position, Movable, RunningSpeed, Running).NoneOf(MakingJump));
         }
         
         public void Execute()
         {
             foreach (var playerCharacter in _characters)
             {
-                var moveDelta = playerCharacter.movingDirection.Value * playerCharacter.walkingSpeed.Value;
+                var moveDelta = playerCharacter.movingDirection.Value * playerCharacter.runningSpeed.Value;
                 
                 if(playerCharacter.hasHorizontalBorder)
                 {

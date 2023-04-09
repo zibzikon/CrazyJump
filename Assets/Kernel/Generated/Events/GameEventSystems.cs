@@ -14,5 +14,6 @@ public sealed class GameEventSystems : Feature {
         Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new RagdollBodyEventSystem(contexts)); // priority: 0
         Add(new RotationEventSystem(contexts)); // priority: 0
+        Add(new RunningEventSystem(contexts)); // priority: 0
     }
 }

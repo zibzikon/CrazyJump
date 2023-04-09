@@ -41,6 +41,7 @@ namespace Kernel.Components
     [Game] public class Obtained : IComponent { }
     [Game] public class Hooked : IComponent { }
     [Game] public class Hooking : IComponent { }
+    [Game, Event(Self)] public class Running : IComponent { }
     [Game, Event(Self)] public class AnchoredToHand : IComponent { }
     
     
@@ -57,7 +58,7 @@ namespace Kernel.Components
     [Game] public class ValuePanelFunction : IComponent { public MathematicalFunctionType Value; }
     [Game] public class ValuePanelValue : IComponent { public float Value; }
     [Game] public class HorizontalSpeed : IComponent { public float Value; }
-    [Game] public class WalkingSpeed : IComponent { public float Value; }
+    [Game] public class RunningSpeed : IComponent { public float Value; }
     [Game] public class FollowSpeed : IComponent { public float Value; }
     [Game] public class DirectionalForce: IComponent { public float Value; }
     
