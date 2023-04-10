@@ -32,7 +32,7 @@ namespace Kernel.Systems.Player
                         Mathf.Clamp(targetRotation.y, rotationYBorder.start, rotationYBorder.end),
                         reachingSpeed * _time.DeltaTime);
                 
-               playerCharacter.ReplaceRotation(rotation.WithNewY(yRotation));
+               playerCharacter.ReplaceRotation(rotation.SetY(yRotation));
             }
         }
     }

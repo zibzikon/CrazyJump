@@ -37,7 +37,7 @@ namespace Kernel.GamePlay.HeightsDiapason
             _heightIndicationTextMesh.text = rowWorldPosition.ToString("#.##");
             
             _renderer.material.color = GetColor(rowPosition, fullHeight);
-            transform.localScale = transform.localScale.WithNewY(rowHeight);
+            transform.localScale = transform.localScale.SetY(rowHeight);
         }
 
         private Color GetColor(float rowWorldPosition, float fullHeight)

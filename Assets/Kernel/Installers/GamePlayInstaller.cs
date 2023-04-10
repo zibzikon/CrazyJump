@@ -9,6 +9,7 @@ using Kernel.GamePlay.HeightsDiapason;
 using Kernel.GamePlay.PlayerCharacter;
 using Kernel.GamePlay.ValuePanel;
 using Kernel.GamePlay.ValuePanel.Interfaces;
+using Kernel.Mediators;
 using Kernel.Services;
 using Kernel.Systems.Registration;
 using Sirenix.OdinInspector;
@@ -22,6 +23,7 @@ namespace Kernel.Installers
     public class GamePlayInstaller : MonoInstaller
     {
         [Required, SerializeField] private Engine _engine;
+        [Required, SerializeField] private Mediator _mediator;
         [SerializeField] private List<GameBoardChunkConfiguration> _gameBoardChunksConfigurations;
         [SerializeField] private ViewsResourcesData _viewsResourcesData;
         
@@ -38,6 +40,8 @@ namespace Kernel.Installers
             Container.Bind<IEntityIdentifierGenerator>().To<EntityIdentifierGenerator>().AsSingle();
             
             Container.Bind<IViewsProvider>().To<ViewsProvider>().AsSingle().WithArguments(_viewsResourcesData);
+
+            Container.Bind<IMediator>().FromInstance(_mediator);
             
             Container.Bind<IGameBoardConfigurationGenerator>().To<RandomGameBoardConfigurationGenerator>().AsSingle().WithArguments(_gameBoardChunksConfigurations.ToArray());
             Container.Bind<IGameBoardViewFactory>().To<GameBoardViewFactory>().AsSingle();

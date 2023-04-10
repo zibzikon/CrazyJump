@@ -62,7 +62,7 @@ namespace Kernel.Systems.Level
                 _viewFactory.CreateValuePanelView(valuePanelConfig).Initialize(entity);
 
                 entity.ReplacePosition(
-                    chunkPosition.WithNewX(config.HorizontalPositions[valuePanelConfig.PlacementType]));
+                    chunkPosition.SetX(config.HorizontalPositions[valuePanelConfig.PlacementType]));
             }
         }
     }

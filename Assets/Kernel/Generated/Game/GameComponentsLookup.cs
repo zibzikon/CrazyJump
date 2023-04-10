@@ -54,16 +54,18 @@ public static class GameComponentsLookup {
     public const int RowsCount = 43;
     public const int Running = 44;
     public const int RunningSpeed = 45;
-    public const int TargetRotation = 46;
-    public const int ValuePanel = 47;
-    public const int ValuePanelFunction = 48;
-    public const int ValuePanelValue = 49;
-    public const int PositionListener = 50;
-    public const int RagdollBodyListener = 51;
-    public const int RotationListener = 52;
-    public const int RunningListener = 53;
+    public const int StartedFollowingFlyingPlayerCharacter = 46;
+    public const int TargetRotation = 47;
+    public const int ValuePanel = 48;
+    public const int ValuePanelFunction = 49;
+    public const int ValuePanelValue = 50;
+    public const int PositionListener = 51;
+    public const int RagdollBodyListener = 52;
+    public const int RotationListener = 53;
+    public const int RunningListener = 54;
+    public const int StartedFollowingFlyingPlayerCharacterListener = 55;
 
-    public const int TotalComponents = 54;
+    public const int TotalComponents = 56;
 
     public static readonly string[] componentNames = {
         "AnchoredToHandListener",
@@ -112,6 +114,7 @@ public static class GameComponentsLookup {
         "RowsCount",
         "Running",
         "RunningSpeed",
+        "StartedFollowingFlyingPlayerCharacter",
         "TargetRotation",
         "ValuePanel",
         "ValuePanelFunction",
@@ -119,7 +122,8 @@ public static class GameComponentsLookup {
         "PositionListener",
         "RagdollBodyListener",
         "RotationListener",
-        "RunningListener"
+        "RunningListener",
+        "StartedFollowingFlyingPlayerCharacterListener"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -169,6 +173,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.RowsCount),
         typeof(Kernel.Components.Running),
         typeof(Kernel.Components.RunningSpeed),
+        typeof(Kernel.Components.StartedFollowingFlyingPlayerCharacter),
         typeof(Kernel.Components.TargetRotation),
         typeof(Kernel.Components.ValuePanel),
         typeof(Kernel.Components.ValuePanelFunction),
@@ -176,6 +181,7 @@ public static class GameComponentsLookup {
         typeof(PositionListenerComponent),
         typeof(RagdollBodyListenerComponent),
         typeof(RotationListenerComponent),
-        typeof(RunningListenerComponent)
+        typeof(RunningListenerComponent),
+        typeof(StartedFollowingFlyingPlayerCharacterListenerComponent)
     };
 }

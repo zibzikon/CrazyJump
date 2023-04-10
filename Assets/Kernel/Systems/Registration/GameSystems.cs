@@ -1,9 +1,10 @@
-using Kernel.Systems.Camera;
+using Kernel.Systems.CameraSystems;
 using Kernel.Systems.HeightsDiapasonSystems;
 using Kernel.Systems.Input;
 using Kernel.Systems.Level;
 using Kernel.Systems.Player;
 using Kernel.Systems.PlayerCharacterSystems;
+using Kernel.Systems.UI;
 using Zenject;
 
 namespace Kernel.Systems.Registration
@@ -40,7 +41,11 @@ namespace Kernel.Systems.Registration
             AddInjected<PlayerCharacterRagdollHookingSystem>();
             
             AddInjected<InitializeFollowingCameraOnPlayerCreatedSystem>();
-            AddInjected<CameraFollowingPlayerCharacterSystem>();
+            AddInjected<StartFollowingFlyingPlayerCharacterSystem>();
+            AddInjected<CameraFollowRunningPlayerCharacterSystem>();
+            AddInjected<CameraFollowFlyingPlayerCharacterSystem>();
+            
+            AddInjected<MenuVisibilitySystem>();
             
             AddInjected<GameEventSystems>();
             

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Entitas;
 using static GameMatcher;
 
-namespace Kernel.Systems.Camera
+namespace Kernel.Systems.CameraSystems
 {
     public class InitializeFollowingCameraOnPlayerCreatedSystem : ReactiveSystem<GameEntity>
     {
@@ -10,7 +10,7 @@ namespace Kernel.Systems.Camera
         
         public InitializeFollowingCameraOnPlayerCreatedSystem(GameContext context) : base(context)
         {
-            _followingCameras = context.GetGroup(AllOf(GameMatcher.Camera, FollowingPlayerCharacter));
+            _followingCameras = context.GetGroup(AllOf(Camera, FollowingPlayerCharacter));
         }
         
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

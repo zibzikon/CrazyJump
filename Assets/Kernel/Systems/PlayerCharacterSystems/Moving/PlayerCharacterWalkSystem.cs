@@ -27,7 +27,7 @@ namespace Kernel.Systems.Player
                 if(playerCharacter.hasHorizontalBorder)
                 {
                     var border = playerCharacter.horizontalBorder.Value;
-                    moveDelta = moveDelta.WithNewX(moveDelta.x.Clamp(border));
+                    moveDelta = moveDelta.SetX(moveDelta.x.Clamp(border));
                 }
                 
                 playerCharacter.ReplacePosition(playerCharacter.position.Value + moveDelta * _time.DeltaTime);

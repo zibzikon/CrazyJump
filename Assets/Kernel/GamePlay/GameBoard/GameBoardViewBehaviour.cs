@@ -22,7 +22,7 @@ namespace Kernel.GamePlay.GameBoard
         private void UpdateView()
         {
             var length = Entity.length.Value;
-            _scalablePartTransform.localScale = _scalablePartTransform.localScale.WithNewZ(length);
+            _scalablePartTransform.localScale = _scalablePartTransform.localScale.SetZ(length);
         }
     }
 }

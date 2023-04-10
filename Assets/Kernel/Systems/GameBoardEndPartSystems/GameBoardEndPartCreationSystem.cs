@@ -35,7 +35,7 @@ namespace Kernel.Systems.Level
                 
                 _viewFactory.CreateGameBoardEndPartView().Initialize(entity);
                 
-                entity.ReplacePosition(gameBoard.position.Value.WithNewZ(gameBoard.length.Value));
+                entity.ReplacePosition(gameBoard.position.Value.SetZ(gameBoard.length.Value));
             }
         }
     }

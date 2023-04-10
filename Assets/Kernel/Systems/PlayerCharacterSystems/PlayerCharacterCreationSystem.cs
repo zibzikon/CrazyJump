@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using Entitas;
 using Kernel.ECSIntegration;
 using Kernel.GamePlay.PlayerCharacter;
-using Unity.Mathematics;
 using UnityEngine;
 using static LevelMatcher;
 
