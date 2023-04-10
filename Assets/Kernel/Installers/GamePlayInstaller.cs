@@ -43,7 +43,7 @@ namespace Kernel.Installers
 
             Container.Bind<IMediator>().FromInstance(_mediator);
             
-            Container.Bind<IGameBoardConfigurationGenerator>().To<RandomGameBoardConfigurationGenerator>().AsSingle().WithArguments(_gameBoardChunksConfigurations.ToArray());
+            Container.Bind<IGameBoardGenerator>().To<RandomGameBoardGenerator>().AsSingle().WithArguments(_gameBoardChunksConfigurations.ToArray());
             Container.Bind<IGameBoardViewFactory>().To<GameBoardViewFactory>().AsSingle();
             Container.Bind<IHeightsDiapasonRowViewFactory>().To<HeightsDiapasonRowViewFactory>().AsSingle();
             

@@ -13,16 +13,16 @@ namespace Kernel.Systems.Level
         private readonly IGameEntityCreator _gameEntityCreator;
         private readonly IGameBoardViewFactory _gameBoardViewFactory;
         private readonly IGameBoardEndPartViewFactory _gameBoardEndPartViewFactory;
-        private readonly IGameBoardConfigurationGenerator _gameBoardConfigurationGenerator;
+        private readonly IGameBoardGenerator _gameBoardGenerator;
 
         public GameBoardGenerationSystem(LevelContext context, 
             IGameEntityCreator gameEntityCreator,
             IGameBoardViewFactory gameBoardViewFactory, 
-            IGameBoardConfigurationGenerator gameBoardConfigurationGenerator) : base(context)
+            IGameBoardGenerator gameBoardGenerator) : base(context)
         {
             _gameEntityCreator = gameEntityCreator;
             _gameBoardViewFactory = gameBoardViewFactory;
-            _gameBoardConfigurationGenerator = gameBoardConfigurationGenerator;
+            _gameBoardGenerator = gameBoardGenerator;
         }
 
 
@@ -37,7 +37,7 @@ namespace Kernel.Systems.Level
             foreach (var level in entities)
             {
 
-                var configuration = _gameBoardConfigurationGenerator.GenerateConfiguration(level.levelDifficulty.Value, 5f);
+                var configuration = _gameBoardGenerator.GenerateConfiguration(level.levelDifficulty.Value, 5f);
                 
                 var entity = _gameEntityCreator.CreateEmpty();
                 

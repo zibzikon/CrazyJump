@@ -8,39 +8,35 @@ using static Kernel.GamePlay.ValuePanel.Data.ValuePanelPlacementType;
 
 namespace Kernel.GamePlay.GameBoard
 {
-    public class RandomGameBoardConfigurationGenerator : IGameBoardConfigurationGenerator
+    public class RandomGameBoardGenerator : IGameBoardGenerator
     {
-        private readonly GameBoardChunkConfiguration[] _chunks;
-
-        public RandomGameBoardConfigurationGenerator(GameBoardChunkConfiguration[] chunks)
+        private readonly GameBoardGeneratorConfiguration _configuration;
+        
+        public RandomGameBoardGenerator(GameBoardGeneratorConfiguration configuration)
         {
-            _chunks = chunks;
+            _configuration = configuration;
         }
         
         public GameBoardConfiguration GenerateConfiguration(int difficulty, float startJumpForce)
         {
             var accumulatedDifficulty = 0;
             var chunks = new List<GameBoardChunkConfiguration>();
-            var maxHeightJump = startJumpForce;
+            var maxJumpForce = startJumpForce;
                 
             while (accumulatedDifficulty < difficulty)
             {
-                var chunk = _chunks.Where(x =>
-                    {
-                        var bestConfig = GetBestValuePanelInChunk(x);
-                        return maxHeightJump.ProcessMathematicalFunction(bestConfig.FunctionType, bestConfig.Value) > 0;
-                    })
-                    .SelectRandomItem();
+                var force = maxJumpForce;
+                var chunk =_configuration.Chunks.Where(x => IsChunkSatisfies(force, x)).SelectRandomItem();
                 
                 accumulatedDifficulty += chunk.SelectionDifficulty;
                 var bestConfiguration = GetBestValuePanelInChunk(chunk);
                 
-                maxHeightJump = maxHeightJump.ProcessMathematicalFunction(bestConfiguration.FunctionType, bestConfiguration.Value);
+                maxJumpForce = maxJumpForce.ProcessMathematicalFunction(bestConfiguration.FunctionType, bestConfiguration.Value);
 
                 chunks.Add(chunk);
             }
 
-            return new GameBoardConfiguration(5f, maxHeightJump, chunks.ToArray(), 
+            return new GameBoardConfiguration(5f, maxJumpForce, chunks.ToArray(), 
                 new Dictionary<ValuePanelPlacementType, float>()
             {
                 [Center] = 0f,
@@ -49,6 +45,19 @@ namespace Kernel.GamePlay.GameBoard
             });
         }
 
+
+        private bool IsChunkSatisfies(float accumulatedJumpForce, GameBoardChunkConfiguration chunk)
+        {
+            var bestValuePanelConfig = GetBestValuePanelInChunk(chunk);
+            accumulatedJumpForce = accumulatedJumpForce.ProcessMathematicalFunction(bestValuePanelConfig.FunctionType,
+                bestValuePanelConfig.Value);
+            
+            if (accumulatedJumpForce <= 0 || !accumulatedJumpForce.InRange(_configuration.JumpForceRange))
+                return false;
+
+            return true;
+        }
+        
         private ValuePanelConfiguration GetBestValuePanelInChunk(GameBoardChunkConfiguration chunk)
         {
             var panels = chunk.Panels;

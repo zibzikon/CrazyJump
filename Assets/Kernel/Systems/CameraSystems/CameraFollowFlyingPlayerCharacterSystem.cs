@@ -28,7 +28,11 @@ namespace Kernel.Systems.CameraSystems
                 
                 var playerCharacterPosition = playerCharacter.position.Value;
                 var cameraPosition = camera.position.Value;
-                var position = cameraPosition.SetY(camera.followingOffset.Value.y + playerCharacterPosition.y);
+                var followingOffset = camera.followingOffset.Value;
+                var position = followingOffset
+                    .AddY(playerCharacterPosition.y)
+                    .AddX(playerCharacterPosition.x)
+                    .SetZ(cameraPosition.z);
                 
                 camera.ReplacePosition(position);
             }

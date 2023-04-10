@@ -45,6 +45,7 @@ namespace Kernel.Systems.Registration
             AddInjected<CameraFollowRunningPlayerCharacterSystem>();
             AddInjected<CameraFollowFlyingPlayerCharacterSystem>();
             
+            AddInjected<AccumulatedJumpForceTextUpdatingSystem>();
             AddInjected<MenuVisibilitySystem>();
             
             AddInjected<GameEventSystems>();
