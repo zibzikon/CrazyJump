@@ -39,5 +39,7 @@ namespace Kernel.Systems.Player
                 playerCharacter.ReplaceDirectionalForce(directionalForce - gravityForce * _time.DeltaTime);
             }
         }
+
+        
     }
 }

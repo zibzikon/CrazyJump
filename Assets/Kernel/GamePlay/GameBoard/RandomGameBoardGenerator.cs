@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Kernel.Extensions;
@@ -51,16 +52,19 @@ namespace Kernel.GamePlay.GameBoard
             var bestValuePanelConfig = GetBestValuePanelInChunk(chunk);
             accumulatedJumpForce = accumulatedJumpForce.ProcessMathematicalFunction(bestValuePanelConfig.FunctionType,
                 bestValuePanelConfig.Value);
-            
-            if (accumulatedJumpForce <= 0 || !accumulatedJumpForce.InRange(_configuration.JumpForceRange))
-                return false;
 
-            return true;
+            return accumulatedJumpForce > 0 && accumulatedJumpForce <= _configuration.MaxJumpForce;
         }
         
         private ValuePanelConfiguration GetBestValuePanelInChunk(GameBoardChunkConfiguration chunk)
         {
             var panels = chunk.Panels;
+
+            if (panels.Length == 1)
+            {
+                var panel = panels.First();
+                return IsGoodPanelConfiguration(panel) ? panel : new ValuePanelConfiguration();
+            }
             
             var bestFunction = Add;
             var bestValue = 0f;
@@ -84,6 +88,20 @@ namespace Kernel.GamePlay.GameBoard
             }
 
             return bestConfigurationIndex != -1? panels[bestConfigurationIndex] : panels[0];
+        }
+
+        private bool IsGoodPanelConfiguration(ValuePanelConfiguration configuration)
+        {
+            var function = configuration.FunctionType;
+            var value = configuration.Value;
+            
+            if (function == Multiply && value == 0 ||
+            function.IsPositive() && value < 0 ||
+            function == Divide && !value.InRange(0.001f, 1) ||
+            function == Subtract && value > 0) 
+                return false;
+
+            return true;
         }
     }
 }

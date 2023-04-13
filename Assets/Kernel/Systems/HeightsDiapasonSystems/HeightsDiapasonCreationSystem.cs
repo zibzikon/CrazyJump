@@ -61,7 +61,7 @@ namespace Kernel.Systems.HeightsDiapasonSystems
         private float CalculateMaxJumpHeight(float gravityForce, float jumpForce)
         {
             var n = (gravityForce + jumpForce) / gravityForce;
-            var height = (2 * jumpForce - gravityForce * n + gravityForce) / 2 * n;
+            var height = jumpForce * n * 0.5f;
             
             return height;
         }

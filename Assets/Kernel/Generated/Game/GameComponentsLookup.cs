@@ -9,76 +9,86 @@
 public static class GameComponentsLookup {
 
     public const int AnchoredToHandListener = 0;
-    public const int DestroyedListener = 1;
-    public const int AccumulatedJumpForce = 2;
-    public const int AnchoredToHand = 3;
-    public const int Camera = 4;
-    public const int CollidedEntityID = 5;
-    public const int Collisionable = 6;
-    public const int DefaultRotation = 7;
-    public const int Destroyable = 8;
-    public const int Destroyed = 9;
-    public const int DirectionalForce = 10;
-    public const int FollowingEntityID = 11;
-    public const int FollowingOffset = 12;
-    public const int FollowingPlayerCharacter = 13;
-    public const int FollowSpeed = 14;
-    public const int GameBoard = 15;
-    public const int GameBoardEndPart = 16;
-    public const int GravityForce = 17;
-    public const int Height = 18;
-    public const int HeightsDiapason = 19;
-    public const int HeightsDiapasonRow = 20;
-    public const int Hooked = 21;
-    public const int HookedEntityID = 22;
-    public const int Hooking = 23;
-    public const int HorizontalBorder = 24;
-    public const int HorizontalSpeed = 25;
-    public const int ID = 26;
-    public const int Interacted = 27;
-    public const int Length = 28;
-    public const int MakingJump = 29;
-    public const int MaxHeight = 30;
-    public const int Movable = 31;
-    public const int MovePosition = 32;
-    public const int MovingDirection = 33;
-    public const int Obtained = 34;
-    public const int PlayerCharacter = 35;
-    public const int PlayingStarted = 36;
-    public const int Position = 37;
-    public const int RagdollBody = 38;
-    public const int Rotation = 39;
-    public const int RotationSensitivity = 40;
-    public const int RotationYBorder = 41;
-    public const int RowPosition = 42;
-    public const int RowsCount = 43;
-    public const int Running = 44;
-    public const int RunningSpeed = 45;
-    public const int StartedFollowingFlyingPlayerCharacter = 46;
-    public const int TargetRotation = 47;
-    public const int ValuePanel = 48;
-    public const int ValuePanelFunction = 49;
-    public const int ValuePanelValue = 50;
-    public const int PositionListener = 51;
-    public const int RagdollBodyListener = 52;
-    public const int RotationListener = 53;
-    public const int RunningListener = 54;
-    public const int StartedFollowingFlyingPlayerCharacterListener = 55;
+    public const int DestructedListener = 1;
+    public const int HookingAnimationStartedListener = 2;
+    public const int AccumulatedJumpForce = 3;
+    public const int AnchoredToHand = 4;
+    public const int Camera = 5;
+    public const int CollidedEntityID = 6;
+    public const int Collisionable = 7;
+    public const int DefaultRotation = 8;
+    public const int Destructable = 9;
+    public const int Destructed = 10;
+    public const int DirectionalForce = 11;
+    public const int Duration = 12;
+    public const int DurationLeft = 13;
+    public const int DurationUp = 14;
+    public const int FollowingEntityID = 15;
+    public const int FollowingOffset = 16;
+    public const int FollowingPlayerCharacter = 17;
+    public const int FollowSpeed = 18;
+    public const int GameBoard = 19;
+    public const int GameBoardEndPart = 20;
+    public const int GravityForce = 21;
+    public const int Height = 22;
+    public const int HeightsDiapason = 23;
+    public const int HeightsDiapasonRow = 24;
+    public const int Hooked = 25;
+    public const int HookedEntityID = 26;
+    public const int HookingAnimationStarted = 27;
+    public const int HookingProcessDuration = 28;
+    public const int HorizontalBorder = 29;
+    public const int HorizontalSpeed = 30;
+    public const int ID = 31;
+    public const int Interacted = 32;
+    public const int Length = 33;
+    public const int MakingJump = 34;
+    public const int MaxHeight = 35;
+    public const int Movable = 36;
+    public const int MovePosition = 37;
+    public const int MovingDirection = 38;
+    public const int Obtained = 39;
+    public const int PlayerCharacter = 40;
+    public const int PlayingStarted = 41;
+    public const int Position = 42;
+    public const int RagdollBody = 43;
+    public const int Rotation = 44;
+    public const int RotationSensitivity = 45;
+    public const int RotationYBorder = 46;
+    public const int RowPosition = 47;
+    public const int RowsCount = 48;
+    public const int Running = 49;
+    public const int RunningSpeed = 50;
+    public const int StartedFollowingFlyingPlayerCharacter = 51;
+    public const int TargetRotation = 52;
+    public const int ValuePanel = 53;
+    public const int ValuePanelFunction = 54;
+    public const int ValuePanelValue = 55;
+    public const int MakingJumpListener = 56;
+    public const int PositionListener = 57;
+    public const int RagdollBodyListener = 58;
+    public const int RotationListener = 59;
+    public const int RunningListener = 60;
+    public const int StartedFollowingFlyingPlayerCharacterListener = 61;
 
-    public const int TotalComponents = 56;
+    public const int TotalComponents = 62;
 
     public static readonly string[] componentNames = {
         "AnchoredToHandListener",
-        "DestroyedListener",
+        "DestructedListener",
+        "HookingAnimationStartedListener",
         "AccumulatedJumpForce",
         "AnchoredToHand",
         "Camera",
         "CollidedEntityID",
         "Collisionable",
         "DefaultRotation",
-        "Destroyable",
-        "Destroyed",
+        "Destructable",
+        "Destructed",
         "DirectionalForce",
+        "Duration",
+        "DurationLeft",
+        "DurationUp",
         "FollowingEntityID",
         "FollowingOffset",
         "FollowingPlayerCharacter",
@@ -91,7 +101,8 @@ public static class GameComponentsLookup {
         "HeightsDiapasonRow",
         "Hooked",
         "HookedEntityID",
-        "Hooking",
+        "HookingAnimationStarted",
+        "HookingProcessDuration",
         "HorizontalBorder",
         "HorizontalSpeed",
         "ID",
@@ -119,6 +130,7 @@ public static class GameComponentsLookup {
         "ValuePanel",
         "ValuePanelFunction",
         "ValuePanelValue",
+        "MakingJumpListener",
         "PositionListener",
         "RagdollBodyListener",
         "RotationListener",
@@ -128,16 +140,20 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(AnchoredToHandListenerComponent),
-        typeof(DestroyedListenerComponent),
+        typeof(DestructedListenerComponent),
+        typeof(HookingAnimationStartedListenerComponent),
         typeof(Kernel.Components.AccumulatedJumpForce),
         typeof(Kernel.Components.AnchoredToHand),
         typeof(Kernel.Components.Camera),
         typeof(Kernel.Components.CollidedEntityID),
         typeof(Kernel.Components.Collisionable),
         typeof(Kernel.Components.DefaultRotation),
-        typeof(Kernel.Components.Destroyable),
-        typeof(Kernel.Components.Destroyed),
+        typeof(Kernel.Components.Destructable),
+        typeof(Kernel.Components.Destructed),
         typeof(Kernel.Components.DirectionalForce),
+        typeof(Kernel.Components.Duration),
+        typeof(Kernel.Components.DurationLeft),
+        typeof(Kernel.Components.DurationUp),
         typeof(Kernel.Components.FollowingEntityID),
         typeof(Kernel.Components.FollowingOffset),
         typeof(Kernel.Components.FollowingPlayerCharacter),
@@ -150,7 +166,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.HeightsDiapasonRow),
         typeof(Kernel.Components.Hooked),
         typeof(Kernel.Components.HookedEntityID),
-        typeof(Kernel.Components.Hooking),
+        typeof(Kernel.Components.HookingProcessDuration),
         typeof(Kernel.Components.HorizontalBorder),
         typeof(Kernel.Components.HorizontalSpeed),
         typeof(Kernel.Components.ID),
@@ -178,6 +194,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.ValuePanel),
         typeof(Kernel.Components.ValuePanelFunction),
         typeof(Kernel.Components.ValuePanelValue),
+        typeof(MakingJumpListenerComponent),
         typeof(PositionListenerComponent),
         typeof(RagdollBodyListenerComponent),
         typeof(RotationListenerComponent),

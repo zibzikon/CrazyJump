@@ -458,6 +458,7 @@ Transform:
   m_Children:
   - {fileID: 1710520528}
   - {fileID: 476287385}
+  - {fileID: 2354838012650551200}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1037,43 +1038,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _engine: {fileID: 903725869}
   _mediator: {fileID: 2677035909338113343}
-  _gameBoardChunksConfigurations:
-  - SelectionDifficulty: 1
-    Panels:
-    - Value: 1
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 0
-  - SelectionDifficulty: 2
-    Panels:
-    - Value: 5
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 1
-    - Value: 2
-      FunctionType: 2
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 2
-    Panels:
-    - Value: 2
-      FunctionType: 3
-      MovingType: 0
-      PlacementType: 1
-    - Value: 10
-      FunctionType: 1
-      MovingType: 0
-      PlacementType: 2
-  - SelectionDifficulty: 2
-    Panels:
-    - Value: 5
-      FunctionType: 0
-      MovingType: 0
-      PlacementType: 1
-    - Value: 5
-      FunctionType: 1
-      MovingType: 0
-      PlacementType: 2
+  _gameBoardGeneratorConfiguration:
+    Chunks:
+    - SelectionDifficulty: 1
+      Panels:
+      - Value: 10
+        FunctionType: 1
+        MovingType: 0
+        PlacementType: 0
+    - SelectionDifficulty: 1
+      Panels:
+      - Value: 5
+        FunctionType: 0
+        MovingType: 0
+        PlacementType: 0
+    - SelectionDifficulty: 1
+      Panels:
+      - Value: 0
+        FunctionType: 0
+        MovingType: 0
+        PlacementType: 0
+    - SelectionDifficulty: 2
+      Panels:
+      - Value: 1
+        FunctionType: 0
+        MovingType: 0
+        PlacementType: 1
+      - Value: 1
+        FunctionType: 1
+        MovingType: 0
+        PlacementType: 2
+    - SelectionDifficulty: 2
+      Panels:
+      - Value: 5
+        FunctionType: 0
+        MovingType: 0
+        PlacementType: 1
+      - Value: 5
+        FunctionType: 1
+        MovingType: 0
+        PlacementType: 2
+    - SelectionDifficulty: 3
+      Panels:
+      - Value: 5
+        FunctionType: 1
+        MovingType: 0
+        PlacementType: 1
+      - Value: 10
+        FunctionType: 1
+        MovingType: 0
+        PlacementType: 2
+    - SelectionDifficulty: 3
+      Panels:
+      - Value: 1
+        FunctionType: 3
+        MovingType: 0
+        PlacementType: 1
+      - Value: 0
+        FunctionType: 2
+        MovingType: 0
+        PlacementType: 2
+    MaxJumpForce: 250
   _viewsResourcesData:
     ValuePanelViews:
     - Prefabs/ValuePanel
@@ -1181,7 +1206,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 639392294}
     m_Modifications:
     - target: {fileID: 398564780643634142, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
       propertyPath: m_Name
@@ -1189,7 +1214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3153035177251099132, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3153035177251099132, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1209,15 +1234,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3153035177251099132, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3153035177251099132, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3153035177251099132, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3153035177251099132, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1264,6 +1289,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
+--- !u!4 &2354838012650551200 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3153035177251099132, guid: 1269cfc109da6c640a924661a06e2f42, type: 3}
+  m_PrefabInstance: {fileID: 2354838012650551199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2677035909338113343
 MonoBehaviour:
   m_ObjectHideFlags: 0

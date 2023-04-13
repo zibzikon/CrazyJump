@@ -12,7 +12,7 @@ namespace Kernel.Systems.PlayerCharacterSystems
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-            => context.CreateCollector(Hooking.Added());
+            => context.CreateCollector(Hooked.Added());
 
         protected override bool Filter(GameEntity hookingEntity)
             => AllOf(PlayerCharacter).NoneOf(RagdollBody).Matches(hookingEntity);

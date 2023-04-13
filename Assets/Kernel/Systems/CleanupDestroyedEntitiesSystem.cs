@@ -1,22 +1,22 @@
 using Entitas;
+using static GameMatcher;
 
 namespace Kernel.Systems
 {
     public class CleanupDestroyedEntitiesSystem : ICleanupSystem
     {
-        private readonly GameContext _gameContext;
+        private readonly IGroup<GameEntity> _destroyed;
 
         public CleanupDestroyedEntitiesSystem(GameContext gameContext)
         {
-            _gameContext = gameContext;
+            _destroyed = gameContext.GetGroup(AllOf(Destructable, Destructed));
         }
         
         public void Cleanup()
         {
-            foreach (var destroyable in _gameContext.GetEntities())
+            foreach (var destroyable in _destroyed.GetEntities())
             {
-                if(destroyable.isDestroyable && destroyable.isDestroyed)
-                    destroyable.Destroy();
+                destroyable.Destroy();
             }
         }
     }

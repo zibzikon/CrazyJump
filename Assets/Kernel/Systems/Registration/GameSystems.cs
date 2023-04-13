@@ -37,6 +37,7 @@ namespace Kernel.Systems.Registration
             AddInjected<PlayerCharacterFlyingSystem>();
             AddInjected<PlayerCharacterJumpMakingSystem>();
             AddInjected<PlayerCharacterHookingSystem>();
+            AddInjected<PlayerCharacterHookingAnimationStartingBehaviour>();
             AddInjected<PlayerCharacterHookToHeightsDiapasonRowSystem>();
             AddInjected<PlayerCharacterRagdollHookingSystem>();
             

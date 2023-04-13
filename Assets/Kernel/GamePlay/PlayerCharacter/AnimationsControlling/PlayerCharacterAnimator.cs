@@ -6,13 +6,10 @@ namespace Kernel.GamePlay.PlayerCharacter
 {
     public class PlayerCharacterAnimator : AnimatorBase
     {
-        [SerializeField] private string _idleAnimationKey;
         [SerializeField] private string _runningAnimationKey;
         [SerializeField] private string _flyingAnimationKey;
         [SerializeField] private string _hookingAnimationKey;
-
-        [HideInEditorMode, Button] public void EnterIdleAnimation() => EnterAnimation(_idleAnimationKey);
-
+        
         [HideInEditorMode, Button] public void EnterRunningAnimation() => EnterAnimation(_runningAnimationKey);
 
         [HideInEditorMode, Button] public void EnterFlyingAnimation() => EnterAnimation(_flyingAnimationKey);

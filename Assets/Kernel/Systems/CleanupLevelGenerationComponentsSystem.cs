@@ -1,22 +1,21 @@
 using Entitas;
+using static LevelMatcher;
 
 namespace Kernel.Systems.Level
 {
     public class CleanupLevelGenerationComponentsSystem : ICleanupSystem
     {
-        private readonly LevelContext _levelContext;
+        private readonly IGroup<LevelEntity> _generateNewLevelEntities;
 
         public CleanupLevelGenerationComponentsSystem(LevelContext levelContext)
         {
-            _levelContext = levelContext;
+            _generateNewLevelEntities = levelContext.GetGroup(GenerateNewLevel);
         }
         
         public void Cleanup()
         {
-            foreach (var levelEntity in _levelContext.GetEntities())
+            foreach (var levelEntity in _generateNewLevelEntities.GetEntities())
             {
-                if(!levelEntity.isGenerateNewLevel) continue;
-                
                 levelEntity.Destroy();
             }
         }

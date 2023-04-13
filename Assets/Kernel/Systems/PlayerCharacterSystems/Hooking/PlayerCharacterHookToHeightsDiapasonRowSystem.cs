@@ -15,7 +15,7 @@ namespace Kernel.Systems.PlayerCharacterSystems
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-            => context.CreateCollector(Hooking.Added());
+            => context.CreateCollector(Hooked.Added());
 
         protected override bool Filter(GameEntity entity)
             => AllOf(PlayerCharacter, Position).Matches(entity);

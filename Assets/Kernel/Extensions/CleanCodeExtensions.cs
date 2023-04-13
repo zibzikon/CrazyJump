@@ -17,9 +17,9 @@ namespace Kernel.Extensions
             => function switch
             {
                 Add => true,
-                Subtract => true,
+                Multiply => true,
+                Subtract => false,
                 Divide => false,
-                Multiply => false,
                 _ => throw new InvalidOperationException()
             };
 

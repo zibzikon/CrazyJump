@@ -2,6 +2,6 @@ namespace Kernel.ECSIntegration.Listeners
 {
     public class DestroyableRegister : EntityRegisterBehaviour
     {
-        public override void Register(GameEntity entity) => entity.isDestroyable = true;
+        public override void Register(GameEntity entity) => entity.isDestructable = true;
     }
 }

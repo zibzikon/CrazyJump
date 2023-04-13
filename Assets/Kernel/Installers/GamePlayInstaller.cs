@@ -24,7 +24,7 @@ namespace Kernel.Installers
     {
         [Required, SerializeField] private Engine _engine;
         [Required, SerializeField] private Mediator _mediator;
-        [SerializeField] private List<GameBoardChunkConfiguration> _gameBoardChunksConfigurations;
+        [SerializeField] private GameBoardGeneratorConfiguration _gameBoardGeneratorConfiguration;
         [SerializeField] private ViewsResourcesData _viewsResourcesData;
         
         public override void InstallBindings()
@@ -43,7 +43,7 @@ namespace Kernel.Installers
 
             Container.Bind<IMediator>().FromInstance(_mediator);
             
-            Container.Bind<IGameBoardGenerator>().To<RandomGameBoardGenerator>().AsSingle().WithArguments(_gameBoardChunksConfigurations.ToArray());
+            Container.Bind<IGameBoardGenerator>().To<RandomGameBoardGenerator>().AsSingle().WithArguments(_gameBoardGeneratorConfiguration);
             Container.Bind<IGameBoardViewFactory>().To<GameBoardViewFactory>().AsSingle();
             Container.Bind<IHeightsDiapasonRowViewFactory>().To<HeightsDiapasonRowViewFactory>().AsSingle();
             
