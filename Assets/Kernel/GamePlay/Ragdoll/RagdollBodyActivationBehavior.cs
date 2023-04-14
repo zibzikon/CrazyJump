@@ -7,7 +7,7 @@ namespace Kernel.GamePlay.Ragdoll
 {
     public class RagdollBodyActivationBehavior : EntityEventListenerBehaviour, IRagdollBodyListener
     {
-        [FormerlySerializedAs("_ragdollBodyBehaviour")] [Required, SerializeField] private RagdollBody ragdollBody;
+        [Required, SerializeField] private RagdollBody _ragdollBody;
         
         public override void Register(GameEntity entity)
             => entity.AddRagdollBodyListener(this);
@@ -15,7 +15,7 @@ namespace Kernel.GamePlay.Ragdoll
         public override void Unregister(GameEntity entity)
             => entity.RemoveRagdollBodyListener(this);
 
-        public void OnRagdollBody(GameEntity entity) => ragdollBody.EnableRagdollPhysics();
+        public void OnRagdollBody(GameEntity entity) => _ragdollBody.EnableRagdollPhysics();
 
     }
 }

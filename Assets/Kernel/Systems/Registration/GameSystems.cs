@@ -21,8 +21,8 @@ namespace Kernel.Systems.Registration
             AddInjected<PreviousLevelDestroyingSystem>();
             AddInjected<GameBoardGenerationSystem>();
             AddInjected<GameBoardEndPartCreationSystem>();
-            AddInjected<GameBoardValuePlanesGenerationSystem>();
-            
+            AddInjected<ValuePlanesGenerationSystem>();
+
             AddInjected<HeightsDiapasonCreationSystem>();
             AddInjected<HeightsDiapasonRowsCreationSystem>();
             
@@ -34,23 +34,34 @@ namespace Kernel.Systems.Registration
             AddInjected<PlayerCharacterRotationSystem>();
             AddInjected<PlayerCharacterWalkSystem>();
             AddInjected<PlayerCharacterJumpSystem>();
+            AddInjected<PlayerCharacterResetRotationAfterJumpSystem>();
             AddInjected<PlayerCharacterFlyingSystem>();
             AddInjected<PlayerCharacterJumpMakingSystem>();
-            AddInjected<PlayerCharacterHookingSystem>();
-            AddInjected<PlayerCharacterHookingAnimationStartingBehaviour>();
+            AddInjected<PlayerCharacterMakeHookAfterHookingProcessDurationLeft>();
+            AddInjected<PlayerCharacterStartHookingSystem>();
             AddInjected<PlayerCharacterHookToHeightsDiapasonRowSystem>();
             AddInjected<PlayerCharacterRagdollHookingSystem>();
+            
+            AddInjected<LooseGameOnPlayerAccumulatedJumpIsNegativeSystem>();
+            
+            AddInjected<ValuePanelDisappearingSystem>();
             
             AddInjected<InitializeFollowingCameraOnPlayerCreatedSystem>();
             AddInjected<StartFollowingFlyingPlayerCharacterSystem>();
             AddInjected<CameraFollowRunningPlayerCharacterSystem>();
             AddInjected<CameraFollowFlyingPlayerCharacterSystem>();
             
+            AddInjected<ShowLooseScreenOnGameLoseSystem>();
+            AddInjected<ShowMenuOnLevelGeneratedSystem>();
+            AddInjected<HideLooseScreenOnLevelGeneratedSystem>();
+            AddInjected<HideMenuOnPlayingStartedSystem>();
             AddInjected<AccumulatedJumpForceTextUpdatingSystem>();
-            AddInjected<MenuVisibilitySystem>();
             
             AddInjected<GameEventSystems>();
-            
+
+            AddInjected<DurationSystem>();
+            AddInjected<DestructOnLifeTimeDurationUpSystem>();
+
             AddInjected<CleanupPlayingStartedEntitySystem>();
             AddInjected<CleanupDestroyedEntitiesSystem>();
             AddInjected<CleanupLevelGenerationComponentsSystem>();

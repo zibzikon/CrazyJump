@@ -10,73 +10,79 @@ public static class GameComponentsLookup {
 
     public const int AnchoredToHandListener = 0;
     public const int DestructedListener = 1;
-    public const int HookingAnimationStartedListener = 2;
-    public const int AccumulatedJumpForce = 3;
-    public const int AnchoredToHand = 4;
-    public const int Camera = 5;
-    public const int CollidedEntityID = 6;
-    public const int Collisionable = 7;
-    public const int DefaultRotation = 8;
-    public const int Destructable = 9;
-    public const int Destructed = 10;
-    public const int DirectionalForce = 11;
-    public const int Duration = 12;
-    public const int DurationLeft = 13;
-    public const int DurationUp = 14;
-    public const int FollowingEntityID = 15;
-    public const int FollowingOffset = 16;
-    public const int FollowingPlayerCharacter = 17;
-    public const int FollowSpeed = 18;
-    public const int GameBoard = 19;
-    public const int GameBoardEndPart = 20;
-    public const int GravityForce = 21;
-    public const int Height = 22;
-    public const int HeightsDiapason = 23;
-    public const int HeightsDiapasonRow = 24;
-    public const int Hooked = 25;
-    public const int HookedEntityID = 26;
-    public const int HookingAnimationStarted = 27;
-    public const int HookingProcessDuration = 28;
-    public const int HorizontalBorder = 29;
-    public const int HorizontalSpeed = 30;
-    public const int ID = 31;
-    public const int Interacted = 32;
-    public const int Length = 33;
-    public const int MakingJump = 34;
-    public const int MaxHeight = 35;
-    public const int Movable = 36;
-    public const int MovePosition = 37;
-    public const int MovingDirection = 38;
-    public const int Obtained = 39;
-    public const int PlayerCharacter = 40;
-    public const int PlayingStarted = 41;
-    public const int Position = 42;
-    public const int RagdollBody = 43;
-    public const int Rotation = 44;
-    public const int RotationSensitivity = 45;
-    public const int RotationYBorder = 46;
-    public const int RowPosition = 47;
-    public const int RowsCount = 48;
-    public const int Running = 49;
-    public const int RunningSpeed = 50;
-    public const int StartedFollowingFlyingPlayerCharacter = 51;
-    public const int TargetRotation = 52;
-    public const int ValuePanel = 53;
-    public const int ValuePanelFunction = 54;
-    public const int ValuePanelValue = 55;
-    public const int MakingJumpListener = 56;
-    public const int PositionListener = 57;
-    public const int RagdollBodyListener = 58;
-    public const int RotationListener = 59;
-    public const int RunningListener = 60;
-    public const int StartedFollowingFlyingPlayerCharacterListener = 61;
+    public const int DisappearingStartedListener = 2;
+    public const int HookingStartedListener = 3;
+    public const int AccumulatedJumpForce = 4;
+    public const int AnchoredToHand = 5;
+    public const int Camera = 6;
+    public const int CollidedEntityID = 7;
+    public const int Collisionable = 8;
+    public const int DefaultRotation = 9;
+    public const int Destructable = 10;
+    public const int Destructed = 11;
+    public const int DirectionalForce = 12;
+    public const int DisappearingDuration = 13;
+    public const int DisappearingStarted = 14;
+    public const int Duration = 15;
+    public const int DurationLeft = 16;
+    public const int DurationUp = 17;
+    public const int FollowingEntityID = 18;
+    public const int FollowingOffset = 19;
+    public const int FollowingPlayerCharacter = 20;
+    public const int FollowSpeed = 21;
+    public const int GameBoard = 22;
+    public const int GameBoardEndPart = 23;
+    public const int GameLose = 24;
+    public const int GravityForce = 25;
+    public const int Height = 26;
+    public const int HeightsDiapason = 27;
+    public const int HeightsDiapasonRow = 28;
+    public const int Hooked = 29;
+    public const int HookedEntityID = 30;
+    public const int HookingProcessDuration = 31;
+    public const int HookingStarted = 32;
+    public const int HorizontalBorder = 33;
+    public const int HorizontalSpeed = 34;
+    public const int ID = 35;
+    public const int Interacted = 36;
+    public const int Length = 37;
+    public const int LifetimeDuration = 38;
+    public const int MakingJump = 39;
+    public const int MaxHeight = 40;
+    public const int Movable = 41;
+    public const int MovePosition = 42;
+    public const int MovingDirection = 43;
+    public const int Obtained = 44;
+    public const int PlayerCharacter = 45;
+    public const int PlayingStarted = 46;
+    public const int Position = 47;
+    public const int RagdollBody = 48;
+    public const int Rotation = 49;
+    public const int RotationSensitivity = 50;
+    public const int RotationYBorder = 51;
+    public const int RowPosition = 52;
+    public const int RowsCount = 53;
+    public const int Running = 54;
+    public const int RunningSpeed = 55;
+    public const int StartedFollowingFlyingPlayerCharacter = 56;
+    public const int TargetRotation = 57;
+    public const int ValuePanel = 58;
+    public const int ValuePanelFunction = 59;
+    public const int ValuePanelValue = 60;
+    public const int MakingJumpListener = 61;
+    public const int PositionListener = 62;
+    public const int RagdollBodyListener = 63;
+    public const int RotationListener = 64;
+    public const int RunningListener = 65;
+    public const int StartedFollowingFlyingPlayerCharacterListener = 66;
 
-    public const int TotalComponents = 62;
+    public const int TotalComponents = 67;
 
     public static readonly string[] componentNames = {
         "AnchoredToHandListener",
         "DestructedListener",
-        "HookingAnimationStartedListener",
+        "DisappearingStartedListener",
+        "HookingStartedListener",
         "AccumulatedJumpForce",
         "AnchoredToHand",
         "Camera",
@@ -86,6 +92,8 @@ public static class GameComponentsLookup {
         "Destructable",
         "Destructed",
         "DirectionalForce",
+        "DisappearingDuration",
+        "DisappearingStarted",
         "Duration",
         "DurationLeft",
         "DurationUp",
@@ -95,19 +103,21 @@ public static class GameComponentsLookup {
         "FollowSpeed",
         "GameBoard",
         "GameBoardEndPart",
+        "GameLose",
         "GravityForce",
         "Height",
         "HeightsDiapason",
         "HeightsDiapasonRow",
         "Hooked",
         "HookedEntityID",
-        "HookingAnimationStarted",
         "HookingProcessDuration",
+        "HookingStarted",
         "HorizontalBorder",
         "HorizontalSpeed",
         "ID",
         "Interacted",
         "Length",
+        "LifetimeDuration",
         "MakingJump",
         "MaxHeight",
         "Movable",
@@ -141,7 +151,8 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(AnchoredToHandListenerComponent),
         typeof(DestructedListenerComponent),
-        typeof(HookingAnimationStartedListenerComponent),
+        typeof(DisappearingStartedListenerComponent),
+        typeof(HookingStartedListenerComponent),
         typeof(Kernel.Components.AccumulatedJumpForce),
         typeof(Kernel.Components.AnchoredToHand),
         typeof(Kernel.Components.Camera),
@@ -151,6 +162,8 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.Destructable),
         typeof(Kernel.Components.Destructed),
         typeof(Kernel.Components.DirectionalForce),
+        typeof(Kernel.Components.DisappearingDuration),
+        typeof(Kernel.Components.DisappearingStarted),
         typeof(Kernel.Components.Duration),
         typeof(Kernel.Components.DurationLeft),
         typeof(Kernel.Components.DurationUp),
@@ -160,6 +173,7 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.FollowSpeed),
         typeof(Kernel.Components.GameBoard),
         typeof(Kernel.Components.GameBoardEndPart),
+        typeof(Kernel.Components.GameLose),
         typeof(Kernel.Components.GravityForce),
         typeof(Kernel.Components.Height),
         typeof(Kernel.Components.HeightsDiapason),
@@ -167,11 +181,13 @@ public static class GameComponentsLookup {
         typeof(Kernel.Components.Hooked),
         typeof(Kernel.Components.HookedEntityID),
         typeof(Kernel.Components.HookingProcessDuration),
+        typeof(Kernel.Components.HookingStarted),
         typeof(Kernel.Components.HorizontalBorder),
         typeof(Kernel.Components.HorizontalSpeed),
         typeof(Kernel.Components.ID),
         typeof(Kernel.Components.Interacted),
         typeof(Kernel.Components.Length),
+        typeof(Kernel.Components.LifetimeDuration),
         typeof(Kernel.Components.MakingJump),
         typeof(Kernel.Components.MaxHeight),
         typeof(Kernel.Components.Movable),

@@ -29,9 +29,11 @@ namespace Kernel.Systems.Player
                 
                 playerCharacter.isMakingJump = false;
                 playerCharacter.isMovable = false;
+                
                 playerCharacter.ReplaceRunningSpeed(config.RunningSpeed);
                 playerCharacter.ReplacePosition(Vector3.zero);
                 playerCharacter.ReplaceAccumulatedJumpForce(config.StartAccumulatedJumpForce);
+                
                 if(playerCharacter.hasDirectionalForce) playerCharacter.RemoveDirectionalForce();
                 if(playerCharacter.hasCollidedEntityID) playerCharacter.RemoveCollidedEntityID();
             }

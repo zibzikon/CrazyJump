@@ -12,10 +12,10 @@ namespace Kernel.Systems.PlayerCharacterSystems
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-            => context.CreateCollector(DurationUp);
+            => context.CreateCollector(DurationUp.Added());
 
         protected override bool Filter(GameEntity playerCharacter)
-            => AllOf(PlayerCharacter, HookingProcessDuration).Matches(playerCharacter);
+            => AllOf(PlayerCharacter, HookingStarted).Matches(playerCharacter);
 
         protected override void Execute(List<GameEntity> playerCharactes)
         {

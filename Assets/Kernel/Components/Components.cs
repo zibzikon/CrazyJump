@@ -10,9 +10,6 @@ namespace Kernel.Components
     // @formatter:off
     
     public class ID : IComponent { [PrimaryEntityIndex] public int Value; }
-    
-   
-   
    
     
     [Level, Unique] public class GenerateNewLevel : IComponent { }
@@ -22,6 +19,8 @@ namespace Kernel.Components
     [Level] public class PlayerCharacterConfiguration : IComponent { public GamePlay.PlayerCharacter.PlayerCharacterConfiguration Value; }
     
     [Game, Unique] public class PlayingStarted : IComponent { }
+    
+    [Game, Unique] public class GameLose : IComponent { }
     
     [Game, Unique] public class GravityForce: IComponent { public float Value; }
     
@@ -41,12 +40,14 @@ namespace Kernel.Components
     
     [Game] public class Interacted : IComponent { }
     [Game] public class Obtained : IComponent { }
-    [Game] public class HookingStarted : IComponent { }
+    [Game] public class Hooked : IComponent { }
     [Game] public class DurationUp : IComponent { }
+    [Game] public class LifetimeDuration : IComponent { }
     
     [Game] public class Duration : IComponent { public float Value; }
     [Game] public class DurationLeft : IComponent { public float Value; }
     [Game] public class HookingProcessDuration : IComponent { public float Value; }
+    [Game] public class DisappearingDuration : IComponent { public float Value; }
     [Game] public class Length : IComponent { public float Value; }
     [Game] public class MovePosition : IComponent { public Vector3 Value; }
     [Game] public class DefaultRotation : IComponent { public Vector3 Value; }
@@ -82,8 +83,9 @@ namespace Kernel.Components
     [Game, Event(Self)] public class RagdollBody : IComponent { }
     [Game, Event(Self)] public class MakingJump : IComponent { }
     [Game, Event(Self)] public class Destructed : IComponent { }
-    [Game, Event(Self)] public class Hooked : IComponent { }
     [Game, Event(Self)] public class Running : IComponent { }
+    [Game, Event(Self)] public class HookingStarted : IComponent { }
+    [Game, Event(Self)] public class DisappearingStarted : IComponent { }
     [Game, Event(Self)] public class AnchoredToHand : IComponent { }
     [Game, Event(Self)] public class Position : IComponent { public Vector3 Value; }
     [Game, Event(Self)] public class StartedFollowingFlyingPlayerCharacter : IComponent { }

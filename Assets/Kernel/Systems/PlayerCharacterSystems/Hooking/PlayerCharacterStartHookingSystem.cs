@@ -1,19 +1,18 @@
 using Entitas;
+using Kernel.Extensions;
 using static GameMatcher;
 
 
 namespace Kernel.Systems.PlayerCharacterSystems
 {
-    public class PlayerCharacterHookingSystem : IExecuteSystem
+    public class PlayerCharacterStartHookingSystem : IExecuteSystem
     {
-        private readonly GameContext _gameContext;
         private readonly IGroup<GameEntity> _playerCharacters;
         private readonly IGroup<GameEntity> _heightsDiapasons;
 
         
-        public PlayerCharacterHookingSystem(GameContext gameContext)
+        public PlayerCharacterStartHookingSystem(GameContext gameContext)
         {
-            _gameContext = gameContext;
             _playerCharacters = gameContext.GetGroup(AllOf(PlayerCharacter, DirectionalForce, MakingJump, HookingProcessDuration));
         }
         
@@ -22,11 +21,12 @@ namespace Kernel.Systems.PlayerCharacterSystems
             foreach (var playerCharacter in _playerCharacters.GetEntities())
             {
                 if (playerCharacter.directionalForce.Value != 0) continue;
+                
                 var hookingProcessDuration = playerCharacter.hookingProcessDuration.Value;
+
+                playerCharacter.WindUpDuration(hookingProcessDuration);
                 
-                playerCharacter.AddDurationLeft(hookingProcessDuration);
-                playerCharacter.AddDuration(hookingProcessDuration);
-                
+                playerCharacter.isHookingStarted = true;
                 playerCharacter.isMakingJump = false;
             }
         }

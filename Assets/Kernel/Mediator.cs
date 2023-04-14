@@ -1,3 +1,4 @@
+using System;
 using Kernel.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,14 +10,17 @@ namespace Kernel.Mediators
     {
         [Required, SerializeField] private Engine _engine;
         [Required, SerializeField] private Menu _menu;
+        [Required, SerializeField] private GameLooseScreen _gameLooseScreen;
         [Required, SerializeField] private AccumulatedJumpForceTextBox _accumulatedJumpForceTextBox;
-        
+
         [Button(FoldoutButton), HideInEditorMode] public void SetAccumulatedJumpForceValue(float force) => _accumulatedJumpForceTextBox.SetAccumulatedJumpForceValue(force);
-        
-        
+
         [Button, HideInEditorMode] public void PlayGame() => _engine.StartPlaying();
         [Button, HideInEditorMode] public void GenerateNewLevel() => _engine.GenerateNewLevel();
         [Button, HideInEditorMode] public void HideMenu() => _menu.Hide();
         [Button, HideInEditorMode] public void ShowMenu() => _menu.Show();
+
+        [Button, HideInEditorMode] public void ShowGameLooseScreen() => _gameLooseScreen.Show();
+        [Button, HideInEditorMode] public void HideGameLooseScreen() => _gameLooseScreen.Hide();
     }
 }

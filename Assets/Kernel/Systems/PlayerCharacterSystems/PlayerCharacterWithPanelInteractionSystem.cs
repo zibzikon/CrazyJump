@@ -16,30 +16,25 @@ namespace Kernel.Systems.PlayerCharacterSystems
         
         public PlayerCharacterWithPanelInteractionSystem(GameContext context)
         {
-            _collidedPanels = context.GetGroup(AllOf(ValuePanel, Collisionable, ValuePanelValue, ValuePanelFunction).NoneOf(Interacted));
+            _collidedPanels = context.GetGroup(AllOf(ValuePanel, Collisionable, ValuePanelValue, ValuePanelFunction).NoneOf(Obtained));
             _characters = context.GetGroup(AllOf(GameMatcher.PlayerCharacter, Collisionable, CollidedEntityID, AccumulatedJumpForce));
         }
         
         public void Execute()
         {
-            var entitiesToInteract = new List<GameEntity>();
-            
             foreach (var character in _characters)
-            foreach (var collidedPanel in _collidedPanels)
+            foreach (var collidedPanel in _collidedPanels.GetEntities())
             {
                 if(character.collidedEntityID.Value != collidedPanel.iD.Value) continue;
                 
                 character.ReplaceAccumulatedJumpForce(character.accumulatedJumpForce.Value.ProcessMathematicalFunction(collidedPanel.valuePanelFunction.Value,
                         collidedPanel.valuePanelValue.Value)
                 );
-                
-                entitiesToInteract.Add(collidedPanel);
-            }
 
-            entitiesToInteract.ForEach(x => x.isInteracted = true);
+                collidedPanel.isObtained = true;
+            }
         }
 
-     
 
     }
 }

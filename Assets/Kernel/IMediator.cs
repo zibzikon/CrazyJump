@@ -6,6 +6,8 @@ namespace Kernel.Mediators
         void GenerateNewLevel();
         void HideMenu();
         void ShowMenu();
+        void HideGameLooseScreen();
+        void ShowGameLooseScreen();
         void SetAccumulatedJumpForceValue(float force);
     }
 }

@@ -7,6 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 [Entitas.CodeGeneration.Attributes.DontGenerate(false)]
-public sealed class HookingAnimationStartedListenerComponent : Entitas.IComponent {
-    public System.Collections.Generic.List<IHookingAnimationStartedListener> value;
+public sealed class DisappearingStartedListenerComponent : Entitas.IComponent {
+    public System.Collections.Generic.List<IDisappearingStartedListener> value;
 }

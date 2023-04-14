@@ -9,12 +9,12 @@ using static LevelMatcher;
 
 namespace Kernel.Systems.Level
 {
-    public class GameBoardValuePlanesGenerationSystem : ReactiveSystem<LevelEntity>
+    public class ValuePlanesGenerationSystem : ReactiveSystem<LevelEntity>
     {
         private readonly IGameEntityCreator _gameEntityCreator;
         private readonly IValuePanelViewFactory _viewFactory;
 
-        public GameBoardValuePlanesGenerationSystem(LevelContext context,
+        public ValuePlanesGenerationSystem(LevelContext context,
             IGameEntityCreator gameEntityCreator,
             IValuePanelViewFactory viewFactory
             ) : base(context)

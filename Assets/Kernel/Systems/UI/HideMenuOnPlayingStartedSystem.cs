@@ -5,11 +5,11 @@ using static GameMatcher;
 
 namespace Kernel.Systems.UI
 {
-    public class MenuVisibilitySystem : ReactiveSystem<GameEntity>
+    public class HideMenuOnPlayingStartedSystem : ReactiveSystem<GameEntity>
     {
         private readonly IMediator _mediator;
 
-        MenuVisibilitySystem(GameContext context, IMediator mediator) : base(context)
+        public HideMenuOnPlayingStartedSystem(GameContext context, IMediator mediator) : base(context)
         {
             _mediator = mediator;
         }

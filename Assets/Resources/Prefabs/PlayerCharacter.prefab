@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93701372feed4b44a0409d16d099faf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ragdollBody: {fileID: 247035325389727847}
+  _ragdollBody: {fileID: 247035325389727847}
 --- !u!114 &227910641982915279
 MonoBehaviour:
   m_ObjectHideFlags: 0
