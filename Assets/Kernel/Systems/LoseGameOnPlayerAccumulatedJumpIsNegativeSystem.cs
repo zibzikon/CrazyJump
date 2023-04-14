@@ -4,12 +4,12 @@ using static GameMatcher;
 
 namespace Kernel.Systems
 {
-    public class LooseGameOnPlayerAccumulatedJumpIsNegativeSystem : IExecuteSystem
+    public class LoseGameOnPlayerAccumulatedJumpIsNegativeSystem : IExecuteSystem
     {
         private readonly IGameEntityCreator _entityCreator;
         private readonly IGroup<GameEntity> _playerCharacters;
 
-        public LooseGameOnPlayerAccumulatedJumpIsNegativeSystem(GameContext gameContext, IGameEntityCreator entityCreator)
+        public LoseGameOnPlayerAccumulatedJumpIsNegativeSystem(GameContext gameContext, IGameEntityCreator entityCreator)
         {
             _playerCharacters = gameContext.GetGroup(AllOf(PlayerCharacter, AccumulatedJumpForce, Running));
             _entityCreator = entityCreator;

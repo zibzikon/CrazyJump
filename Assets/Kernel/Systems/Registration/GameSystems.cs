@@ -41,8 +41,9 @@ namespace Kernel.Systems.Registration
             AddInjected<PlayerCharacterStartHookingSystem>();
             AddInjected<PlayerCharacterHookToHeightsDiapasonRowSystem>();
             AddInjected<PlayerCharacterRagdollHookingSystem>();
+            AddInjected<PlayerCharacterEnableRagdollOnGameLoseSystem>();
             
-            AddInjected<LooseGameOnPlayerAccumulatedJumpIsNegativeSystem>();
+            AddInjected<LoseGameOnPlayerAccumulatedJumpIsNegativeSystem>();
             
             AddInjected<ValuePanelDisappearingSystem>();
             

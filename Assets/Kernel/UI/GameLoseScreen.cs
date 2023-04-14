@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Kernel.UI
 {
-    public class GameLooseScreen : MonoBehaviour
+    public class GameLoseScreen : MonoBehaviour
     {
         [Required, SerializeField] private Button _restartLevelButton;
         [Required, SerializeField] private Mediator _mediator;
