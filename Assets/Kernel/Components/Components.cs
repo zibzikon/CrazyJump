@@ -87,8 +87,8 @@ namespace Kernel.Components
     [Game, Event(Self)] public class HookingStarted : IComponent { }
     [Game, Event(Self)] public class DisappearingStarted : IComponent { }
     [Game, Event(Self)] public class AnchoredToHand : IComponent { }
-    [Game, Event(Self)] public class Position : IComponent { public Vector3 Value; }
     [Game, Event(Self)] public class StartedFollowingFlyingPlayerCharacter : IComponent { }
+    [Game, Event(Self)] public class Position : IComponent { public Vector3 Value; }
     [Game, Event(Self)] public class Rotation : IComponent { public Vector3 Value; }
 
 }

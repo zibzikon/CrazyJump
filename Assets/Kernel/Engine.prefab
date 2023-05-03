@@ -45,13 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerCharacterConfiguration:
-    WalkingSpeed: 12
+    RunningSpeed: 5
     HorizontalSpeed: 12
-    RotationSpeed: 1
+    RotationSensitivity: 50000
     StartAccumulatedJumpForce: 5
     HorizontalMovingBorder:
       start: -1.5
       end: 1.5
     RotationYBorder:
-      start: -75
-      end: 75
+      start: -85
+      end: 85

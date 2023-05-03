@@ -299,7 +299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8377497861457190246
 Transform:
   m_ObjectHideFlags: 0
@@ -404,7 +404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2128653640875284271
 Transform:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _connectedBody: {fileID: 2998394254610130408}
-  _axis: {x: 0, y: 0, z: 1}
+  _axis: {x: -0.15, y: 0.25, z: 5}
 --- !u!1 &1862721700146259020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2861875902493169046, guid: e0ec8c82a25c9d64a9f57949df4790ad, type: 3}

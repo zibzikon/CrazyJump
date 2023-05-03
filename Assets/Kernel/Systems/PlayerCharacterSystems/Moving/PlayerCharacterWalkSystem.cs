@@ -15,22 +15,21 @@ namespace Kernel.Systems.Player
         public PlayerCharacterWalkSystem(GameContext context, ITime time)
         {
             _time = time;
-            _characters = context.GetGroup(AllOf(PlayerCharacter, MovingDirection, Position, Movable, RunningSpeed, Running).NoneOf(MakingJump));
+            _characters = context.GetGroup(AllOf(PlayerCharacter, MovingDirection, Position, HorizontalBorder, Movable, RunningSpeed, Running).NoneOf(MakingJump));
         }
         
         public void Execute()
         {
             foreach (var playerCharacter in _characters)
             {
+                var border = playerCharacter.horizontalBorder.Value;
                 var moveDelta = playerCharacter.movingDirection.Value * playerCharacter.runningSpeed.Value;
+                var position = (playerCharacter.position.Value + moveDelta * _time.DeltaTime);
                 
-                if(playerCharacter.hasHorizontalBorder)
-                {
-                    var border = playerCharacter.horizontalBorder.Value;
-                    moveDelta = moveDelta.SetX(moveDelta.x.Clamp(border));
-                }
-                
-                playerCharacter.ReplacePosition(playerCharacter.position.Value + moveDelta * _time.DeltaTime);
+                position.SetX(position.x.Clamp(border));
+
+
+                playerCharacter.ReplacePosition(position);
             }
         }
     }
